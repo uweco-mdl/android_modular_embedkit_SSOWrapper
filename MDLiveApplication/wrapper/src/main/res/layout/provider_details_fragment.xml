@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/ContainerStyle"
+            android:background="@color/mdliveBottomBlueColor">
+            <!-- <LinearLayout
+                 style="@style/wagHeaderLinearLayoutStyle"
+                 android:orientation="horizontal">
+
+                 <ImageView
+                     android:id="@+id/backImg"
+                     android:layout_gravity="center"
+                     style="@style/HeaderBackImgStyle"
+                    />
+
+                 <TextView
+                     android:id="@+id/headerTxt"
+                     style="@style/HeaderTextViewStyle"
+                     android:layout_marginLeft="@dimen/chooseproviderhomeheader_marginLeft"
+                     android:text="@string/doctor_details" />
+             </LinearLayout>-->
+
+            <ScrollView style="@style/ScrollViewStyle"
+                android:background="@color/mdliveBottomBlueColor">
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View style="@style/ViewStyle" />
+
+                    <LinearLayout
+                        style="@style/WagLinearLayoutStyle"
+                        android:background="@drawable/banner"
+                        android:layout_height="300dp"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.mdlive.embedkit.uilayer.sav.CircularNetworkImageView
+                            android:id="@+id/ProfileImg1"
+                            style="@style/DoctorOnCallImgViewStyle"
+                            android:layout_width="@dimen/chooseproviderdoctoroncallImg_height"
+                            android:layout_height="@dimen/chooseproviderdoctoroncallImg_width"
+                            android:layout_marginTop="@dimen/margin_top"
+                            android:src="@drawable/doctor_icon"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/DoctorName"
+                            style="@style/ProviderDetailsDoctorTxtStyle"
+                            android:layout_marginLeft="@dimen/manualsearch_margintop"
+                            android:layout_marginTop="@dimen/margin_top"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:textSize="@dimen/providerdetails_qualificationtxt"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginLeft="@dimen/manualsearch_margintop"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/specalist"
+                                style="@style/ProviderDetailsDoctorTxtStyle"
+                                android:gravity="center"
+                                android:text=""
+                                android:tag="@string/mdltag_general_practise"
+                                android:textStyle="bold"
+                                android:textColor="@color/white" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/ProviderDetailsDoctorTxtStyle"
+                            android:layout_marginLeft="@dimen/switch_marginLeft"
+                            android:gravity="left|center"
+                            android:id="@+id/detailsGroupAffiliations"
+                            android:visibility="gone"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="@string/mdl_capital_regional"
+                            android:tag="@string/mdltag_capital_regional"
+                            android:textColor="@color/search_bgd" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:text="Wed,Sep2014"
+                        android:id="@+id/dateTxt"
+                        android:onClick="appointmentAction"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:id="@+id/AvailableByLl"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/byvideoBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="By Video"/>
+                        <Button
+                            android:id="@+id/byphoneBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="By Phone"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:id="@+id/panelMsgLl"
+                        android:orientation="horizontal">
+                        <HorizontalScrollView
+                            android:id="@+id/horizontalscrollview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:id="@+id/panelMessageFiles"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/tapBtn"
+                        style="@style/ContinueButtonStyle"
+                        android:layout_marginTop="@dimen/toggleChildView_marginTop"
+                        android:ellipsize="end"
+                        android:onClick="detailsTapBtnAction"
+                        android:singleLine="true"
+                        android:textAllCaps="false" />
+                    <Button
+                        android:id="@+id/reqfutureapptBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:text="Request future appointment"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/detailsLl"
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/ProviderDetailsDoctorQualificationTxtStyle"
+                            android:text="@string/mdl_qualifications"
+                            android:tag="@string/mdltag_qualifications"
+                            />
+
+
+                        <LinearLayout
+                            android:id="@+id/specialitiesLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/detailsLl_marginTop">
+
+                            <include layout="@layout/mdlive_provider_specialities" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/hosaffiliationsLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/speciatiesLl_marginTop">
+
+                            <include layout="@layout/mdlive_provider_license" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/educationLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/margin_top">
+
+                            <include layout="@layout/mdlive_provider_education" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/languagesLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/speciatiesLl_marginTop">
+
+                            <include layout="@layout/mdlive_provider_languages" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/boardCertificationsLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/speciatiesLl_marginTop">
+
+                            <include layout="@layout/mdlive_provider_location" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/aboutmeLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/speciatiesLl_marginTop">
+
+                            <include layout="@layout/mdlive_provider_aboutme" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginTop="@dimen/speciatiesLl_marginTop"
+                            android:visibility="gone">
+
+                            <include layout="@layout/mdlive_provider_languages" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/details_spaceheight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/providerDetailsFooterLl"
+                        android:background="@color/mdliveBottomBlueColor">
+                        <include
+                            style="@style/Footer_Style"
+                            layout="@layout/mdlive_footer" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <include layout="@layout/custom_progress_dialog" />
+
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+
+    </android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"   >
+    <LinearLayout
+        style="@style/ContainerStyle"
+        android:background="@color/mdliveBottomBlueColor"
+        >
+        <RelativeLayout
+            style="@style/wagHeaderLinearLayoutStyle"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/HeaderBackImgStyle"
+                android:background="@drawable/exit_icon"
+                android:contentDescription="@string/mdl_closeBtn"
+                android:tag="@string/mdltag_closeBtn"
+                android:id="@+id/backImg"
+                />
+
+            <TextView
+                android:id="@+id/headerTxt"
+                style = "@style/HeaderTextViewStyle"
+                android:layout_toRightOf="@+id/backImg"
+                android:text="@string/mdl_doctor_filters"
+                android:tag="@string/mdltag_doctor_filters"
+                />
+            <Button
+                android:onClick="doneAction"
+                android:id="@+id/doneBtn"
+                android:labelFor="@string/mdl_done"
+                style = "@style/endHeaderTextViewStyle"
+                android:textSize="@dimen/textsize_large"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:text="@string/mdl_doneUpperCase"
+                android:tag="@string/mdltag_doneUpperCase"
+                />
+        </RelativeLayout>
+        <ScrollView style="@style/ScrollViewStyle"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                style="@style/WagParentLinearLayoutStyle"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:id="@+id/providerNameLl">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_provider_name"
+                        android:tag="@string/mdltag_provider_name"
+                        android:textColor="@color/grey_txt"/>
+                    />
+                    <EditText
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:maxLength="50"
+                        android:id="@+id/edt_searchProvider" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:onClick="providerTypeAction"
+                    >
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:textColor="@color/grey_txt"
+                        android:text="@string/mdl_providerTypeTxt"
+                        android:tag="@string/mdltag_providerTypeTxt" />
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_any"
+                        android:tag="@string/mdltag_any"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:textColor="@color/black"
+                        android:id="@+id/ProviderTypeTxtView" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:visibility="gone"
+                    android:onClick="sortByAction">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:textColor="@color/grey_txt"
+                        android:text="@string/mdl_sort_by"
+                        android:tag="@string/mdltag_sort_by"/>
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_any"
+                        android:tag="@string/mdltag_any"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:id="@+id/SortbyTxtView" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:onClick="specialityAction">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:textColor="@color/grey_txt"
+                        android:text="@string/mdl_speciality"
+                        android:tag="@string/mdltag_speciality"/>
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_any"
+                        android:tag="@string/mdltag_any"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:id="@+id/SpecialityTxtView" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:onClick="locationAction">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:textColor="@color/grey_txt"
+                        android:text="@string/mdl_located_in"
+                        android:tag="@string/mdltag_located_in"/>
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_select_stg"
+                        android:tag="@string/mdltag_select_stg"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:id="@+id/LocatioTxtView" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:onClick="speaksAction">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_Speaks"
+                        android:tag="@string/mdltag_Speaks"
+                        android:textColor="@color/grey_txt"/>
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_any"
+                        android:tag="@string/mdltag_any"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:id="@+id/SpeaksTxtView" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:paddingBottom="@dimen/manualsearch_marginbottom"
+                    android:onClick="genderAction"
+                    >
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_gender"
+                        android:tag="@string/mdltag_gender"
+                        android:textColor="@color/grey_txt"/>
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_any"
+                        android:tag="@string/mdltag_any"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:id="@+id/GenderTxtView" />
+                    <View style="@style/ProviderSearchViewStyle"
+                        android:layout_marginTop="@dimen/manualsearch_margintop"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:id="@+id/availableLl"
+                    android:onClick="availbleAction"
+                    android:visibility="gone">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:textColor="@color/grey_txt"
+                        android:text="@string/mdl_available_by"
+                        android:tag="@string/mdltag_available_by" />
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_any"
+                        android:tag="@string/mdltag_any"
+                        android:textColor="@color/black"
+                        android:id="@+id/AvailableTxtView" />
+                    <View style="@style/ProviderSearchViewStyle" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/WagProviderProfileLinearLayoutStyle"
+                    android:visibility="gone"
+                    android:onClick="appointmentAction"
+                    android:id="@+id/appointmentLl">
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:textColor="@color/grey_txt"
+                        android:text="@string/mdl_txt_appointment_date"
+                        android:tag="@string/mdltag_txt_appointment_date" />
+                    <TextView
+                        style = "@style/ProviderSearchAvailableTxtStyle"
+                        android:text="@string/mdl_appointment_date"
+                        android:tag="@string/mdltag_appointment_date"
+                        android:textColor="@color/black"
+                        android:id="@+id/AppointmentDate" />
+                </LinearLayout>
+                <View style="@style/ProviderSearchViewStyle" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>    <include
+    layout="@layout/custom_progress_dialog"
+    />
+</merge>

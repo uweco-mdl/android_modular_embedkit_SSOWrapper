@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mdltag_fistname_caps">mdl_first_name_caps</string>
+    <string name="mdltag_last_name_caps">mdl_last_name_caps</string>
+    <string name="mdltag_email_caps">mdl_email_caps</string>
+    <string name="mdltag_user_name_caps">mdl_user_name_caps</string>
+    <string name="mdltag_street_address_caps">mdl_street_address_caps</string>
+    <string name="mdltag_city_caps">mdl_city_caps</string>
+    <string name="mdltag_state_caps">mdl_state_caps</string>
+    <string name="mdltag_dob_caps">mdl_dob_caps</string>
+    <string name="mdltag_gender_caps">mdl_gender_caps</string>
+    <string name="mdltag_phone_caps">mdl_phone_caps</string>
+
+    <string name="mdltag_appointment_details">mdl_appointment_details</string>
+    <string name="mdltag_phone_consultation">mdl_phone_consultation</string>
+    <string name="mdltag_phone_to_call">mdl_phone_to_call</string>
+    <string name="mdltag_doctor_visit">mdl_doctor_visit</string>
+    <string name="mdltag_do_you_have_primary_care">mdl_do_you_have_primary_care</string>
+    <string name="mdltag_yes">mdl_yes</string>
+    <string name="mdltag_no">mdl_no</string>
+    <string name="mdltag_confirm_appointment_txt">mdl_confirm_appointment_txt</string>
+
+    <string name="mdltag_pcp_title_text">mdl_pcp_title_text</string>
+    <string name="mdltag_first_name_caps">mdl_first_name_caps</string>
+    <string name="mdltag_middle_name_caps">mdl_middle_name_caps</string>
+    <string name="mdltag_practice_name_caps">mdl_practice_name_caps</string>
+    <string name="mdltag_email_address_caps">mdl_email_address_caps</string>
+    <string name="mdltag_address_line1_caps">mdl_address_line1_caps</string>
+    <string name="mdltag_state_caps_mandatory">mdl_state_caps_mandatory</string>
+    <string name="mdltag_zip_caps">mdl_zip_caps</string>
+    <string name="mdltag_country_caps">mdl_country_caps</string>
+    <string name="mdltag_phone_caps_mandatory">mdl_phone_caps_mandatory</string>
+
+    <string name="mdltag_time_for_visit">mdl_time_for_visit</string>
+    <string name="mdltag_time_for_visit_description">mdl_time_for_visit_description</string>
+    <string name="mdltag_start_visit">mdl_start_visit</string>
+
+    <string name="mdltag_large_text">mdl_large_text</string>
+    <string name="mdltag_small_text">mdl_small_text</string>
+
+    <string name="mdltag_app_name">mdl_app_name</string>
+
+    <string name="mdltag_update_credit_message">mdl_update_credit_message</string>
+
+    <string name="mdltag_add_new_family_member">mdl_add_new_family_member</string>
+
+    <string name="mdltag_call_text">mdl_call_text</string>
+
+    <string name="mdltag_enter_your_question">mdl_enter_your_question</string>
+
+    <string name="mdltag_cancel">mdl_cancel</string>
+
+    <string name="mdltag_help_and_support_title">mdl_help_and_support_title</string>
+
+    <string name="mdltag_submit">mdl_submit</string>
+
+    <string name="mdltag_list_results">mdl_list_results</string>
+
+    <string name="mdltag_reason_for_visit_colon_text">mdl_reason_for_visit_colon_text</string>
+
+    <string name="mdltag_primary_diagnosis">mdl_primary_diagnosis</string>
+    <string name="mdltag_not_sure">mdl_not_sure</string>
+    <string name="mdltag_send_message_caps">mdl_send_message_caps</string>
+    <string name="mdltag_aftercase_instructions_caps">mdl_aftercase_instructions_caps</string>
+    <string name="mdltag_view_claim_form_caps">mdl_view_claim_form_caps</string>
+
+    <string name="mdltag_email_confirmation_first_text">mdl_email_confirmation_first_text</string>
+    <string name="mdltag_email_confirmation_second_text">mdl_email_confirmation_second_text</string>
+    <string name="mdltag_email_confirmation_third_text">mdl_email_confirmation_third_text</string>
+    <string name="mdltag_email_confirmation_fourth_text">mdl_email_confirmation_fourth_text</string>
+    <string name="mdltag_email_confirmation_fifth_text">mdl_email_confirmation_fifth_text</string>
+
+    <string name="mdltag_schedule_appoinment">mdl_schedule_appoinment</string>
+    <string name="mdltag_to_cancel_your_appointment">mdl_to_cancel_your_appointment</string>
+    <string name="mdltag_call_customer_service_small">mdl_call_customer_service_small</string>
+    <string name="mdltag_mdlive_call_center_text">mdl_mdlive_call_center_text</string>
+
+    <string name="mdltag_cancelation_fee_may_apply">mdl_cancelation_fee_may_apply</string>
+    <string name="mdltag_start_appointment">mdl_start_appointment</string>
+    <string name="mdltag_cancel_appointment">mdl_cancel_appointment</string>
+
+    <string name="mdltag_address_line_1">mdl_address_line_1</string>
+    <string name="mdltag_address_line_2">mdl_address_line_2</string>
+
+    <string name="mdltag_phone_number">mdl_phone_number</string>
+    <string name="mdltag_phone_number_caps">mdl_phone_number_caps</string>
+    <string name="mdltag_emergency_contact_number_caps">mdl_emergency_contact_number_caps</string>
+
+    <string name="mdltag_doctor_on_call">mdl_doctor_on_call</string>
+    <string name="mdltag_average_wait">mdl_average_wait</string>
+    <string name="mdltag_locating_available_doctors">mdl_locating_available_doctors</string>
+    <string name="mdltag_select_provider">mdl_select_provider</string>
+    <string name="mdltag_filter_txt">mdl_filter_txt</string>
+
+    <string name="mdltag_email_confirmation_text">mdl_email_confirmation_text</string>
+    <string name="mdltag_email_confirmation_detail_text">mdl_email_confirmation_detail_text</string>
+    <string name="mdltag_resend_email_confirmation">mdl_resend_email_confirmation</string>
+    <string name="mdltag_dismiss">mdl_dismiss</string>
+
+    <string name="mdltag_forgot_your_pin_lower">mdl_forgot_your_pin_lower</string>
+    <string name="mdltag_tap_below_to_reset_it">mdl_tap_below_to_reset_it</string>
+    <string name="mdltag_reset_pin">mdl_reset_pin</string>
+
+    <string name="mdltag_current_family_member">mdl_current_family_member</string>
+
+    <string name="mdltag_welcome">mdl_welcome</string>
+    <string name="mdltag_first_name">mdl_first_name</string>
+    <string name="mdltag_email_unconfirmed">mdl_email_unconfirmed</string>
+
+    <string name="mdltag_username">mdl_username</string>
+    <string name="mdltag_username_or_email">mdl_username_or_email</string>
+    <string name="mdltag_forgot_username">mdl_forgot_username</string>
+    <string name="mdltag_password">mdl_password</string>
+    <string name="mdltag_forgot_password">mdl_forgot_password</string>
+    <string name="mdltag_sign_in">mdl_sign_in</string>
+    <string name="mdltag_or_upper">mdl_or_upper</string>
+    <string name="mdltag_create_free_account">mdl_create_free_account</string>
+
+    <string name="mdltag_see_your_visit">mdl_see_your_visit</string>
+    <string name="mdltag_no_prev_visits">mdl_no_prev_visits</string>
+    <string name="mdltag_provider_access_to_med_records">mdl_provider_access_to_med_records</string>
+
+    <string name="mdltag_to">mdl_to</string>
+    <string name="mdltag_subject">mdl_subject</string>
+    <string name="mdltag_message">mdl_message</string>
+
+    <string name="mdltag_myrecords_add_photo">mdl_myrecords_add_photo</string>
+
+    <string name="mdltag_last_update">mdl_last_update</string>
+    <string name="mdltag_age_check1">mdl_age_check1</string>
+    <string name="mdltag_age_check2">mdl_age_check2</string>
+    <string name="mdltag_my_health_preexisting">mdl_my_health_preexisting</string>
+    <string name="mdltag_pediatric_profile">mdl_pediatric_profile</string>
+    <string name="mdltag_pediatric_notcompleted_txt">mdl_pediatric_notcompleted_txt</string>
+    <string name="mdltag_health_conditions">mdl_health_conditions</string>
+    <string name="mdltag_no_conditions_reported">mdl_no_conditions_reported</string>
+    <string name="mdltag_my_health_medications">mdl_my_health_medications</string>
+    <string name="mdltag_medications">mdl_medications</string>
+    <string name="mdltag_no_medications_reported">mdl_no_medications_reported</string>
+    <string name="mdltag_my_health_allergies">mdl_my_health_allergies</string>
+    <string name="mdltag_allergies">mdl_allergies</string>
+    <string name="mdltag_no_allergies_reported">mdl_no_allergies_reported</string>
+    <string name="mdltag_my_health_procedures">mdl_my_health_procedures</string>
+    <string name="mdltag_procedures">mdl_procedures</string>
+    <string name="mdltag_no_procedures_reported">mdl_no_procedures_reported</string>
+    <string name="mdltag_behavioural_health_history">mdl_behavioural_health_history</string>
+    <string name="mdltag_LifeStyle">mdl_LifeStyle</string>
+    <string name="mdltag_family_history_txt">mdl_family_history_txt</string>
+    <string name="mdltag_my_record">mdl_my_record</string>
+    <string name="mdltag_next_btn">mdl_next_btn</string>
+    <string name="mdltag_pediatric_completed_txt">mdl_pediatric_completed_txt</string>
+
+    <string name="mdltag_select_the_provider">mdl_select_the_provider</string>
+
+    <string name="mdltag_sign_out">mdl_sign_out</string>
+
+    <string name="mdltag_subheader_therapist_txt">mdl_subheader_therapist_txt</string>
+
+    <string name="mdltag_subheader_reason_txt">mdl_subheader_reason_txt</string>
+    <string name="mdltag_enter_symptom">mdl_enter_symptom</string>
+    <string name="mdltag_add_photo">mdl_add_photo</string>
+    <string name="mdltag_my_health_helpful">mdl_my_health_helpful</string>
+
+    <string name="mdltag_enter_your_pin_to_unlock">mdl_enter_your_pin_to_unlock</string>
+    <string name="mdltag_sign_in_with_user_name_and_password">mdl_sign_in_with_user_name_and_password</string>
+
+    <string name="mdltag_credit_card_info">mdl_credit_card_info</string>
+    <string name="mdltag_replace_card">mdl_replace_card</string>
+
+    <string name="mdltag_health_tip_one">mdl_health_tip_one</string>
+    <string name="mdltag_health_tip_one_title">mdl_health_tip_one_title</string>
+    <string name="mdltag_health_tip_one_content">mdl_health_tip_one_content</string>
+
+    <string name="mdltag_add_a_card">mdl_add_a_card</string>
+
+    <string name="mdltag_card_number">mdl_card_number</string>
+    <string name="mdltag_expiration_date_caps">mdl_expiration_date_caps</string>
+    <string name="mdltag_security_code_caps">mdl_security_code_caps</string>
+    <string name="mdltag_name_on_card_caps">mdl_name_on_card_caps</string>
+    <string name="mdltag_address_toggle_txt">mdl_address_toggle_txt</string>
+
+    <string name="mdltag_change_password">mdl_change_password</string>
+    <string name="mdltag_current_password">mdl_current_password</string>
+    <string name="mdltag_new_password">mdl_new_password</string>
+    <string name="mdltag_confirm_password">mdl_confirm_password</string>
+    <string name="mdltag_password_length">mdl_password_length</string>
+    <string name="mdltag_password_diffname">mdl_password_diffname</string>
+
+    <string name="mdltag_password_alphanumeric_check">mdl_password_alphanumeric_check</string>
+    <string name="mdltag_password_confirmation_check">mdl_password_confirmation_check</string>
+    <string name="mdltag_password_two_more_chars_check">mdl_password_two_more_chars_check</string>
+    <string name="mdltag_password_special_chars">mdl_password_special_chars</string>
+
+
+    <string name="mdltag_confirmationTxt">mdl_confirmationTxt</string>
+
+    <string name="mdltag_please_create_a_6_digit_pin">mdl_please_create_a_6_digit_pin</string>
+    <string name="mdltag_access_your_phone_using_pin">mdl_access_your_phone_using_pin</string>
+    <string name="mdltag_i_dont_want_to_use_pin">mdl_i_dont_want_to_use_pin</string>
+    <string name="mdltag_you_can_enable_your_screen">mdl_you_can_enable_your_screen</string>
+
+    <string name="mdltag_edit">mdl_edit</string>
+    <string name="mdltag_email">mdl_email</string>
+    <string name="mdltag_address">mdl_address</string>
+    <string name="mdltag_timezone">mdl_timezone</string>
+    <string name="mdltag_change_language">mdl_change_language</string>
+    <string name="mdltag_preferred_signin">mdl_preferred_signin</string>
+    <string name="mdltag_change_pin">mdl_change_pin</string>
+    <string name="mdltag_change_security_questions">mdl_change_security_questions</string>
+
+    <string name="mdltag_security_question_1">mdl_security_question_1</string>
+    <string name="mdltag_answer_question_1">mdl_answer_question_1</string>
+    <string name="mdltag_security_question_2">mdl_security_question_2</string>
+    <string name="mdltag_answer_question_2">mdl_answer_question_2</string>
+
+    <string name="mdltag_see_a_doctor_now">mdl_see_a_doctor_now</string>
+    <string name="mdltag_my_health">mdl_my_health</string>
+    <string name="mdltag_mdlive_assist">mdl_mdlive_assist</string>
+    <string name="mdltag_message_center">mdl_message_center</string>
+    <string name="mdltag_symptom_checker">mdl_symptom_checker</string>
+
+    <string name="mdltag_your_appointmant_has_started">mdl_your_appointmant_has_started</string>
+    <string name="mdltag_tap_here_to_enter">mdl_tap_here_to_enter</string>
+
+    <string name="mdltag_call_customer_service">mdl_call_customer_service</string>
+    <string name="mdltag_ask_a_question">mdl_ask_a_question</string>
+
+    <string name="mdltag_Ok">mdl_Ok</string>
+
+    <string name="mdltag_norecords_added">mdl_norecords_added</string>
+    <string name="mdltag_add_records_txt_1">mdl_add_records_txt_1</string>
+    <string name="mdltag_add_records_txt_2">mdl_add_records_txt_2</string>
+
+    <string name="mdltag_add_condition_hint">mdl_add_condition_hint</string>
+    <string name="mdltag_delete">mdl_delete</string>
+
+    <string name="mdltag_add_family_member_txt">mdl_add_family_member_txt</string>
+    <string name="mdltag_add_family_text">mdl_add_family_text</string>
+
+    <string name="mdltag_general_practise">mdl_general_practise</string>
+    <string name="mdltag_capital_regional">mdl_capital_regional</string>
+    <string name="mdltag_qualifications">mdl_qualifications</string>
+
+    <string name="mdltag_advanced_search_options">mdl_advanced_search_options</string>
+    <string name="mdltag_search_provider_name">mdl_search_provider_name</string>
+    <string name="mdltag_available_by_caps">mdl_available_by_caps</string>
+    <string name="mdltag_any">mdl_any</string>
+    <string name="mdltag_appointment_date_caps">mdl_appointment_date_caps</string>
+    <string name="mdltag_provider_type_caps">mdl_provider_type_caps</string>
+    <string name="mdltag_sort_by_caps">mdl_sort_by_caps</string>
+    <string name="mdltag_specialty_caps">mdl_specialty_caps</string>
+    <string name="mdltag_located_in_caps">mdl_located_in_caps</string>
+    <string name="mdltag_speaks_caps">mdl_speaks_caps</string>
+
+    <string name="mdltag_thankyou_txt">mdl_thankyou_txt</string>
+    <string name="mdltag_cancellation_information">mdl_cancellation_information</string>
+    <string name="mdltag_cancellation_instructions">mdl_cancellation_instructions</string>
+
+    <string name="mdltag_sign_up">mdl_sign_up</string>
+    <string name="mdltag_forgot_your_pin">mdl_forgot_your_pin</string>
+
+    <string name="mdltag_waiting_warn_text">mdl_waiting_warn_text</string>
+    <string name="mdltag_waiting_doctor_new">mdl_waiting_doctor_new</string>
+    <string name="mdltag_waiting_text">mdl_waiting_text</string>
+    <string name="mdltag_waiting_warn_complete">mdl_waiting_warn_complete</string>
+
+    <string name="mdltag_waiting_room_title">mdl_waiting_room_title</string>
+    <string name="mdltag_waiting_provider_text">mdl_waiting_provider_text</string>
+
+    <string name="mdltag_consultation_starting">mdl_consultation_starting</string>
+
+    <string name="mdltag_summary_thankyou_txt">mdl_summary_thankyou_txt</string>
+    <string name="mdltag_summary_qus_txt">mdl_summary_qus_txt</string>
+    <string name="mdltag_summary_qus_improve">mdl_summary_qus_improve</string>
+    <string name="mdltag_summary_feedback_txt">mdl_summary_feedback_txt</string>
+    <string name="mdltag_summary_need_assistance_txt">mdl_summary_need_assistance_txt</string>
+    <string name="mdltag_summary_phone_txt">mdl_summary_phone_txt</string>
+    <string name="mdltag_summary_michelle_txt">mdl_summary_michelle_txt</string>
+    <string name="mdltag_summary_comment_txt">mdl_summary_comment_txt</string>
+
+    <string name="mdltag_closeBtn">mdl_closeBtn</string>
+    <string name="mdltag_doctor_filters">mdl_doctor_filters</string>
+    <string name="mdltag_doneUpperCase">mdl_doneUpperCase</string>
+    <string name="mdltag_provider_name">mdl_provider_name</string>
+    <string name="mdltag_providerTypeTxt">mdl_providerTypeTxt</string>
+    <string name="mdltag_sort_by">mdl_sort_by</string>
+    <string name="mdltag_speciality">mdl_speciality</string>
+    <string name="mdltag_located_in">mdl_located_in</string>
+    <string name="mdltag_select_stg">mdl_select_stg</string>
+    <string name="mdltag_Speaks">mdl_Speaks</string>
+    <string name="mdltag_gender">mdl_gender</string>
+    <string name="mdltag_available_by">mdl_available_by</string>
+    <string name="mdltag_txt_appointment_date">mdl_txt_appointment_date</string>
+    <string name="mdltag_appointment_date">mdl_appointment_date</string>
+
+    <string name="mdltag_specialties">mdl_specialties</string>
+
+    <string name="mdltag_provider_location">mdl_provider_location</string>
+
+    <string name="mdltag_hospital_affilations">mdl_hospital_affilations</string>
+
+    <string name="mdltag_languages_spoken">mdl_languages_spoken</string>
+
+    <string name="mdltag_education">mdl_education</string>
+
+    <string name="mdltag_hospital_affiliations">mdl_hospital_affiliations</string>
+
+    <string name="mdltag_prof_statement">mdl_prof_statement</string>
+
+    <string name="mdltag_apply_offer_code">mdl_apply_offer_code</string>
+    <string name="mdltag_enter_code">mdl_enter_code</string>
+    <string name="mdltag_apply">mdl_apply</string>
+
+    <string name="mdltag_choosepharmacy">mdl_choosepharmacy</string>
+    <string name="mdltag_filter">mdl_filter</string>
+
+    <string name="mdltag_my_pharmacy_addressline_one">mdl_my_pharmacy_addressline_one</string>
+    <string name="mdltag_my_pharmacy_addressline_two">mdl_my_pharmacy_addressline_two</string>
+    <string name="mdltag_my_pharmacy_addressline_three">mdl_my_pharmacy_addressline_three</string>
+    <string name="mdltag_my_pharmacy_addressline_four">mdl_my_pharmacy_addressline_four</string>
+    <string name="mdltag_my_pharmacy_opening_time">mdl_my_pharmacy_opening_time</string>
+    <string name="mdltag_change_pharmacy">mdl_change_pharmacy</string>
+
+    <string name="mdltag_pharm_details">mdl_pharm_details</string>
+    <string name="mdltag_addr_text">mdl_addr_text</string>
+    <string name="mdltag_phone_txt">mdl_phone_txt</string>
+    <string name="mdltag_distance_txt">mdl_distance_txt</string>
+    <string name="mdltag_getdir_text">mdl_getdir_text</string>
+    <string name="mdltag_use_pharm_txt">mdl_use_pharm_txt</string>
+
+    <string name="mdltag_testing">mdl_testing</string>
+    <string name="mdltag_preferred">mdl_preferred</string>
+
+    <string name="mdltag_pharmacy_opn">mdl_pharmacy_opn</string>
+    <string name="mdltag_current_loc_txt">mdl_current_loc_txt</string>
+    <string name="mdltag_manual_txt_small">mdl_manual_txt_small</string>
+    <string name="mdltag_zip_code">mdl_zip_code</string>
+    <string name="mdltag_ph_Or_str">mdl_ph_Or_str</string>
+    <string name="mdltag_city">mdl_city</string>
+    <string name="mdltag_state">mdl_state</string>
+    <string name="mdltag_search">mdl_search</string>
+
+    <string name="mdltag_default_pharm_text">mdl_default_pharm_text</string>
+    <string name="mdltag_no_results_found">mdl_no_results_found</string>
+
+    <string name="mdltag_empty_conditions_reported">mdl_empty_conditions_reported</string>
+    <string name="mdltag_empty_conditions_reported_msg">mdl_empty_conditions_reported_msg</string>
+    <string name="mdltag_add_conditions_text">mdl_add_conditions_text</string>
+
+    <string name="mdltag_dosageTxt">mdl_dosageTxt</string>
+    <string name="mdltag_select_surgery_txt">mdl_select_surgery_txt</string>
+    <string name="mdltag_year_txt">mdl_year_txt</string>
+
+    <string name="mdltag_save">mdl_save</string>
+    <string name="mdltag_add_medication_hint">mdl_add_medication_hint</string>
+    <string name="mdltag_dosage">mdl_dosage</string>
+    <string name="mdltag_once">mdl_once</string>
+    <string name="mdltag_hourly">mdl_hourly</string>
+
+    <string name="mdltag_ideal_date">mdl_ideal_date</string>
+    <string name="mdltag_next_available">mdl_next_available</string>
+    <string name="mdltag_best_number_to_contact">mdl_best_number_to_contact</string>
+    <string name="mdltag_reason_for_visit">mdl_reason_for_visit</string>
+    <string name="mdltag_additional_text">mdl_additional_text</string>
+    <string name="mdltag_future_appointment_message">mdl_future_appointment_message</string>
+    <string name="mdltag_my_family_history_checkbox_text">mdl_my_family_history_checkbox_text</string>
+
+
+    <string name="mdltag_behaviouralhealthhistory_small">mdl_behaviouralhealthhistory_smallcaps</string>
+    <string name="mdltag_behaviouralhealthhistory">mdl_behaviouralhealthhistory</string>
+    <string name="mdltag_behaviouralhealth_question_one">mdl_behaviouralhealth_question_one</string>
+    <string name="mdltag_behaviouralhealth_question_options_one">mdl_behaviouralhealth_question_options_one</string>
+    <string name="mdltag_behaviouralhealth_question_two">mdl_behaviouralhealth_question_two</string>
+    <string name="mdltag_behaviouralhealth_question_three">mdl_behaviouralhealth_question_three</string>
+    <string name="mdltag_behaviouralhealth_question_four">mdl_behaviouralhealth_question_four</string>
+    <string name="mdltag_behaviouralhealth_question_five">mdl_behaviouralhealth_question_five</string>
+    <string name="mdltag_behaviouralhealth_question_six">mdl_behaviouralhealth_question_six</string>
+    <string name="mdltag_behaviouralhealth_question_seven">mdl_behaviouralhealth_question_seven</string>
+
+    <string name="mdltag_thankkyou_appoint_txt">mdl_thankkyou_appoint_txt</string>
+    <string name="mdltag_mdl_to_appint_call_txt">mdl_to_appint_call_txt</string>
+
+
+    <string name="mdltag_behaviouralhealth_question_options_two">mdl_behaviouralhealth_question_options_two</string>
+    <string name="mdltag_behaviouralhealth_question_options_three">mdl_behaviouralhealth_question_options_three</string>
+    <string name="mdltag_behaviouralhealth_question_options_four">mdl_behaviouralhealth_question_options_four</string>
+    <string name="mdltag_behaviouralhealth_question_options_five">mdl_behaviouralhealth_question_options_five</string>
+    <string name="mdltag_behaviouralhealth_question_options_six">mdl_behaviouralhealth_question_options_six</string>
+    <string name="mdltag_behaviouralhealth_question_options_seven">mdl_behaviouralhealth_question_options_seven</string>
+    <string name="mdltag_behaviouralhealth_question_options_eight">mdl_behaviouralhealth_question_options_eight</string>
+    <string name="mdltag_behaviouralhealthhistory_dummy_date">mdl_behaviouralhealthhistory_dummy_date</string>
+    <string name="mdltag_behaviouralhealthhistory_dummy_duration">mdl_behaviouralhealthhistory_dummy_duration</string>
+    <string name="mdltag_male">mdl_male</string>
+
+
+    <string name="mdltag_choose_doctor">mdl_choose_doctor</string>
+    <string name="mdltag_averagewait">mdl_averagewait</string>
+    <string name="mdltag_seedoctoroncall_btn">mdl_seedoctoroncall_btn</string>
+    <string name="mdltag_chooseotherdoctor">mdl_chooseotherdoctor</string>
+
+
+    <string name="mdltag_by_video">mdl_by_video</string>
+    <string name="mdltag_by_phone">mdl_by_phone</string>
+    <string name="mdltag_other_available_time">mdl_other_available_time</string>
+    <string name="mdltag_request_appointment">mdl_request_appointment</string>
+
+
+    <string name="mdltag_schedule_a_visit">mdl_schedule_a_visit</string>
+    <string name="mdltag_my_account">mdl_my_account</string>
+    <string name="mdltag_first_available">mdl_first_available</string>
+    <string name="mdltag_first_available_doctor">mdl_first_available_doctor</string>
+    <string name="mdltag_appointment_type_text">mdl_appointment_type_text</string>
+
+
+    <string name="mdltag_family_history_save">mdl_family_history_save</string>
+
+
+    <string name="mdltag_my_family_history_question">mdl_my_family_history_question</string>
+    <string name="mdltag_my_family_history_other">mdl_my_family_history_other</string>
+    <string name="mdltag_my_family_history_other_add">mdl_my_family_history_other_add</string>
+
+
+    <string name="mdltag_relationship">mdl_relationship</string>
+
+    <string name="mdltag_service_provided_by">mdl_service_provided_by</string>
+
+    <string name="mdltag_get_started_title">mdl_get_started_title</string>
+    <string name="mdltag_patientTxt">mdl_patientTxt</string>
+    <string name="mdltag_my_location">mdl_my_location</string>
+    <string name="mdltag_provider_category">mdl_provider_category</string>
+    <string name="mdltag_phonenumber">mdl_phonenumber</string>
+    <string name="mdltag_get_started_message_text">mdl_get_started_message_text</string>
+
+
+    <string name="mdltag_question_hint">mdl_question_hint</string>
+
+
+    <string name="mdltag_done">mdl_done</string>
+    <string name="mdltag_image_name_upper">mdl_image_name_upper</string>
+    <string name="mdltag_upload_upper">mdl_upload_upper</string>
+
+
+    <string name="mdltag_join_now">mdl_join_now</string>
+    <string name="mdltag_mdlive_text">mdl_mdlive_text</string>
+    <string name="mdltag_already_a_member">mdl_already_a_member</string>
+    <string name="mdltag_signin_here">mdl_signin_here</string>
+
+
+    <string name="mdltag_life_style_save">mdl_life_style_save</string>
+
+
+    <string name="mdltag_life_style_height_text">mdl_life_style_height_text</string>
+    <string name="mdltag_life_style_ft_text">mdl_life_style_ft_text</string>
+    <string name="mdltag_life_style_in_text">mdl_life_style_in_text</string>
+    <string name="mdltag_life_style_weight_text">mdl_life_style_weight_text</string>
+    <string name="mdltag_life_style_lbs_text">mdl_life_style_lbs_text</string>
+    <string name="mdltag_life_style_bmi_text">mdl_life_style_bmi_text</string>
+
+
+    <string name="mdltag_life_style_question_text">mdl_life_style_question_text</string>
+
+    <string name="mdltag_Or">mdltag_Or</string>
+
+
+    <string name="mdltag_last_update_txt">mdl_last_update_txt</string>
+
+
+    <string name="mdltag_pre_existing_conditions">mdl_pre_existing_conditions</string>
+    <string name="mdltag_primary_txt">mdl_primary_txt</string>
+
+
+    <string name="mdltag_conditions">mdl_conditions</string>
+    <string name="mdltag_add_condition_with_eg_hint">mdl_add_condition_with_eg_hint</string>
+
+
+    <string name="mdltag_add_pcp_physician">mdl_add_pcp_physician</string>
+    <string name="mdltag_pcp_physician">mdl_pcp_physician</string>
+
+
+    <string name="mdltag_doctor_visit_total">mdl_doctor_visit_total</string>
+    <string name="mdltag_use_card_text">mdl_use_card_text</string>
+    <string name="mdltag_card_details">mdl_card_details</string>
+    <string name="mdltag_payment_instructions">mdl_payment_instructions</string>
+    <string name="mdltag_expiration_date">mdl_expiration_date</string>
+    <string name="mdltag_mm_yy">mdl_mm_yy</string>
+    <string name="mdltag_name_on_card">mdl_name_on_card</string>
+    <string name="mdltag_hsa_card">mdl_hsa_card</string>
+    <string name="mdltag_card_usage_message">mdl_card_usage_message</string>
+
+
+    <string name="mdltag_patient_under_age">mdl_patient_under_age</string>
+    <string name="mdltag_pediatric_please_text">mdl_pediatric_please_text</string>
+    <string name="mdltag_pediatric_Birth_Weight_text">mdl_pediatric_Birth_Weight_text</string>
+    <string name="mdltag_pediatric_lbs_text">mdl_pediatric_lbs_text</string>
+    <string name="mdltag_pediatric_current_Weight_text">mdl_pediatric_current_Weight_text</string>
+    <string name="mdltag_pediatric_diet_text">mdl_pediatric_diet_text</string>
+    <string name="mdltag_pediatric_select_hint">mdl_pediatric_select_hint</string>
+    <string name="mdltag_pediatric_delivery_text">mdl_pediatric_delivery_text</string>
+
+
+    <string name="mdltag_pediatric_exercise_question">mdl_pediatric_exercise_question</string>
+    <string name="mdltag_weight">mdl_weight</string>
+    <string name="mdltag_lbs">mdl_lbs</string>
+    <string name="mdltag_consultation_header">mdl_consultation_header</string>
+    <string name="mdltag_welcome_back">mdl_welcome_back</string>
+    <string name="mdltag_resume_saved_consultation">mdl_resume_saved_consultation</string>
+    <string name="mdltag_consultation_info">mdl_consultation_info</string>
+    <string name="mdltag_patient">mdl_patient</string>
+    <string name="mdltag_reason">mdl_reason</string>
+    <string name="mdltag_doctor">mdl_doctor</string>
+    <string name="mdltag_choosen_pharmacy_upper">mdl_choosen_pharmacy_upper</string>
+    <string name="mdltag_resume_consultation_txt">mdl_resume_consultation_txt</string>
+
+    <string name="mdltag_pediatric_birthComplications_text">mdl_pediatric_birthComplications_text</string>
+    <string name="mdltag_radio_yes_text">mdl_radio_yes_text</string>
+    <string name="mdltag_radio_No_text">mdl_radio_No_text</string>
+    <string name="mdltag_pediatric_birth_describe">mdl_pediatric_birth_describe</string>
+    <string name="mdltag_pediatric_immunization_text">mdl_pediatric_immunization_text</string>
+    <string name="mdltag_pediatric_last_shot">mdl_pediatric_last_shot</string>
+    <string name="mdltag_pediatric_edt_last_shot">mdl_pediatric_edt_last_shot</string>
+    <string name="mdltag_pediatric_smoking_text">mdl_pediatric_smoking_text</string>
+    <string name="mdltag_pediatric_childcare_text">mdl_pediatric_childcare_text</string>
+    <string name="mdltag_pediatric_siblings_text">mdl_pediatric_siblings_text</string>
+    <string name="mdltag_pediatric_mandatory_text">mdl_pediatric_mandatory_text</string>
+
+</resources>

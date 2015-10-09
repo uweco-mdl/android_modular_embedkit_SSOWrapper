@@ -1,0 +1,203 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    >
+    <LinearLayout
+        android:id="@+id/HomePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <include layout="@layout/header"
+    />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:background="@drawable/profilepic"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="50dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+        <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+            style="@style/HomeHeader"
+            android:text="@string/mdl_welcome"
+            android:tag="@string/mdltag_welcome"
+            android:layout_marginBottom="10dp"
+            android:textColor="#585858"/>
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/SubHomeHeader"
+                android:textSize="22sp"
+                android:textColor="#585858"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/imageView2"
+        android:background="#E0D8D8"
+        android:id="@+id/view1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:paddingTop="15dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:id="@+id/SavLl">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:id="@+id/imageView4"
+                android:background="@drawable/schedule"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/HomeTextViewStyleLeft"
+                android:text="@string/mdl_schedule_a_visit"
+                android:tag="@string/mdltag_schedule_a_visit"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:id="@+id/MdliveAssistLl">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:id="@+id/imageViewa"
+                android:background="@drawable/mdlive_assist"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/HomeTextViewStyleRight"
+                android:text="@string/mdl_mdlive_assist"
+                android:tag="@string/mdltag_mdlive_assist"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:paddingTop="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:id="@+id/MyHealthLl">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:id="@+id/myhealth"
+                android:background="@drawable/health"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/HomeTextViewStyleLeft"
+                android:text="@string/mdl_my_health"
+                android:tag="@string/mdltag_my_health"
+                android:id="@+id/text_myhealth" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:id="@+id/MessageCenterLl">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:id="@+id/imageViewb"
+                android:background="@drawable/message_center"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/HomeTextViewStyleRight"
+                android:text="@string/mdl_message_center"
+                android:tag="@string/mdltag_message_center"
+                android:id="@+id/textViewb" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:paddingTop="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:id="@+id/SymptomLl"
+            >
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:id="@+id/symptom"
+                android:background="@drawable/symptom"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/HomeTextViewStyleLeft"
+                android:text="@string/mdl_symptom_checker"
+                android:tag="@string/mdltag_symptom_checker"
+
+                android:id="@+id/text_symptom" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:id="@+id/MyAccountLl">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:id="@+id/account"
+                android:background="@drawable/myaccount"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/HomeTextViewStyleRight"
+                android:text="@string/mdl_my_account"
+                android:tag="@string/mdltag_my_account"
+                android:id="@+id/text_acct" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/dashboard_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+    </LinearLayout>
+
+    <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
+    <fragment
+        android:id="@+id/fragment_drawer"
+        android:name="com.mdlive.embedkit.uilayer.navigation.NavigationDrawerFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+        app:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
+

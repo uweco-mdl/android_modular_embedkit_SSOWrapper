@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/ContainerStyle"
+            android:background="@color/mdliveBackgroundColor">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/mdlive_toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:clipToPadding="false">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/getstarted_background_color"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="79.67dp"
+                        android:layout_marginLeft="9.67dp"
+                        android:layout_marginRight="9.67dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_rect_white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="9.67dp"
+                            android:paddingTop="13.33dp">
+
+                            <TextView
+                                android:id="@+id/addressline1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/medical_history_sub_text"
+                                android:textSize="16.80sp" />
+
+                            <TextView
+                                android:id="@+id/addressline2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/medical_history_sub_text"
+                                android:textSize="14.40sp" />
+
+                            <TextView
+                                android:id="@+id/addressline3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/medical_history_sub_text"
+                                android:textSize="14.40sp" />
+
+                            <TextView
+                                android:id="@+id/txt_my_pharmacy_addressline_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="my_pharmacy_addressline_four"
+                                android:text="@string/mdl_my_pharmacy_addressline_four"
+                                android:textColor="@color/radio_button_color_highlighted"
+                                android:textSize="14.40sp" />
+
+                            <TextView
+                                android:id="@+id/SavContinueBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="12.67dp"
+                                android:tag="my_pharmacy_opening_time"
+                                android:text="@string/mdl_my_pharmacy_opening_time"
+                                android:textColor="@color/medical_history_sub_text"
+                                android:textSize="13.44sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_marginLeft="9.67dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:background="@color/grey_txt"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/mapView"
+                                style="@style/common_style_W_Match_M_Match"
+                                class="com.google.android.gms.maps.SupportMapFragment" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/changePharmacyButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:onClick="changePharmacyButtonOnClick"
+                            android:tag="change_pharmacy"
+                            android:text="@string/mdl_change_pharmacy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/summary_contact"
+                            android:textSize="16.80sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include layout="@layout/custom_progress_dialog" />
+</merge>

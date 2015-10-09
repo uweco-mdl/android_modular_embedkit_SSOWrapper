@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    style="@style/ContainerStyle">
+<!--
+    <include layout="@layout/header" />-->
+    <LinearLayout
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:background="@color/red_theme_primary"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/dimen_toolbar_height"
+        >
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_icon"
+            android:id="@+id/homeImg"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/backImg"
+            />-->
+        <include
+            android:id="@+id/header"
+            layout="@layout/mdlive_toolbar"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/doneText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView style="@style/ScrollViewStyle"
+        android:fillViewport="false"
+         >
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/AddConditionsLl"
+            android:focusableInTouchMode="true"
+            >
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        style="@style/ContinueButtonStyle"
+        android:text="@string/mdl_save"
+        android:tag="@string/mdltag_save"
+        android:visibility="gone"
+        android:id="@+id/SaveBtn" />
+
+</LinearLayout>
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+    </android.support.v4.widget.DrawerLayout>
+    <include
+        layout="@layout/custom_progress_dialog" />
+</merge>

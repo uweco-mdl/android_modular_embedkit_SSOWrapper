@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/choose_pharmacy_background">
+
+            <include
+            android:id="@+id/header"
+            layout="@layout/mdlive_toolbar" />
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dimen_10_dp"
+                card_view:cardCornerRadius="5dp">
+
+                <LinearLayout style="@style/LinearLayoutStyle">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:background="@color/choose_pharmacy_background">
+
+                        <LinearLayout
+                            style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+                            android:background="@color/white"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/appointmentIdealDate"
+                                style="@style/AppointmentRequestFieldsStyle"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/right_arrow_icon"
+                                android:hint="@string/mdl_ideal_date"
+                                android:onClick="onclickDate"
+                                android:tag="@string/mdltag_ideal_date" />
+
+                            <TextView
+                                android:id="@+id/appointmentNextAvailable"
+                                style="@style/AppointmentRequestFieldsStyle"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/right_arrow_icon"
+                                android:hint="@string/mdl_next_available"
+                                android:onClick="onclickNxtAvailable"
+                                android:tag="@string/mdltag_next_available" />
+
+                            <EditText
+                                android:id="@+id/appointmentContactNumber"
+                                style="@style/AppointmentRequestFieldsStyle"
+                                android:hint="@string/mdl_best_number_to_contact"
+                                android:inputType="number"
+                                android:maxLength="14"
+                                android:tag="@string/mdltag_best_number_to_contact" />
+
+                            <EditText
+                                android:id="@+id/appointmentReason"
+                                style="@style/AppointmentRequestFieldsStyle"
+                                android:hint="@string/mdl_reason_for_visit"
+                                android:singleLine="true"
+                                android:tag="@string/mdltag_reason_for_visit" />
+
+                            <EditText
+                                android:id="@+id/appointmentComment"
+                                style="@style/AppointmentRequestFieldsStyle"
+                                android:gravity="top"
+                                android:hint="@string/mdl_additional_text"
+                                android:lines="10"
+                                android:minLines="6"
+                                android:tag="@string/mdltag_additional_text" />
+
+                            <LinearLayout
+                                style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                                android:layout_marginTop="18dp">
+
+                                <LinearLayout
+                                    android:id="@+id/video_ll"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/round_rect_light_grey_border"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:onClick="onclickVideo"
+                                    android:clickable="true">
+
+                                    <ImageView
+                                        android:id="@+id/videoicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/video_icon"/>
+                                    <TextView
+                                        android:id="@+id/videoBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:textSize="@dimen/dimen_16_dp"
+                                        android:text="@string/mdl_by_video"
+                                        android:tag="@string/mdltag_by_video"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/phone_ll"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/round_rect_light_grey_border"
+                                    android:layout_weight="1"
+                                    android:onClick="onclickPhone"
+                                    android:clickable="true">
+
+                                    <ImageView
+                                        android:id="@+id/phoneicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/phone_icon"/>
+                                    <TextView
+                                        android:id="@+id/phoneBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:textSize="@dimen/dimen_16_dp"
+                                        android:text="@string/mdl_by_phone"
+                                        android:tag="@string/mdltag_by_phone"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:lineSpacingExtra="3dp"
+                                android:tag="@string/mdltag_future_appointment_message"
+                                android:text="@string/mdl_future_appointment_message"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+
+    </android.support.v4.widget.DrawerLayout>
+</merge>

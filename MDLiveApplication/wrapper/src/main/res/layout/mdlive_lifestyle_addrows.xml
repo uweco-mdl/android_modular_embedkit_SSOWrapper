@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        style="@style/MyLifeStyleLinearStyle"
+        android:id="@+id/lifestyle_question_linearlayout"
+        android:layout_margin="5dp"
+        android:layout_marginRight="@dimen/dimen_10_dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/life_style_question_text"
+            android:text="@string/mdl_life_style_question_text"
+            android:tag="@string/mdltag_life_style_question_text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/dimen_10_dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2" />
+
+        <RadioGroup
+            android:id="@+id/rootradiogroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/yesradioButton"
+                android:text="@string/mdl_yes"
+                android:tag="@string/mdltag_yes"
+                style="@style/YesNoRadioButtonStyle" />
+
+            <RadioButton
+                android:id="@+id/noradioButton"
+                android:text="@string/mdl_no"
+                android:tag="@string/mdltag_no"
+                style="@style/YesNoRadioButtonStyle"
+                android:layout_marginLeft="8dp" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</LinearLayout>

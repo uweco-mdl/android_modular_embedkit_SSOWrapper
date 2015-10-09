@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout android:id="@+id/footer_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mdl_life_style_save"
+            android:tag="@string/mdltag_life_style_save"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:background="@color/steelblue"
+            android:onClick="saveAction"/>
+
+    </RelativeLayout>
+
+</merge>

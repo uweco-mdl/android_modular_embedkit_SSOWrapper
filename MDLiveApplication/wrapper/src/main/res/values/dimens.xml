@@ -1,0 +1,155 @@
+<resources>
+    <dimen name="dimen_0_dp">0dp</dimen>
+    <dimen name="dimen_1_dp">1dp</dimen>
+    <dimen name="dimen_2_dp">2dp</dimen>
+    <dimen name="dimen_4_dp">4dp</dimen>
+    <dimen name="dimen_6_dp">6dp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
+    <dimen name="dimen_10_dp">10dp</dimen>
+    <dimen name="dimen_13_dp">10dp</dimen>
+    <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_18_dp">18dp</dimen>
+    <dimen name="dimen_14_dp">14dp</dimen>
+    <dimen name="dimen_20_dp">20dp</dimen>
+    <dimen name="dimen_24_dp">24dp</dimen>
+    <dimen name="dimen_28_dp">28dp</dimen>
+    <dimen name="dimen_32_dp">32dp</dimen>
+    <dimen name="dimen_64_dp">64dp</dimen>
+    <dimen name="dimen_128_dp">128dp</dimen>
+
+    <dimen name="dimen_toolbar_height">56dp</dimen>
+    <dimen name="dimen_space_toolbar">42dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp: https://developer.android.com/design/patterns/navigation-drawer.html -->
+
+
+    <dimen name="navigation_drawer_width">320dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <!-- Global Header values -->
+    <dimen name="headerbackimg_leftmargin">16dp</dimen>
+    <dimen name="headerhomeimg_leftmargin">16dp</dimen>
+    <dimen name="textsize_large">18sp</dimen>
+    <dimen name="textsize_Header_large">20sp</dimen>
+    <dimen name="textsize_medium">16sp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+
+    <!-- Get Started  values -->
+    <dimen name="spinnerpatientname_leftmargin">3dp</dimen>
+    <dimen name="spinnerpatientname_rightmargin">12dp</dimen>
+    <dimen name="view_margin">7dp</dimen>
+    <dimen name="disclaimer_leftmargin">10dp</dimen>
+    <dimen name="disclaimer_rightmargin">5dp</dimen>
+
+    <!-- Add Child -->
+    <dimen name="headerAddChildTxt_leftmargin">20dp</dimen>
+    <dimen name="headerChildAgeTxt_leftmargin">18dp</dimen>
+    <dimen name="Linearlayoutt_leftmargin">5dp</dimen>
+    <dimen name="AddChildText_leftmargin">12dp</dimen>
+    <dimen name="addChildView_margin">5dp</dimen>
+    <dimen name="toggleChildView_marginTop">30dp</dimen>
+    <dimen name="switch_marginLeft">4dp</dimen>
+    <dimen name="footer_marginBottom">0dp</dimen>
+
+    <!-- Location-->
+    <dimen name="useCurrentLocation_PaddingLeft">70dp</dimen>
+    <dimen name="useCurrentLocation_PaddingRight">60dp</dimen>
+    <dimen name="scrollview_height">0dp</dimen>
+    <dimen name="manualsearch_margintop">5dp</dimen>
+    <dimen name="manualsearch_marginbottom">15dp</dimen>
+
+    <!-- Choose Provider-->
+    <dimen name="chooseproviderhomeheader_marginLeft">20dp</dimen>
+    <dimen name="chooseproviderdoctoroncallImg_height">150dp</dimen>
+    <dimen name="chooseproviderdoctoroncallImg_width">150dp</dimen>
+    <dimen name="chooseproviderfilterll_height">60dp</dimen>
+    <dimen name="chooseotherdoctor_marginleft">19dp</dimen>
+    <dimen name="choosefilterlayout_marginbottom">20dp</dimen>
+    <dimen name="chooseproviderlist_width">230dp</dimen>
+    <dimen name="generalpractise_marginleft">3dp</dimen>
+    <dimen name="generalpractise_margintop">2dp</dimen>
+    <!-- Provider Details-->
+    <dimen name="providerdetails_qualificationtxt">20sp</dimen>
+    <dimen name="providerdetails_designtxt">15sp</dimen>
+    <dimen name="qualificationtxt_marginLeft">14dp</dimen>
+    <dimen name="detailsLl_marginTop">15dp</dimen>
+    <dimen name="speciatiesLl_marginTop">3dp</dimen>
+    <dimen name="details_spaceheight">20dp</dimen>
+    <!-- Reason For Visit-->
+    <dimen name="reasonsearch_rl_height">60dp</dimen>
+    <dimen name="reasonsearch_drawablepadding">25dp</dimen>
+    <!--Search provider-->
+
+    <!--Pediatric -->
+    <dimen name="ped_margin_left">20dp</dimen>
+    <dimen name="ped_header_height">70dp</dimen>
+    <dimen name="ped_header_top">5dp</dimen>
+    <dimen name="ped_bottom">10dp</dimen>
+    <dimen name="ped_view">10dp</dimen>
+
+    <dimen name="doctorOnCall_imageSize">76dp</dimen>
+    <dimen name="doctorOnCall_imageMarginTop_Bottom">11dp</dimen>
+    <dimen name="doctor_on_call_image_margin_left">6dp</dimen>
+
+    <dimen name="txtDoctorOnCall_marginLeft">21dp</dimen>
+    <dimen name="txtDoctorOnCall_marginTop">20dp</dimen>
+    <dimen name="txtDoctorOnCall_textSize">17sp</dimen>
+
+    <dimen name="txtAverageWaitTime_marginLeft">21dp</dimen>
+    <dimen name="txtAverageWaitTime_marginTop">1dp</dimen>
+    <dimen name="txtAverageWaitTime_textSize">13sp</dimen>
+
+    <dimen name="drawer_width">300dp</dimen>
+    <dimen name="no_condition_width">100dp</dimen>
+
+    <dimen name="card_margin">5dp</dimen>
+
+    <!-- Medical History -->
+    <dimen name="medical_history_text_size">17sp</dimen>
+    <dimen name="medical_history_common_margin">5dp</dimen>
+    <dimen name="medical_history_margin_ten">10dp</dimen>
+    <dimen name="medical_history_dimen_eight">8dp</dimen>
+    <dimen name="medical_history_arrow_padding">20dp</dimen>
+    <dimen name="medical_history_margin_twelve">12dp</dimen>
+
+    <!-- Appointment Request Form Page -->
+    <dimen name="appointment_request_form_text_size">17sp</dimen>
+    <dimen name="appointment_request_form_padding_left">30dp</dimen>
+
+    <dimen name="button_height_48_dp">48dp</dimen>
+    <dimen name="button_height_38_dp">38dp</dimen>
+
+    <dimen name="dash_board_icon_width">48dp</dimen>
+    <dimen name="dash_board_icon_height">48dp</dimen>
+
+    <dimen name="dimen_96_dp">96dp</dimen>
+
+    <!-- Provider -->
+    <dimen name="provider_imageSize">50dp</dimen>
+    <dimen name="provider_imageMarginTop_Bottom">5dp</dimen>
+    <dimen name="provider_image_margin_left">5dp</dimen>
+    <dimen name="txtProvider_marginLeft">10dp</dimen>
+
+    <!-- First Available -->
+    <dimen name="provider_display_image_size">98dp</dimen>
+
+    <dimen name="login_container_top_margin">200dp</dimen>
+
+    <dimen name="spinner_drop_down_offset">0dp</dimen>
+    <dimen name="spinner_drop_down_offset_getstarted">0dp</dimen>
+
+    <dimen name="dashboard_user_logo_width">48dp</dimen>
+    <dimen name="dashboard_user_logo_height">48dp</dimen>
+
+    <dimen name="dashboard_user_spinner_margin_top">0dp</dimen>
+    <dimen name="dashboard_user_spinner_margin_bottom">24dp</dimen>
+    <dimen name="dashboard_user_spinner_height">96dp</dimen>
+
+    <dimen name="spinner_padding_left">6dp</dimen>
+
+</resources>

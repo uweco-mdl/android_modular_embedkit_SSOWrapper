@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"   >
+<LinearLayout
+    style="@style/ContainerStyle">
+
+    <RelativeLayout
+        android:id="@+id/defaultPharmlayout"
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/doneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:onClick="doneTxtClick"
+            android:clickable="true"
+            android:textSize="15sp"
+            android:text="@string/mdl_done"
+            android:tag="@string/mdltag_done" />
+        <TextView
+            android:id="@+id/imageNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:maxLength="15"
+            android:ellipsize="end"
+            android:text="@string/mdl_image_name_upper"
+            android:tag="@string/mdltag_image_name_upper"/>
+
+        <TextView
+            android:id="@+id/uploadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:clickable="true"
+            android:text="@string/mdl_upload_upper"
+            android:tag="@string/mdltag_upload_upper"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/ViewStyle"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.mdlive.embedkit.uilayer.myhealth.MDLiveRotateZoomImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/galleryImageView"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/doctor_icon"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/deleteImageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:onClick="deleteImageTextClick"
+            android:text="@string/mdl_delete"
+            android:tag="@string/mdltag_delete"
+            android:clickable="true"
+            android:textAllCaps="true"/>
+
+    </RelativeLayout>
+</LinearLayout>
+    <include
+        layout="@layout/custom_progress_dialog"
+        />
+    </merge>

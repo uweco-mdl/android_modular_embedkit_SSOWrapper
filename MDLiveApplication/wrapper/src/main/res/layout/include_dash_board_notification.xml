@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/doctorOnCall_imageSize"
+    android:background="@color/dash_board_notification_background_color"
+    android:layout_gravity="bottom|center_horizontal"
+    android:orientation="horizontal"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="@dimen/button_height_48_dp"
+        android:layout_height="@dimen/button_height_48_dp"
+        android:src="@drawable/notification_icon4_upcoming_white"
+        android:layout_marginLeft="@dimen/dimen_16_dp"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_8_dp"
+        android:layout_marginRight="@dimen/dimen_8_dp">
+
+        <TextView
+            android:id="@+id/notification_first_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:tag="@string/mdltag_your_appointmant_has_started"
+            android:text="@string/mdl_your_appointmant_has_started"/>
+
+        <TextView
+            android:id="@+id/notification_second_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:tag="@string/mdltag_tap_here_to_enter"
+            android:text="@string/mdl_tap_here_to_enter"/>
+    </LinearLayout>
+</LinearLayout>

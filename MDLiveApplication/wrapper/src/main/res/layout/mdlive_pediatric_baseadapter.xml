@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        style="@style/LinearLayoutStyle">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/LinearLayoutStyle">
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style = "@style/ProviderSearchAvailableTxtStyle"
+                android:text="@string/mdl_pediatric_exercise_question"
+                android:tag="@string/mdltag_pediatric_exercise_question"
+                android:id="@+id/lifestyle_txt"/>
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style = "@style/LifeStyleSpinnerCustomButtonStyle"
+                android:visibility="gone"
+                android:id="@+id/current_diet"/>
+
+            <Button
+                style = "@style/LifeStyleYesCustomButtonStyle"
+                android:id="@+id/exercise_YesBtn" />
+            <Button
+                style="@style/NoCustomButtonStyle"
+                android:id="@+id/exercise_NoBtn" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/ViewStyle"
+
+        />
+    <LinearLayout
+     style="@style/LinearLayoutStyle"
+        android:id="@+id/LinarLay"
+        android:visibility="gone">
+
+
+    <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomEt
+        android:id="@+id/pediatricEtxt"
+        style="@style/phonenumberStyle_edittext" />
+    </LinearLayout>
+</LinearLayout>

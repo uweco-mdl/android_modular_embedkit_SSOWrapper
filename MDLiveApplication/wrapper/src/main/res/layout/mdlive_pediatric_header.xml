@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        style="@style/LinearLayoutStyle"
+        android:weightSum="1">
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/PediatricheaderTxtViewStyle"
+                />
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/LinearLayoutStyle"
+            android:padding="5dp">
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/LifeStyleWeightTxtViewStyle"
+                android:text="@string/mdl_weight"
+                android:tag="@string/mdltag_weight" />
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomEt
+                style="@style/LifeStyleFeetEditTxtStyle"
+                android:textColor="@color/black"
+                android:id="@+id/currentWeightEt" />
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/LifeStyleFeetTxtViewStyle"
+                android:text="@string/mdl_lbs"
+                android:tag="@string/mdltag_lbs" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/DoctorLinearLayoutStyle"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/chooseotherdoctor_marginleft"
+        android:orientation="horizontal"
+        >
+        <com.mdlive.embedkit.uilayer.sav.CircularNetworkImageView
+            android:id="@+id/ProfileImglist"
+            android:visibility="visible"
+            style="@style/DoctorOnCallImgViewStyle"/>
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:layout_width="@dimen/chooseproviderlist_width">
+
+            <TextView
+                style="@style/DoctorTxtStyle"
+                android:id="@+id/PatientName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_large"
+                android:singleLine="true"
+                />
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/specalist"
+                    style="@style/ProviderDetailsDoctorTxtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/generalpractise_marginleft"
+                    android:layout_marginTop="@dimen/generalpractise_margintop"
+                    android:gravity="left|center"
+                    android:text=""
+                    android:tag="@string/mdltag_general_practise"
+                    android:textColor="@color/mdliveLoginUsernameColor" />
+
+                <TextView
+                    android:id="@+id/callImg"
+                    style="@style/ProviderDetailsDoctorTxtStyle"
+                    android:gravity="end|right|center"
+                   android:visibility="gone"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/withPatient" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/DoctorTxtStyle"
+                android:visibility="visible"
+                android:textColor="@color/mdliveLoginUsernameColor"
+                android:layout_marginTop="@dimen/generalpractise_margintop"
+                android:text=""
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/group_affiliations"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View style="@style/ViewStyle"
+        />
+</LinearLayout>

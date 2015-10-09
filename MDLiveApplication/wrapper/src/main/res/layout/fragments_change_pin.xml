@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background_color"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_32_dp"
+    android:paddingBottom="@dimen/dimen_32_dp"
+    android:paddingLeft="@dimen/dimen_16_dp"
+    android:paddingRight="@dimen/dimen_16_dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_16_dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/passCode1"
+                android:layout_width="@dimen/dimen_24_dp"
+                android:layout_height="@dimen/dimen_24_dp"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:background="@drawable/edit_text_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+            <ToggleButton
+                android:id="@+id/passCode2"
+                android:layout_width="@dimen/dimen_24_dp"
+                android:layout_height="@dimen/dimen_24_dp"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:background="@drawable/edit_text_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+            <ToggleButton
+                android:id="@+id/passCode3"
+                android:layout_width="@dimen/dimen_24_dp"
+                android:layout_height="@dimen/dimen_24_dp"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:background="@drawable/edit_text_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+            <ToggleButton
+                android:id="@+id/passCode4"
+                android:layout_width="@dimen/dimen_24_dp"
+                android:layout_height="@dimen/dimen_24_dp"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:background="@drawable/edit_text_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+            <ToggleButton
+                android:id="@+id/passCode5"
+                android:layout_width="@dimen/dimen_24_dp"
+                android:layout_height="@dimen/dimen_24_dp"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:background="@drawable/edit_text_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+            <ToggleButton
+                android:id="@+id/passCode6"
+                android:layout_width="@dimen/dimen_24_dp"
+                android:layout_height="@dimen/dimen_24_dp"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:background="@drawable/edit_text_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textOff="@null"
+                android:textOn="@null"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etPasscode"
+            android:layout_width="230dp"
+            android:layout_height="@dimen/dimen_32_dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/transparent"
+            android:windowSoftInputMode="adjustPan">
+
+            <requestFocus/>
+        </EditText>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/fragment_change_pin_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_24_dp"
+        android:text="@string/mdl_please_create_a_6_digit_pin"
+        android:tag="@string/mdltag_please_create_a_6_digit_pin"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_16_dp"
+            android:text="@string/mdl_access_your_phone_using_pin"
+            android:tag="@string/mdltag_access_your_phone_using_pin"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dont_use_pin_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_24_dp"
+            android:text="@string/mdl_i_dont_want_to_use_pin"
+            android:tag="@string/mdltag_i_dont_want_to_use_pin"
+            android:textColor="@color/card_details_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_4_dp"
+            android:text="@string/mdl_you_can_enable_your_screen"
+            android:tag="@string/mdltag_you_can_enable_your_screen"
+            android:textColor="@color/grey_txt"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

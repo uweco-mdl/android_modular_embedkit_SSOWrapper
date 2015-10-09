@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mdlive.mobile">
+
+    <application android:allowBackup="true"
+        android:label="@string/mdl_app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/CustomTheme">
+
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyDQGOmEg_fXiWJ8YB9tDenNWHR7ghafcPM" />
+
+            <activity
+                    android:name=".SplashScreenActivity"
+                    android:label="@string/app_name"
+                    android:noHistory="true"
+                    android:screenOrientation="portrait" >
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+
+            <activity
+                    android:name=".MainActivity"
+                    android:screenOrientation="portrait" >
+            </activity>
+
+    </application>
+
+</manifest>

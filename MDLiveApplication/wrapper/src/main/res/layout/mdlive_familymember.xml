@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        style="@style/ContainerStyle"
+        android:background="@color/mdliveBottomBlueColor">
+
+        <LinearLayout
+            style="@style/wagHeaderLinearLayoutStyle"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backImg"
+                style="@style/HeaderBackImgStyle"
+                android:layout_gravity="center"
+                android:onClick="onBackClicked" />
+
+            <TextView
+                android:id="@+id/headerTxt"
+                style="@style/HeaderTextViewStyle"
+                android:layout_marginLeft="@dimen/headerAddChildTxt_leftmargin"
+                android:text="@string/mdl_add_child"
+                android:tag="add_child" />
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/ScrollViewStyle"
+            android:background="@color/mdliveBottomBlueColor">
+
+            <LinearLayout
+                android:id="@+id/providerNameLl"
+                style="@style/LinearLayoutStyle"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/BaseSubHeaderTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/headerChildAgeTxt_leftmargin"
+                    android:text="@string/mdl_child_must_be_younger_than"
+                    android:tag="child_must_be_younger_than"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_large" />
+
+                <LinearLayout
+                    style="@style/WagParentLinearLayoutStyle"
+                    android:layout_marginLeft="@dimen/Linearlayoutt_leftmargin"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/patientLl"
+                            style="@style/WagLinearLayoutStyle"
+                            android:layout_marginLeft="@dimen/AddChildText_leftmargin"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:text="@string/mdl_first_name"
+                                android:tag="first_name"/>
+
+                            <EditText
+                                android:id="@+id/patientEt"
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:background="@color/transparent_native"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_large"
+                                />
+
+                            <View
+                                style="@style/ViewStyle"
+                                android:layout_marginTop="@dimen/Linearlayoutt_leftmargin" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/patientL2"
+                            style="@style/WagLinearLayoutStyle"
+                            android:layout_marginLeft="@dimen/AddChildText_leftmargin"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:text="@string/mdl_last_name"
+                                android:tag="last_name"/>
+
+                            <EditText
+                                android:id="@+id/lastNamePatientEt"
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:background="@color/transparent_native"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_large" />
+
+                            <View
+                                style="@style/ViewStyle"
+                                android:layout_marginTop="@dimen/addChildView_margin" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/dobLl"
+                            style="@style/WagLinearLayoutStyle"
+                            android:layout_marginLeft="@dimen/AddChildText_leftmargin"
+                            android:onClick="onDateOfBirthClicked"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:text="@string/mdl_date_of_birth"
+                                android:tag="date_of_birth"/>
+
+                            <TextView
+                                android:id="@+id/dobTxt"
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:hint="@string/mdl_date_of_birth_hint"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_large" />
+                            />
+
+                            <View
+                                style="@style/ViewStyle"
+                                android:layout_marginTop="@dimen/addChildView_margin" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/genderLl"
+                            style="@style/WagLinearLayoutStyle"
+                            android:layout_marginLeft="@dimen/AddChildText_leftmargin"
+                            android:onClick="onGenderClicked"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/GetStartedHeaderContentStyle"
+                                android:text="@string/mdl_Gender"
+                                android:tag="Gender"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/genderTxt"
+                                    style="@style/GetStartedContentTxtStyle"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_large" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/dropdown_icon" />
+                            </RelativeLayout>
+                            />
+
+                            <View
+                                style="@style/ViewStyle"
+                                android:layout_marginTop="@dimen/addChildView_margin" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/locationLl"
+                            style="@style/LinearLayoutStyle"
+                            android:layout_marginLeft="@dimen/Linearlayoutt_leftmargin"
+                            android:layout_marginTop="@dimen/toggleChildView_marginTop"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/mySwitch"
+                                style="@style/addChildSwitchStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:checked="false"
+                                android:gravity="left|center"
+                                android:text="@string/mdl_i_michelle_text"
+                                android:tag="i_michelle_text"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addChildBtn"
+                    style="@style/ContinueButtonStyle"
+                    android:onClick="onAddChildButtonClicked"
+                    android:text="@string/mdl_add_child"
+                    android:tag="add_child"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <include layout="@layout/custom_progress_dialog" />
+</merge>

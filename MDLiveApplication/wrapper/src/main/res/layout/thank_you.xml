@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/ContainerStyle"
+        android:background="@color/mdliveBottomBlueColor">
+
+        <include android:id="@+id/toolbar"
+            layout="@layout/toolbar_help_support"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                style="@style/ContainerStyle"
+                android:background="@color/choose_pharmacy_background"
+                android:padding="@dimen/dimen_10_dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/choose_pharmacy_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mdl_thankyou_txt"
+                        android:tag="@string/mdltag_thankyou_txt"
+                        android:textColor="@color/darkblack"
+                        android:textSize="23sp" />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:src="@drawable/tick_in_green_circle" />
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="4dp">
+
+                        <LinearLayout
+                            style="@style/common_style_W_Match_H_Match_O_Vertical">
+
+                            <TextView
+                                style="@style/myChangeProfileInfoTitleTextStyle"
+                                android:text="@string/mdl_appointment_details"
+                                android:tag="@string/mdltag_appointment_details"
+                                android:background="@color/darkgrey_background" />
+
+                            <TextView
+                                android:id="@+id/provider"
+                                style="@style/myChangeProfileInfoTextStyle"
+                                android:layout_marginTop="14dp"
+                                android:text="Provider:" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                style="@style/myChangeProfileInfoTextStyle"
+                                android:layout_marginTop="2dp"
+                                android:text="Date:" />
+
+                            <TextView
+                                android:id="@+id/time"
+                                style="@style/myChangeProfileInfoTextStyle"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Time:" />
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        style="@style/common_style_W_Match_H_Match_O_Vertical"
+                        android:padding="8dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mdl_cancellation_information"
+                            android:tag="@string/mdltag_cancellation_information"
+                            android:textColor="@color/unread_text_color"
+                            android:textSize="17sp"
+                            android:fontFamily="sans-serif"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mdl_cancellation_instructions"
+                            android:tag="@string/mdltag_cancellation_instructions"
+                            android:textColor="@color/read_text_color"
+                            android:textSize="17sp"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"/>
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end"/>
+
+    </android.support.v4.widget.DrawerLayout>
+</merge>

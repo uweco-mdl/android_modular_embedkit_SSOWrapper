@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Get_Started_Field_Style"
+    android:baselineAligned="false"
+    android:paddingRight="8dp"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <com.mdlive.embedkit.uilayer.sav.CircularNetworkImageView
+        android:id="@+id/ProfileImglist"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/dimen_4_dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dash_board_doctor_icon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+          />
+
+    <RelativeLayout
+        android:id="@+id/layoutDoctorDetails"
+        style="@style/common_style_W_Match_M_Wrap"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ProfileImglist">
+
+        <TextView
+            android:id="@+id/PatientName"
+            style="@style/chooseProviderTextStyle"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/video_call_icon"
+            android:layout_toStartOf="@+id/video_call_icon" />
+
+        <ImageButton
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:id="@+id/video_call_icon"
+            android:layout_gravity="right"
+            android:background="@color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/group_affiliations"
+        style="@style/chooseProviderTextStyle"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@id/ProfileImglist"
+        android:layout_below="@id/layoutDoctorDetails"
+        android:textSize="14sp"
+        android:layout_alignRight="@+id/layoutDoctorDetails"
+        android:layout_alignEnd="@+id/layoutDoctorDetails" />
+
+    <TextView
+        android:id="@+id/specalist"
+        style="@style/chooseProviderTextStyle"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@id/ProfileImglist"
+        android:layout_alignBottom="@id/ProfileImglist"
+        android:layout_marginBottom="5dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/Availabilty_TextColor_green"
+        android:textSize="14sp"
+        android:layout_alignRight="@+id/layoutDoctorDetails"
+        android:layout_alignEnd="@+id/layoutDoctorDetails" />
+
+</RelativeLayout>

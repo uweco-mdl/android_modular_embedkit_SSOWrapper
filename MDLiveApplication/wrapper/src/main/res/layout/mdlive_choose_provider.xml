@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle"
+    android:background="@color/mdliveBottomBlueColor">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/HeaderBackImgStyle"
+            android:id="@+id/backImg"
+            />
+
+        <ImageView
+            style="@style/HeaderHomeImgStyle"
+            android:id="@+id/homeImg"
+            android:layout_marginLeft="@dimen/chooseproviderhomeheader_marginLeft"
+            android:layout_toRightOf="@+id/backImg"
+            android:onClick="movetohome"
+            />
+
+        <TextView
+            android:id="@+id/headerTxt"
+            style = "@style/HeaderTextViewStyle"
+            android:text="@string/mdl_choose_doctor"
+            android:tag="@string/mdltag_choose_doctor" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/providerBgdLinearLayoutStyle"
+        android:id="@+id/docOnCalLinLay"
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        android:background="@color/white"
+        >
+        <com.android.volley.toolbox.NetworkImageView
+            style="@style/DoctorOnCallImgViewStyle"
+            android:id="@+id/ProfileImg"
+            android:layout_height="@dimen/chooseproviderdoctoroncallImg_height"
+            android:layout_width="@dimen/chooseproviderdoctoroncallImg_width"
+            android:layout_marginTop="@dimen/margin_top"
+            android:background="@drawable/doctor_icon"
+            />
+
+        <TextView
+            style="@style/HeaderAvailableDoctorTxtStyle"
+            android:id="@+id/PatientName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_large"
+            android:text="@string/mdl_doctor_on_call"
+            android:tag="@string/mdltag_doctor_on_call"
+            />
+
+        <TextView
+            style="@style/DoctorTxtStyle"
+            android:text="@string/mdl_averagewait"
+            android:tag="@string/mdltag_averagewait"
+            android:textSize="@dimen/textsize_large"
+            android:gravity="center"
+            android:textColor="@color/search_bgd"
+            android:id="@+id/Time"/>
+
+        <Button
+            android:id="@+id/seenextAvailableBtn"
+            style="@style/ContinueButtonStyle"
+            android:text="@string/mdl_seedoctoroncall_btn"
+            android:tag="@string/mdltag_seedoctoroncall_btn"
+            android:layout_marginTop="@dimen/addChildView_margin"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loadingTxt"
+        style="@style/common_style_W_Wrap_H_Wrap"
+        android:text="@string/mdl_locating_available_doctors"
+        android:tag="@string/mdltag_locating_available_doctors"
+        android:layout_below="@id/docOnCalLinLay"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/filterMainRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chooseproviderfilterll_height"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_below="@id/docOnCalLinLay"
+        android:background="@color/mdliveBottomBlueColor"
+        >
+
+        <TextView
+            android:text="@string/mdl_chooseotherdoctor"
+            android:tag="@string/mdltag_chooseotherdoctor"
+            style="@style/BaseAvailableDoctorTxtStyle"
+            android:gravity="left|center"
+            android:textSize="@dimen/textsize_large"
+            android:textColor="@color/search_bgd"
+            android:layout_marginLeft="@dimen/chooseotherdoctor_marginleft"
+            android:layout_centerVertical="true"
+            android:id="@+id/txtFilter" />
+
+        <TextView
+            style="@style/BaseAvailableDoctorTxtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mdl_filter_txt"
+            android:tag="@string/mdltag_filter_txt"
+            android:layout_marginRight="@dimen/choosefilterlayout_marginbottom"
+            android:textSize="@dimen/textsize_large"
+            android:textColor="@color/mdlivePrimaryBlueColor"
+            android:id="@+id/filterTxt"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_below="@id/filterMainRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:id="@+id/chooseProviderList"
+        />
+
+    <include
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Footer_Style"
+        android:layout_alignParentBottom="true"
+        layout="@layout/mdlive_footer" />
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        layout="@layout/custom_progress_bar"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mdliveBottomBlueColor"
+        >
+        <include
+            layout="@layout/custom_progress_bar"
+            />
+    </RelativeLayout>
+</RelativeLayout>

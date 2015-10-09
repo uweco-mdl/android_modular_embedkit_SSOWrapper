@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle">
+
+
+    <TextView
+        android:id="@+id/titleMedication"
+        style="@style/titleHeaderBackgroundStyle" />
+
+    <RelativeLayout
+        style="@style/common_style_W_Match_H_Match_O_Vertical"
+        android:background="@drawable/pharmacy_line_bg">
+
+        <Button
+            android:id="@+id/addMedicationButton"
+            style="@style/ContinueButtonStyle"
+            android:layout_alignParentBottom="true"
+            android:text=" "></Button>
+
+        <LinearLayout
+            style="@style/common_style_W_Match_H_Match_O_Vertical"
+            android:layout_above="@+id/addMedicationButton"
+            android:background="@drawable/pharmacy_line_bg"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+
+            <AutoCompleteTextView
+                style="@style/common_style_W_Match_M_Wrap"
+                android:background="@drawable/edittext_bg"
+                android:padding="10dp"
+                android:hint="@string/mdl_add_medication_hint"
+                android:tag="@string/mdltag_add_medication_hint"
+                android:id="@+id/medicationName" />
+
+            <EditText
+                style="@style/common_style_W_Match_M_Wrap"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_bg"
+                android:id="@+id/dosageText"
+                android:padding="10dp"
+                android:hint="@string/mdl_dosage"
+                android:tag="@string/mdltag_dosage"/>
+
+            <LinearLayout
+                style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    style="@style/common_style_W_Zero_H_Match"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="60"
+                    android:background="@drawable/edittext_bg"
+                    android:id="@+id/modeLayout">
+
+                    <TextView
+                        android:id="@+id/doseTimesText"
+                        style="@style/GetStartedContentTxtStyle"
+                        android:editable="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/mdl_once"
+                        android:tag="@string/mdltag_once"/>
+
+                    <ImageView style="@style/ProviderDownSearchImgStyle" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/common_style_W_Zero_H_Match"
+                    android:layout_weight="40"
+                    android:background="@drawable/edittext_bg"
+                    android:id="@+id/sessionLayout">
+
+                    <TextView
+                        android:id="@+id/doseSessionText"
+                        style="@style/GetStartedContentTxtStyle"
+                        android:editable="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/mdl_hourly"
+                        android:tag="@string/mdltag_hourly"/>
+
+                    <ImageView style="@style/ProviderDownSearchImgStyle" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

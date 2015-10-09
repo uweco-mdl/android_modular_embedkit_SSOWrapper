@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/common_style_W_Match_H_Match_O_Vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/mdlive_toolbar" />
+
+        <ScrollView
+            style="@style/common_style_W_Match_M_Match_view_port"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout style="@style/common_style_W_Match_H_Match_O_Vertical">
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/myChangeProfileInfoLayoutStyle"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp">
+
+                    <LinearLayout style="@style/common_style_W_Match_H_Wrap_O_Vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/darkgrey_background"
+                            android:gravity="center"
+                            android:text="@string/mdl_appointment_details"
+                            android:tag="@string/mdltag_appointment_details"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout style="@style/common_style_W_Match_H_Wrap_O_Vertical">
+
+                            <com.mdlive.embedkit.uilayer.sav.CircularNetworkImageView
+                                android:id="@+id/imgProfilePic"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="20dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/profilepic" />
+
+                            <TextView
+                                android:id="@+id/txtProfileName"
+                                style="@style/myProfileTextStyle"
+                                android:layout_marginTop="50dp"
+                                android:layout_toRightOf="@id/imgProfilePic"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtproviderType"
+                                style="@style/myProfileTextStyle"
+                                android:layout_below="@id/txtProfileName"
+                                android:layout_marginTop="0dp"
+                                android:layout_toRightOf="@id/imgProfilePic" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtConsultationtype"
+                            style="@style/phone_consultation_text"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/mdl_phone_consultation"
+                            android:tag="@string/mdltag_phone_consultation" />
+
+                        <TextView
+                            android:id="@+id/txtDate"
+                            style="@style/phone_consultation_text"
+                            android:layout_marginBottom="0dp" />
+
+                        <TextView
+                            android:id="@+id/txtTime"
+                            style="@style/phone_consultation_text"
+                            android:layout_marginBottom="0dp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/myChangeProfileInfoLayoutStyle"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp">
+
+                    <FrameLayout style="@style/common_style_W_Match_H_Wrap">
+
+                        <TextView
+                            style="@style/appointment_text_style"
+                            android:padding="5dp"
+                            android:layout_gravity="left"
+                            android:tag="@string/mdltag_phone_to_call"
+                            android:text="@string/mdl_phone_to_call" />
+
+                        <TextView
+                            android:id="@+id/phoneNumber"
+                            android:padding="5dp"
+                            style="@style/appointment_text_style"
+                            android:layout_gravity="right" />
+
+                    </FrameLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/myChangeProfileInfoLayoutStyle"
+                    app:cardBackgroundColor="@color/white"
+                    android:padding="5dp"
+                    app:cardCornerRadius="4dp">
+
+                    <FrameLayout style="@style/common_style_W_Match_H_Wrap">
+
+                        <TextView
+                            style="@style/appointment_text_style"
+                            android:layout_gravity="left"
+                            android:padding="5dp"
+                            android:tag="@string/mdltag_doctor_visit"
+                            android:text="@string/mdl_doctor_visit" />
+
+                        <TextView
+                            android:id="@+id/amountInDollar"
+                            android:padding="5dp"
+                            style="@style/appointment_text_style"
+                            android:layout_gravity="right" />
+
+                    </FrameLayout>
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    style="@style/common_style_W_Match_H_Wrap"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:paddingLeft="11dp">
+
+                    <TextView
+                        style="@style/appointment_text_style"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:tag="@string/mdltag_do_you_have_primary_care"
+                        android:text="@string/mdl_do_you_have_primary_care" />
+
+                    <LinearLayout
+                        style="@style/common_style_W_Wrap_H_Wrap_o_Horizontal"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="17dp">
+
+
+                        <RadioGroup
+                            android:id="@+id/conditionsGroup"
+                            style="@style/common_style_W_Wrap_H_Wrap_o_Horizontal">
+
+                            <RadioButton
+                                android:id="@+id/yesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginRight="9dp"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes"/>
+
+                            <RadioButton
+                                android:id="@+id/noButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/start_visit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/search_pvr_blue_color"
+            android:clickable="true"
+            android:onClick="rightBtnOnClick"
+            android:text="@string/mdl_confirm_appointment_txt"
+            android:tag="@string/mdltag_confirm_appointment_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/dash_board__left_container"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start" />
+
+
+    <FrameLayout
+        android:id="@+id/dash_board__right_container"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|end" />
+</android.support.v4.widget.DrawerLayout>

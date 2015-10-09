@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        style="@style/common_style_W_Wrap_H_Wrap"
+        >
+
+        <com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView
+            android:id="@+id/imgMemberPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profilepic" />
+
+        <TextView
+            android:id="@+id/txtMemberName"
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:layout_toRightOf="@id/imgMemberPic"
+            android:textColor="@color/darkgreyTextColor"
+            android:layout_marginTop="16dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtMemberType"
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:textColor="@color/darkgreyTextColor"
+            android:layout_below="@id/txtMemberName"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/imgMemberPic"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

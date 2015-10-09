@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/ContainerStyle"
+        android:background="#EEF2F7">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/ContainerScrollView"
+            style="@style/ScrollViewStyle"
+            android:layout_marginBottom="12dp"
+            android:paddingTop="10dp"
+            android:clipToPadding="false"
+            android:background="#EEF2F7"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#EEF2F7"
+                android:orientation="vertical">
+
+                <!--<com.mdlive.com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv-->
+
+
+                <!--style="@style/SubHeaderTextViewStyle"-->
+
+
+                <!--android:text="@string/getStarted">-->
+
+
+                <!--</com.mdlive.com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv>-->
+                <LinearLayout
+                    android:id="@+id/UpdateInfoWindow"
+                    style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/updateInfoText"
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:text="@string/mdl_last_update"
+                        android:tag="@string/mdltag_last_update"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/PediatricAgeCheck1"
+                    style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/PediatricChecks"
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:tag="@string/mdltag_age_check1"
+                        android:text="@string/mdl_age_check1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/pediatricAgeGroup1"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/perdiatric1YesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes"/>
+
+                            <RadioButton
+                                android:id="@+id/perdiatric1NoButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<View style="@style/MyhealthViewStyle"
+                    android:id="@+id/age_chk_line2"
+                    android:visibility="gone"/>-->
+
+
+                <LinearLayout
+                    android:id="@+id/PediatricAgeCheck2"
+                    style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/PediatricCheck"
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:tag="@string/mdltag_age_check2"
+                        android:text="@string/mdl_age_check2" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/pediatricAgeGroup2"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/perdiatric2YesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes" />
+
+                            <RadioButton
+                                android:id="@+id/perdiatric2NoButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MyHealthConditionChoiceLl"
+                    style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:tag="@string/mdltag_my_health_preexisting"
+                        android:text="@string/mdl_my_health_preexisting" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/conditionsGroup"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/conditionYesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes" />
+
+                            <RadioButton
+                                android:id="@+id/conditionNoButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:id="@+id/pediatric_cardview"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/card_margin">
+                <RelativeLayout
+                    android:id="@+id/PediatricLayoutLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:onClick="pediatricOnClick"
+                    android:visibility="visible">
+                    <!--<item name="android:layout_width">match_parent</item>
+                    <item name="android:layout_height">wrap_content</item>-->
+                    <LinearLayout
+                        android:id="@+id/pediatriclinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_pediatric"
+                                android:id="@+id/pediatric_icon"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                            <TextView
+                                style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:text="@string/mdl_pediatric_profile"
+                                android:tag="@string/mdltag_pediatric_profile"
+                                android:textSize="@dimen/medical_history_text_size"
+                                android:layout_toRightOf="@+id/pediatric_icon"
+                                android:id="@+id/textView11"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/PediatricNameTv"
+                            style="@style/MyhealthListLayoutSubSubTextStyle"
+                            android:layout_width="match_parent"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:tag="@string/mdltag_pediatric_notcompleted_txt"
+                            android:text="@string/mdl_pediatric_notcompleted_txt" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+                <RelativeLayout
+                    android:id="@+id/MyHealthConditionsLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:onClick="MyHealthConditionsLlOnClick"
+                    android:visibility="visible">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/pre_existing_condition"
+                                android:id="@+id/editConditionsTxt"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                            <TextView
+                                style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:text="@string/mdl_health_conditions"
+                                android:tag="@string/mdltag_health_conditions"
+                                android:id="@+id/health_cond_tv"
+                                android:textSize="@dimen/medical_history_text_size"
+                                android:layout_toRightOf="@+id/editConditionsTxt"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/MyHealthConditionsNameTv"
+                            style="@style/MyhealthListLayoutSubSubTextStyle"
+                            android:layout_width="match_parent"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:singleLine="true"
+                            android:tag="@string/mdltag_no_conditions_reported"
+                            android:text="@string/mdl_no_conditions_reported"  />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/MyHealthMedicationsLl"
+                    style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:tag="@string/mdltag_my_health_medications"
+                        android:text="@string/mdl_my_health_medications" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/medicationsGroup"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/medicationsYesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:checked="false"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes" />
+
+                            <RadioButton
+                                android:id="@+id/medicationsNoButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+                    <RelativeLayout
+                        android:id="@+id/MedicationsLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="MedicationsLlOnClick"
+                        android:visibility="visible">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:src="@drawable/ic_medications"
+                                    android:id="@+id/editMedicationsTxt"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                                <TextView
+                                    style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/mdl_medications"
+                                    android:tag="@string/mdltag_medications"
+                                    android:id="@+id/medications_tv"
+                                    android:textSize="@dimen/medical_history_text_size"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_toRightOf="@+id/editMedicationsTxt"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/MedicationsNameTv"
+                                style="@style/MyhealthListLayoutSubSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="@string/mdl_no_medications_reported"
+                                android:tag="@string/mdltag_no_medications_reported"/>
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/MyHealthAllergiesLl"
+                    style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/Primary_txt"
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:tag="@string/mdltag_my_health_allergies"
+                        android:text="@string/mdl_my_health_allergies" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/allergiesGroup"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/allergiesYesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes" />
+
+                            <RadioButton
+                                android:id="@+id/allergiesNoButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+                    <RelativeLayout
+                        android:id="@+id/AllergiesLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="AllergiesLlOnClick"
+                        android:visibility="visible">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_allergy"
+                                    android:id="@+id/editAllergiesTxt"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                                <TextView
+                                    style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/mdl_allergies"
+                                    android:tag="@string/mdltag_allergies"
+                                    android:id="@+id/allergy_tv"
+                                    android:textSize="@dimen/medical_history_text_size"
+                                    android:layout_toRightOf="@+id/editAllergiesTxt"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/AlergiesNameTv"
+                                android:text="@string/mdl_no_allergies_reported"
+                                android:tag="@string/mdltag_no_allergies_reported"
+                                style="@style/MyhealthListLayoutSubSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:ellipsize="end"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/MyHealthProceduresLl"
+                    style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/Procedure_primary_txt"
+                        style="@style/BaseTextViewStyle.MyhealthContentStyle"
+                        android:tag="@string/mdltag_my_health_procedures"
+                        android:text="@string/mdl_my_health_procedures" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/proceduresGroup"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/proceduresYesButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:text="@string/mdl_yes"
+                                android:tag="@string/mdltag_yes" />
+
+                            <RadioButton
+                                android:id="@+id/proceduresNoButton"
+                                style="@style/YesNoRadioButtonStyle"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/mdl_no"
+                                android:tag="@string/mdltag_no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+                    <RelativeLayout
+                        android:id="@+id/ProceduresLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="ProceduresLlOnClick"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_procedure"
+                                    android:id="@+id/editProcedureTxt"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                                <TextView
+                                    style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/mdl_procedures"
+                                    android:tag="@string/mdltag_procedures"
+                                    android:id="@+id/procedure_tv"
+                                    android:textSize="@dimen/medical_history_text_size"
+                                    android:layout_toRightOf="@+id/editProcedureTxt"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/ProceduresNameTv"
+                                android:text="@string/mdl_no_procedures_reported"
+                                android:tag="@string/mdltag_no_procedures_reported"
+                                style="@style/MyhealthListLayoutSubSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:ellipsize="end"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:visibility="gone"
+                    android:id="@+id/BehaviouralHealthCardView"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/BehaviouralHealthLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="BehaviouralHealthLlOnClick"
+                        >
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_behavioural_history"
+                                    android:id="@+id/editBehaviouralHealthTxt"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                                <TextView
+                                    style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/mdl_behavioural_health_history"
+                                    android:tag="@string/mdltag_behavioural_health_history"
+                                    android:id="@+id/beh_health_tv"
+                                    android:textSize="@dimen/medical_history_text_size"
+                                    android:layout_toRightOf="@+id/editBehaviouralHealthTxt"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/BehaviouralHealthTv"
+                                android:text="@string/mdl_pediatric_notcompleted_txt"
+                                android:tag="@string/mdltag_pediatric_notcompleted_txt"
+                                style="@style/MyhealthListLayoutSubSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:ellipsize="end"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:id="@+id/LifestyleCardView"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/LifestyleLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="LifestyleLlOnClick"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_lifestyle"
+                                    android:id="@+id/editLifestyleTxt"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                                <TextView
+                                    style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/mdl_LifeStyle"
+                                    android:tag="@string/mdltag_LifeStyle"
+                                    android:id="@+id/life_style_tv"
+                                    android:textSize="@dimen/medical_history_text_size"
+                                    android:layout_toRightOf="@+id/editLifestyleTxt"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/LifestyleTv"
+                                android:text="@string/mdl_pediatric_notcompleted_txt"
+                                android:tag="@string/mdltag_LifeStyle"
+                                style="@style/MyhealthListLayoutSubSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:ellipsize="end"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+                    <RelativeLayout
+                        android:id="@+id/FamilyHistoryLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="familyHistoryOnClick"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_family_history"
+                                    android:id="@+id/FamilyHistoryIv"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/medical_history_dimen_eight"/>
+
+                                <TextView
+                                    style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/mdl_family_history_txt"
+                                    android:tag="@string/mdltag_family_history_txt"
+                                    android:id="@+id/family_hist_tv"
+                                    android:textSize="@dimen/medical_history_text_size"
+                                    android:layout_toRightOf="@+id/FamilyHistoryIv"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/FamilyHistoryTv"
+                                android:text="@string/mdl_pediatric_notcompleted_txt"
+                                android:tag="@string/mdltag_pediatric_notcompleted_txt"
+                                style="@style/MyhealthListLayoutSubSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:ellipsize="end"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+                    <RelativeLayout
+                        android:id="@+id/MyRecordsLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        android:onClick="myRecordsOnClick"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout8"
+                            style="@style/BaseTextViewStyle.MyhealthChoiceBtnStyle"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="0dp">
+                            <ImageView
+                                android:id="@+id/editMyRecordsTxt"
+                                style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                android:layout_height="25dp"
+                                android:layout_width="25dp"
+                                android:src="@drawable/ic_myrecords"
+                                />
+                            <TextView
+                                style="@style/BaseTextViewStyle.MyhealthListLayoutSubTextStyle"
+                                android:layout_width="match_parent"
+                                android:text="@string/mdl_my_record"
+                                android:tag="@string/mdltag_my_record"
+                                android:padding="5dp"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/MyRecordsTv"
+                            style="@style/MyhealthListLayoutSubSubTextStyle"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="10dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:layout_below="@+id/linearLayout8"
+                            android:visibility="gone"
+                            android:text="@string/mdl_pediatric_notcompleted_txt"
+                            android:tag="@string/mdltag_pediatric_notcompleted_txt" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <Button
+                    android:id="@+id/SavContinueBtn"
+                    android:onClick="SavContinueBtnOnClick"
+                    style="@style/MedicalContinueButtonStyle"
+                    android:visibility="gone"
+                    android:tag="@string/mdltag_next_btn"
+                    android:text="@string/mdl_next_btn" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>

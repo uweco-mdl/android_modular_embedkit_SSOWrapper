@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle">
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:orientation="horizontal">
+
+        <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+            style = "@style/HeaderTextViewStyle"
+            android:text="@string/mdl_add_family_member_txt"
+            android:tag="@string/mdltag_add_family_member_txt"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_bg"
+        android:layout_margin="10dp"
+        android:id="@+id/AddFamilyLl"
+        style="@style/LinearLayoutStyle">
+
+        <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+            style = "@style/GetStartedContentTxtStyle"
+            android:id="@+id/addFanilyTxtView"
+            android:text="@string/mdl_add_family_text"
+            android:tag="@string/mdltag_add_family_text"/>
+
+        <ImageView
+            style="@style/ProviderSearchImgStyle"
+            android:id="@+id/addFamily_img" />
+    </LinearLayout>
+
+</LinearLayout>

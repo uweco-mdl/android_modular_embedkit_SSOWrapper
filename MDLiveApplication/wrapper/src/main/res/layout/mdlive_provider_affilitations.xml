@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/LinearLayoutStyle"
+    >
+    <LinearLayout
+        android:id="@+id/providerImageHolder"
+       style="@style/DoctorLinearLayoutStyle"
+        android:background="@drawable/edittext_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ProviderDetailHeaderStyle"
+            android:text="@string/mdl_hospital_affilations"
+            android:tag="@string/mdltag_hospital_affiliations"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:background="#fff1f5f8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0_dp"
+            android:layout_weight="1"
+            android:background="@drawable/banner"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dimen_toolbar_height"
+                    android:layout_marginBottom="@dimen/dashboard_user_spinner_margin_bottom"
+                    android:orientation="vertical">
+
+                    <!--<com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView-->
+                    <!--android:id="@+id/dash_board_circular_image_view"-->
+                    <!--android:layout_width="@dimen/dimen_64_dp"-->
+                    <!--android:layout_height="@dimen/dimen_64_dp"-->
+                    <!--android:src="@null"-->
+                    <!--android:scaleType="centerCrop"/>-->
+
+                    <Spinner
+                        android:id="@+id/dash_board_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dashboard_user_spinner_height"
+                        android:background="@null"
+                        android:dropDownVerticalOffset="@dimen/spinner_drop_down_offset"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <include android:id="@+id/dash_board_notification_layout"
+                    layout="@layout/include_dash_board_notification"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.01"
+                android:background="#fff1f5f8"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_16_dp"
+                android:paddingBottom="@dimen/dimen_16_dp">
+                <include
+                    layout="@layout/home_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/dash_board_email_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_38_dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_38_dp"
+            android:orientation="horizontal"
+            android:background="@color/red_theme_primary"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/mdl_email_unconfirmed"
+                android:tag="@string/mdltag_email_unconfirmed"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:onClick="onEmailUnconfirmClicked"
+                android:drawableLeft="@drawable/notification_alert_icon"
+                android:drawablePadding="@dimen/dimen_8_dp"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

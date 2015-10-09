@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+// VSee repository credentials setup
+
+repositories {
+    maven {
+        credentials {
+            username 'uweco'
+            password '903fdbf83488be99797a7757429240ca4f3a2619'
+        }
+        url 'http://dl.bintray.com/vsee/android'
+    }
+    maven {
+        url "https://repo.commonsware.com.s3.amazonaws.com"
+    }
+    maven {
+        url "http://dl.bintray.com/populov/maven"
+    }
+    jcenter()
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.mdlive.mobile"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+android.packagingOptions {
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/NOTICE'
+    exclude 'version.properties'
+}
+dependencies {
+    // this is the Theming placeholder:
+    compile project(':wrapper')
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:support-v13:23.0.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.google.android.gms:play-services-maps:7.8.0'
+
+    compile(name: 'embedkit', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+
+    compile('com.vsee:vsee-kit:0.3.20524@aar') {
+        transitive = true
+    }
+
+    //this section ensures that the .AAR can be located
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}

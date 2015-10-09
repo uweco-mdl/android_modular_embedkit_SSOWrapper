@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mdliveBottomBlueColor"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/mdliveBottomBlueColor"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout style="@style/ContainerStyle">
+
+                    <LinearLayout
+                        style="@style/wagHeaderLinearLayoutStyle"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/txtCancelPending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:onClick="cancelVisit"
+                            android:text="@string/mdl_cancel"
+                            android:tag="@string/mdltag_cancel"
+                            android:textAllCaps="false"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="40dp"
+                            android:text="@string/mdl_consultation_header"
+                            android:tag="@string/mdltag_consultation_header"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/mdl_welcome_back"
+                        android:tag="@string/mdltag_welcome_back"
+                        android:textSize="18sp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mdl_resume_saved_consultation"
+                        android:tag="@string/mdltag_resume_saved_consultation"
+                        android:textSize="18sp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/mdl_consultation_info"
+                        android:tag="@string/mdltag_consultation_info"
+                        android:textSize="18sp"
+                        android:textColor="#555555" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtpatientLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/mdl_patient"
+                            android:tag="@string/mdltag_patient"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"  />
+                        <TextView
+                            android:id="@+id/txtPendingPatientName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/txtpatientLabel"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="20dp"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtReasonLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/mdl_reason"
+                            android:tag="@string/mdltag_reason"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:id="@+id/txtPendingReason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/txtReasonLabel"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtDoctorLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/mdl_doctor"
+                            android:tag="@string/mdltag_doctor"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txtPendingDoctorName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/txtDoctorLabel"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/mdl_choosen_pharmacy_upper"
+                        android:tag="@string/mdltag_choosen_pharmacy_upper"
+                        android:textColor="#555555"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtPharmacyAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/resumeConsultationBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn_rounded_bg"
+                        android:text="@string/mdl_resume_consultation_txt"
+                        android:tag="@string/mdltag_resume_consultation_txt"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-medium" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/mdliveBottomBlueColor">
+                    <include
+                        style="@style/Footer_Style"
+                        layout="@layout/mdlive_footer" />
+                        </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/custom_progress_dialog" />
+</merge>

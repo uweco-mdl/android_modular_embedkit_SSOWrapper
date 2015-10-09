@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle"
+    android:background="#EEF2F7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_8_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/mdl_behaviouralhealth_question_one"
+                android:tag="@string/mdltag_behaviouralhealth_question_one"
+                android:textColor="@color/ReasonForVisit_TextColor_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mdlive_behavioural_histroy_conditions"
+                android:orientation="vertical"></LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray_c" />
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BaseTextViewStyle.MyhealthBehavoiralContentStyle"
+                    android:text="@string/mdl_behaviouralhealth_question_two"
+                    android:tag="@string/mdltag_behaviouralhealth_question_two"
+                    android:textSize="14sp"
+                    android:textColor="@color/ReasonForVisit_TextColor_black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/behavioural_health_hospitalized_radio_group"
+                        style="@style/BaseTextViewStyle.MyhealthBehaviourChoiceBtnStyle"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/behavioural_health_hospitalized_yes_radio_button"
+                            style="@style/YesNoRadioButtonStyle"
+                            android:text="@string/mdl_yes"
+                            android:tag="@string/mdltag_yes" />
+
+                        <RadioButton
+                            android:id="@+id/behavioural_health_hospitalized_no_radio_button"
+                            style="@style/YesNoRadioButtonStyle"
+                            android:layout_marginLeft="@dimen/medical_history_margin_ten"
+                            android:text="@string/mdl_no"
+                            android:tag="@string/mdltag_no" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray_c" />
+            <LinearLayout
+                style="@style/Choose_Pharmacy_Search_Field"
+                android:layout_width="wrap_content"
+                android:id="@+id/behavoural_when_ll"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/searchPharmacyLabelStyle"
+                    android:text="@string/mdl_behaviouralhealth_question_three"
+                    android:tag="@string/mdltag_behaviouralhealth_question_three"
+                    android:textColor="@color/darkgreyTextColor" />
+
+                <TextView
+                    android:id="@+id/mdlive_behavioural_histroy_when_text_view"
+                    style="@style/SelectStateCommonStyle"
+                    android:drawableRight="@drawable/dropdown_icon"
+                    android:onClick="chooseStateOnClick"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Choose_Pharmacy_Search_Field"
+                android:layout_width="wrap_content"
+                android:id="@+id/behavoural_how_long_ll"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/searchPharmacyLabelStyle"
+                    android:text="@string/mdl_behaviouralhealth_question_four"
+                    android:tag="@string/mdltag_behaviouralhealth_question_four"
+                    android:textColor="@color/darkgreyTextColor" />
+
+                <EditText
+                    android:id="@+id/mdlive_behavioural_histroy_how_long_text_view"
+                    style="@style/SelectStateCommonStyle"
+                    android:hint="@string/mdl_behaviouralhealthhistory_dummy_duration"
+                    android:tag="@string/mdltag_behaviouralhealthhistory_dummy_duration"
+                    android:textColor="@color/darkgreyTextColor" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/mdl_behaviouralhealth_question_five"
+                android:tag="@string/mdltag_behaviouralhealth_question_five"
+                android:textColor="@color/ReasonForVisit_TextColor_black"/>
+
+            <LinearLayout
+                android:id="@+id/mdlive_behavioural_family_histroy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray_c" />
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/PediatricChecks"
+                    style="@style/BaseTextViewStyle.MyhealthBehavoiralContentStyle"
+                    android:text="@string/mdl_behaviouralhealth_question_six"
+                    android:tag="@string/mdltag_behaviouralhealth_question_six"
+                    android:textColor="@color/ReasonForVisit_TextColor_black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/behavioural_health_question_family_radio_group"
+                        style="@style/BaseTextViewStyle.MyhealthBehaviourChoiceBtnStyle"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/behavioural_health_question_family_yes_radio_button"
+                            style="@style/YesNoRadioButtonStyle"
+                            android:text="@string/mdl_yes"
+                            android:tag="@string/mdltag_yes" />
+
+                        <RadioButton
+                            android:id="@+id/behavioural_health_question_family_no_radio_button"
+                            style="@style/YesNoRadioButtonStyle"
+                            android:layout_marginLeft="@dimen/medical_history_margin_ten"
+                            android:text="@string/mdl_no"
+                            android:tag="@string/mdltag_no" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray_c" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/mdl_behaviouralhealth_question_seven"
+                android:tag="@string/mdltag_behaviouralhealth_question_seven"
+                android:textColor="@color/ReasonForVisit_TextColor_black" />
+
+            <LinearLayout style="@style/Choose_Pharmacy_Search_Field"
+                android:layout_width="wrap_content"
+                >
+
+                <Spinner
+                    android:id="@+id/behavioural_health_counselling_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

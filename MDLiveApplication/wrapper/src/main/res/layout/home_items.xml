@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_style_W_Match_H_Match_O_Vertical"
+    android:weightSum="3">
+
+    <LinearLayout
+        style="@style/HomeItemsBaseStyle"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:onClick="onSeeADoctorNowClicked">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:background="@drawable/dash_board_doctor_icon" />
+
+            <TextView
+                style="@style/HomeTextViewStyleLeft"
+                android:tag="@string/mdltag_see_a_doctor_now"
+                android:text="@string/mdl_see_a_doctor_now" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:onClick="onMyHealthClicked">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:background="@drawable/dash_board_health_icon" />
+
+            <TextView
+                style="@style/HomeTextViewStyleLeft"
+                android:tag="@string/mdltag_my_health"
+                android:text="@string/mdl_my_health" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HomeItemsBaseStyle"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:onClick="onMdliveAssistClicked">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:background="@drawable/dash_board_mdlive_icon" />
+
+            <TextView
+                style="@style/HomeTextViewStyleLeft"
+                android:tag="@string/mdltag_mdlive_assist"
+                android:text="@string/mdl_mdlive_assist" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/messageCenter"
+            style="@style/HomeImageviewContainerStyle"
+            android:onClick="onMessageCenterClicked">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    style="@style/HomeImageviewIconStyle"
+                    android:background="@drawable/dash_board_message_icon" />
+
+                <TextView
+                    android:id="@+id/message_count"
+                    android:layout_width="@dimen/dimen_28_dp"
+                    android:layout_height="@dimen/dimen_28_dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/red_circle_image"
+                    android:padding="@dimen/dimen_2_dp"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:layout_gravity="right|top"/>
+            </FrameLayout>
+
+            <TextView
+                style="@style/HomeTextViewStyleRight"
+                android:tag="@string/mdltag_message_center"
+                android:text="@string/mdl_message_center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HomeItemsBaseStyle"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:onClick="onSymptomCheckerClicked">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:background="@drawable/dash_board_symptom_icon" />
+
+            <TextView
+                style="@style/HomeTextViewStyleRight"
+                android:tag="@string/mdltag_symptom_checker"
+                android:text="@string/mdl_symptom_checker" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HomeImageviewContainerStyle"
+            android:onClick="onMyAccountClicked">
+
+            <ImageView
+                style="@style/HomeImageviewIconStyle"
+                android:background="@drawable/dash_board_my_account_icon" />
+
+            <TextView
+                style="@style/HomeTextViewStyleRight"
+                android:tag="@string/mdltag_symptom_checker"
+                android:text="@string/mdl_my_accounts" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

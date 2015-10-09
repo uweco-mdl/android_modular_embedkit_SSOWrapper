@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_hamburger_bell" />
+
+        <TextView
+            android:id="@+id/time_for_visit_txt"
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/mdl_time_for_visit"
+            android:tag="@string/mdltag_time_for_visit"
+            android:textColor="@color/darkgreyTextColor"
+            android:textSize="20sp" />
+
+        <com.mdlive.embedkit.uilayer.sav.CircularNetworkImageView
+            android:id="@+id/doctorPic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/time_for_visit_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dash_board_doctor_icon" />
+
+        <TextView
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:layout_below="@id/doctorPic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/mdl_time_for_visit_description"
+            android:tag="@string/mdltag_time_for_visit_description"
+            android:textColor="@color/darkgreyTextColor"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/start_visit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/search_pvr_blue_color"
+            android:clickable="true"
+            android:onClick="rightBtnOnClick"
+            android:text="@string/mdl_start_visit"
+            android:tag="@string/mdltag_start_visit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/dash_board__left_container"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start" />
+    <FrameLayout
+        android:id="@+id/dash_board__right_container"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|end" />
+</android.support.v4.widget.DrawerLayout>

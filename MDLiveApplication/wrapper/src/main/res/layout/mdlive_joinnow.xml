@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mdl_join_now"
+        android:tag="@string/mdltag_join_now"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        android:background="@color/green"
+        android:id="@+id/joinnwBtn"
+        android:textAllCaps="false"
+        android:layout_gravity="right|center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="joinNowAction"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+       android:layout_above="@+id/textView10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/mdl_mdlive_text"
+        android:tag="@string/mdltag_mdlive_text"
+        android:id="@+id/textView10"
+        android:layout_above="@+id/joinnwBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mdl_already_a_member"
+        android:tag="@string/mdltag_already_a_member"
+        android:textSize="18sp"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/joinnwBtn"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:text="@string/mdl_signin_here"
+        android:tag="@string/mdltag_signin_here"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
+
+</RelativeLayout>

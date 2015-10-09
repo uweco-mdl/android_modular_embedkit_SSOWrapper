@@ -1,0 +1,232 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mdlive.embedkit.uilayer.behaviouralhealth.MDLiveBehaviouralHealthFragment">
+
+    <RelativeLayout
+        android:id="@+id/rootrelativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/middlescrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/secondrootrelativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/behaviouralhealth__textviewid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/mdl_behaviouralhealthhistory"
+                    android:tag="@string/mdltag_behaviouralhealthhistory"/>
+
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_one_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth__textviewid"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_one"
+                    android:tag="@string/mdltag_behaviouralhealth_question_one"/>
+
+
+                <CheckBox
+                    android:id="@+id/behaviouralhealth_question_checkBox_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_one_textView"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_options_one"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_one"/>
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_two_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_checkBox_one"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_two"
+                    android:tag="@string/mdltag_behaviouralhealth_question_two"/>
+
+                <RadioGroup
+                    android:id="@+id/behaviouralhealth_question_two_rootradiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_two_textView"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/behaviouralhealth_question_two_yesradioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mdl_yes"
+                        android:tag="@string/mdltag_yes"/>
+
+                    <RadioButton
+                        android:id="@+id/behaviouralhealth_question_two_noradioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mdl_no"
+                        android:tag="@string/mdltag_no"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_three_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_two_rootradiogroup"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_three"
+                    android:tag="@string/mdltag_behaviouralhealth_question_three"/>
+
+                <Spinner
+                    android:id="@+id/behaviouralhealth_question_three_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_three_textView"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_four_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_three_spinner"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_four"
+                    android:tag="@string/mdltag_behaviouralhealth_question_four"/>
+
+                <Spinner
+                    android:id="@+id/behaviouralhealth_question_four_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_four_textView"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_five_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_four_spinner"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_five"
+                    android:tag="@string/mdltag_behaviouralhealth_question_five"/>
+
+
+                <CheckBox
+                    android:id="@+id/behaviouralhealth_question_checkBox_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_five_textView"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_options_one"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_one"/>
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_six_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_checkBox_two"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_six"
+                    android:tag="@string/mdltag_behaviouralhealth_question_six"/>
+
+                <RadioGroup
+                    android:id="@+id/behaviouralhealth_question_six_rootradiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_six_textView"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/behaviouralhealth_question_six_yesradioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mdl_yes"
+                        android:tag="@string/mdltag_yes" />
+
+                    <RadioButton
+                        android:id="@+id/behaviouralhealth_question_six_noradioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mdl_no"
+                        android:tag="@string/mdltag_no" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/behaviouralhealth_question_seven_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_six_rootradiogroup"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mdl_behaviouralhealth_question_seven"
+                    android:tag="@string/mdltag_behaviouralhealth_question_seven"/>
+
+                <Spinner
+                    android:id="@+id/behaviouralhealth_question_seven_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/behaviouralhealth_question_seven_textView"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/mdlive_behaviouralhealth_footer_id"
+            layout="@layout/mdlive_life_style_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/email_confirmation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mdl_email_confirmation_text"
+        android:tag="@string/mdltag_email_confirmation_text"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/email_confirmation_text"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:text="@string/mdl_email_confirmation_detail_text"
+        android:tag="@string/mdltag_email_confirmation_detail_text"/>
+
+    <Button
+        android:id="@+id/resend_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/mdl_resend_email_confirmation"
+        android:tag="@string/mdltag_resend_email_confirmation"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:background="@drawable/btn_resend"
+        />
+
+    <Button
+        android:id="@+id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/resend_email"
+        android:text="@string/mdl_dismiss"
+        android:tag="@string/mdltag_dismiss"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:background="@drawable/btn_dismiss"
+        />
+
+</RelativeLayout>

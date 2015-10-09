@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background_color"
+    android:padding="@dimen/dimen_16_dp">
+
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/dimen_4_dp">
+
+        <EditText
+            android:id="@+id/questionId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_margin="@dimen/dimen_8_dp"
+            android:gravity="top|left"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:tag="@string/mdltag_enter_your_question"
+            android:hint="@string/mdl_enter_your_question"/>
+    </android.support.v7.widget.CardView>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_gravity="right|bottom" />
+
+</FrameLayout>

@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <!--<Button
+        android:id="@+id/drawer_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_8_dp"
+        android:paddingRight="@dimen/dimen_8_dp">
+
+        <LinearLayout
+            android:id="@+id/navigation_selected_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_16_dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_8_dp"
+            android:background="@color/transparent"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/navigation_user_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/navigation_drawer_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="singleChoice"
+                android:scrollbars="none"
+                android:divider="@color/transparent"
+                android:dividerHeight="@dimen/dimen_4_dp"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_8_dp"
+            android:layout_toRightOf="@id/image"
+            android:textColor="@android:color/black"
+            android:text="@string/mdl_sign_out"
+            android:tag="@string/mdltag_sign_out"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/drawer_sign_out_icon"
+            android:drawablePadding="@dimen/dimen_16_dp"
+            android:clickable="true"
+            android:onClick="onSignoutClicked"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:layout_marginBottom="@dimen/dimen_8_dp"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+</FrameLayout>

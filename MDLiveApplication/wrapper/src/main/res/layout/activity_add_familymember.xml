@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/mdlive_toolbar"
+        />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/common_style_W_Match_M_Match"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/app_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/mdl_current_family_member"
+                android:textColor="@color/darkblack"
+                android:visibility="gone"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/firstNameView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_first_name_caps"
+                        android:tag="@string/mdltag_first_name_caps" />
+
+                    <EditText
+                        android:id="@+id/firstName"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/firstNameView"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:inputType="textNoSuggestions"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:imeOptions="actionNext"
+                        android:cursorVisible="true" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/lastNameView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_last_name_caps"
+                        android:tag="@string/mdltag_last_name_caps"/>
+
+                    <EditText
+                        android:id="@+id/lastName"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/lastNameView"
+                        android:singleLine="true"
+                        android:inputType="textNoSuggestions"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:imeOptions="actionNext"
+                        android:background="@color/white"
+                        android:cursorVisible="true" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/emailView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_email_caps"
+                        android:tag="@string/mdltag_email_caps"/>
+
+                    <EditText
+                        android:id="@+id/email"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/emailView"
+                        android:singleLine="true"
+                        android:background="@color/white"
+                        android:inputType="textNoSuggestions"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@. "
+                        android:cursorVisible="true" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/validEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/mdl_valid_emailtext"
+                android:tag="mdl_valid_emailtext"
+                android:textColor="@color/darkblack"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/validationEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/mdl_validation_email"
+                android:tag="mdl_validation_email"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/userNameView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_user_name_caps"
+                        android:tag="@string/mdltag_user_name_caps" />
+
+                    <EditText
+                        android:id="@+id/userName"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/userNameView"
+                        android:background="@color/white"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:inputType="textNoSuggestions"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:cursorVisible="true"
+                        />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/userNameLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/red_circle_small"
+                android:drawablePadding="5dp"
+                android:text="@string/mdl_username_length"
+                android:tag="mdl_username_length"
+                android:textColor="@color/change_password_alert_text_color_red"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/userNameAlphaNumericCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/red_circle_small"
+                android:drawablePadding="5dp"
+                android:text="@string/mdl_password_alphanumeric_check"
+                android:tag="password_alphanumeric_check"
+                android:textColor="@color/change_password_alert_text_color_red"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/userNameSpecialCharactersCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawableLeft="@drawable/green_circle_small"
+                android:drawablePadding="5dp"
+                android:text="@string/mdl_username_specialcharacters_check"
+                android:tag="mdl_username_specialcharacters_check"
+                android:textColor="@color/change_password_alert_text_color_green"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/phoneView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_phone_caps"
+                        android:tag="@string/mdltag_phone_caps"/>
+
+                    <EditText
+                        android:id="@+id/phone"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/phoneView"
+                        android:background="@color/white"
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:cursorVisible="true" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/streetAddressView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_street_address_caps"
+                        android:tag="@string/mdltag_street_address_caps" />
+
+                    <EditText
+                        android:id="@+id/streetAddress"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/streetAddressView"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions"
+                        android:background="@color/white"
+                        android:cursorVisible="true" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/myChangeProfileInfoLayoutStyle"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout style="@style/common_style_W_Match_H_Wrap">
+
+                    <TextView
+                        android:id="@+id/cityView"
+                        style="@style/myChangeProfileInfoTextStyle"
+                        android:text="@string/mdl_city_caps"
+                        android:tag="@string/mdltag_city_caps" />
+
+                    <EditText
+                        android:id="@+id/city"
+                        style="@style/myChangeProfileInfoValueStyle"
+                        android:layout_below="@id/cityView"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:inputType="textNoSuggestions"
+                        android:imeOptions="actionDone"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:cursorVisible="true" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/myChangeProfileInfoLayoutStyle"
+                    android:layout_weight="0.4"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp">
+
+                    <RelativeLayout style="@style/common_style_W_Wrap_H_Wrap"
+                        android:id="@+id/stateLayout"
+                        >
+
+                        <TextView
+                            android:id="@+id/stateView"
+                            style="@style/myChangeProfileInfoTextStyle"
+                            android:text="@string/mdl_state_caps"
+                            android:tag="@string/mdltag_state_caps" />
+
+                        <TextView
+                            android:id="@+id/state"
+                            style="@style/myChangeProfileInfoValueStyle"
+                            android:layout_below="@id/stateView"
+                            android:background="@color/white"
+                            android:cursorVisible="true"
+                            android:drawablePadding="5dp"
+                            android:drawableRight="@drawable/dropdown_icon" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:visibility="visible"
+                    android:layout_weight="0.4"
+                    >
+
+                </View>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/myChangeProfileInfoLayoutStyle"
+                    android:layout_weight="0.4"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp">
+
+                    <RelativeLayout style="@style/common_style_W_Wrap_H_Wrap"
+                        android:id="@+id/DOBLayout">
+
+                        <TextView
+                            android:id="@+id/DOBView"
+                            style="@style/myChangeProfileInfoTextStyle"
+                            android:text="@string/mdl_dob_caps"
+                            android:tag="@string/mdltag_dob_caps" />
+
+                        <TextView
+                            android:id="@+id/DOB"
+                            style="@style/myChangeProfileInfoValueStyle"
+                            android:layout_below="@id/DOBView"
+                            android:background="@color/white"
+                            android:cursorVisible="true"
+                            android:drawablePadding="5dp"
+                            android:drawableRight="@drawable/dropdown_icon" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/myChangeProfileInfoLayoutStyle"
+
+                    android:layout_weight="0.4"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp">
+
+                    <RelativeLayout style="@style/common_style_W_Wrap_H_Wrap"
+                        android:id="@+id/genderLayout">
+
+                        <TextView
+                            android:id="@+id/genderView"
+                            style="@style/myChangeProfileInfoTextStyle"
+                            android:text="@string/mdl_gender_caps"
+                            android:tag="@string/mdltag_gender_caps" />
+
+                        <TextView
+                            android:id="@+id/gender"
+                            style="@style/myChangeProfileInfoValueStyle"
+                            android:layout_below="@id/genderView"
+                            android:background="@color/white"
+                            android:cursorVisible="true"
+                            android:drawablePadding="5dp"
+                            android:drawableRight="@drawable/dropdown_icon" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

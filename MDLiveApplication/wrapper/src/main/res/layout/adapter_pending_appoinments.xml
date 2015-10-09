@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/dimen_16_dp"
+    android:layout_marginBottom="@dimen/dimen_8_dp"
+    android:paddingLeft="@dimen/dimen_8_dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/notification_icon4_upcoming"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:paddingTop="@dimen/dimen_14_dp"
+        android:paddingLeft="@dimen/dimen_8_dp"/>
+
+    <TextView
+        android:id="@+id/adapter_upcoming_appoinment_text_view"
+        style="@style/Notification_Text_Upcoming"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:layout_marginBottom="@dimen/dimen_8_dp"/>
+</LinearLayout>

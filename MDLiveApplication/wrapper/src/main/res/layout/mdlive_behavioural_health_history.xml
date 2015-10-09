@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle">
+
+    <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+        style="@style/Behaviuor_headerStyle"
+        android:text="@string/mdl_behaviouralhealthhistory"
+        android:tag="@string/mdltag_behaviouralhealthhistory"/>
+
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            style="@style/ContainerStyle">
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/QuestionTextStyle"
+                android:text="@string/mdl_behaviouralhealth_question_one"
+                android:tag="@string/mdltag_behaviouralhealth_question_one"/>
+
+                <CheckBox
+                    android:id="@+id/check_alcohol_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_one"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_one"
+                    android:fontFamily="h"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_obsessive_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_two"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_two"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_anxiety_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_three"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_three"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_panic_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_four"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_four"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_bipolar_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_five"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_five"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_schiz_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_six"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_six"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_depression_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_seven"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_seven"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_substance_parent"
+                    android:text="@string/mdl_behaviouralhealth_question_options_eight"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_eight"
+                    style="@style/QuestionCheckStyle" />
+
+            <View style="@style/viewstyle_behavioural" />
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/QuestionStyle"
+                android:text="@string/mdl_behaviouralhealth_question_two"
+                android:tag="@string/mdltag_behaviouralhealth_question_two"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/QuestionContentStyle">
+
+                <Button
+                    android:id="@+id/btn_yes_parent"
+                    style="@style/YesCustomButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_no_parent"
+                    style="@style/NoCustomButtonStyle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                    style="@style/QuestionStyle"
+                    android:text="@string/mdl_behaviouralhealth_question_three"
+                    android:tag="@string/mdltag_behaviouralhealth_question_three"/>
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableRight="@drawable/icon_arrow_down"
+                    android:hint="@string/mdl_behaviouralhealthhistory_dummy_date"
+                    android:tag="@string/mdltag_behaviouralhealthhistory_dummy_date"
+                    android:padding="10dp" />
+
+                <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                    style="@style/QuestionStyle"
+                    android:text="@string/mdl_behaviouralhealth_question_four"
+                    android:tag="@string/mdltag_behaviouralhealth_question_four"/>
+
+                <EditText
+                    android:id="@+id/edt_howLong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="@string/mdl_behaviouralhealthhistory_dummy_duration"
+                    android:tag="@string/mdltag_behaviouralhealthhistory_dummy_duration"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <View style="@style/viewstyle_behavioural" />
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/QuestionStyle"
+                android:text="@string/mdl_behaviouralhealth_question_five"
+                android:tag="@string/mdltag_behaviouralhealth_question_five"/>
+
+                <CheckBox
+                    android:id="@+id/check_alcohol_child"
+                    android:text="@string/mdl_behaviouralhealth_question_options_one"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_one"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_obsessive_child"
+                    android:text="@string/mdl_behaviouralhealth_question_options_two"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_two"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_bipolar_child"
+                    android:text="@string/mdl_behaviouralhealth_question_options_five"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_five"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_schiz_child"
+                    android:text="@string/mdl_behaviouralhealth_question_options_six"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_six"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_depression_child"
+                    android:text="@string/mdl_behaviouralhealth_question_options_seven"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_seven"
+                    style="@style/QuestionCheckStyle" />
+
+                <CheckBox
+                    android:id="@+id/check_substance_child"
+                    android:text="@string/mdl_behaviouralhealth_question_options_eight"
+                    android:tag="@string/mdltag_behaviouralhealth_question_options_eight"
+                    style="@style/QuestionCheckStyle" />
+
+            <View style="@style/viewstyle_behavioural" />
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/QuestionStyle"
+                android:text="@string/mdl_behaviouralhealth_question_six"
+                android:tag="@string/mdltag_behaviouralhealth_question_six"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/QuestionContentStyle">
+
+                <Button
+                    android:id="@+id/btn_yes_child"
+                    style="@style/YesCustomButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_no_child"
+                    style="@style/NoCustomButtonStyle" />
+
+            </LinearLayout>
+
+            <View style="@style/viewstyle_behavioural" />
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CustomTv
+                style="@style/QuestionStyle"
+                android:text="@string/mdl_behaviouralhealth_question_seven"
+                android:tag="@string/mdltag_behaviouralhealth_question_seven" />
+
+            <TextView
+                android:id="@+id/txt_counselor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_bg"
+                android:drawableRight="@drawable/icon_arrow_down"
+                android:layout_marginRight="10dp"
+                android:hint="@string/mdl_male"
+                android:tag="@string/mdltag_male"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/btn_save_behavioral"
+                android:text="@string/mdl_save"
+                android:tag="@string/mdltag_save"
+                android:layout_marginTop="10dp"
+                style="@style/ContinueButtonStyle">
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
