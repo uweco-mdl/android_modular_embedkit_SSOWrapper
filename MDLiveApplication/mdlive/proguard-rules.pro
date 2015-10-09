@@ -15,3 +15,11 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+# Maintain visibility of Inner class enums
+
+-keepattributes InnerClasses
+-keep class com.mdlive.mobile.Utils$* {
+          *;
+      }
