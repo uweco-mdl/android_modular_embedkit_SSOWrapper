@@ -1,23 +1,5 @@
 apply plugin: 'com.android.application'
 
-// VSee repository credentials setup
-
-repositories {
-    maven {
-        credentials {
-            username 'uweco'
-            password '903fdbf83488be99797a7757429240ca4f3a2619'
-        }
-        url 'http://dl.bintray.com/vsee/android'
-    }
-    maven {
-        url "https://repo.commonsware.com.s3.amazonaws.com"
-    }
-    maven {
-        url "http://dl.bintray.com/populov/maven"
-    }
-    jcenter()
-}
 
 android {
     compileSdkVersion 21
@@ -48,7 +30,7 @@ android.packagingOptions {
 }
 dependencies {
     // this is the Theming placeholder:
-    compile project(':wrapper')
+    compile project(':theming')
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     //compile 'com.android.support:appcompat-v7:23.0.1'
@@ -62,10 +44,6 @@ dependencies {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
-    }
-
-    compile('com.vsee:vsee-kit:0.3.20524@aar') {
-        transitive = true
     }
 
     //this section ensures that the .AAR can be located

@@ -19,8 +19,10 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.mdlive.embedkit.global.MDLiveConfig;
 import com.mdlive.embedkit.global.MDLiveConfig.ENVIRON;
 import com.mdlive.embedkit.global.MDLiveConfig.SIGNALS;
+import com.mdlive.embedkit.global.MDLiveConfig.EMBEDKIT_COMPONENTS;
 import com.mdlive.embedkit.uilayer.login.SSOActivity;
 import com.mdlive.unifiedmiddleware.commonclasses.utils.MdliveUtils;
 
@@ -40,7 +42,6 @@ public class MainActivity extends Activity {
     static LinkedHashMap memberData;
     static LinkedHashMap pharmaData;
 
- 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,7 +126,6 @@ public class MainActivity extends Activity {
 
 
     public void openMDLIVE(View v) {
-        Intent embedKitIntent = new Intent(MainActivity.this, SSOActivity.class);
         JsonObject jsoMessage = new JsonObject();
         try {
 
@@ -173,9 +173,19 @@ public class MainActivity extends Activity {
 
             String jsonString = jsonData.toString();
 
+            /**
+             * OLD way of invoking EmbedKit component
+             */
+            Intent embedKitIntent = new Intent(MainActivity.this, SSOActivity.class);
             embedKitIntent.putExtra("affiliate_sso_login", jsonString);
             embedKitIntent.putExtra("env", env.name());
             startActivity(embedKitIntent);
+
+            /**
+             * NEW way of invoking an EmbedKit component
+             */
+            MDLiveConfig.activate(EMBEDKIT_COMPONENTS.CALL_ASSIST, jsonString, env, this);
+
             finish();
 
         }catch(Exception e){
