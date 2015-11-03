@@ -22,14 +22,12 @@ import com.google.gson.JsonObject;
 import com.mdlive.embedkit.global.MDLiveConfig;
 import com.mdlive.embedkit.global.MDLiveConfig.ENVIRON;
 import com.mdlive.embedkit.global.MDLiveConfig.SIGNALS;
-import com.mdlive.embedkit.global.MDLiveConfig.EMBEDKIT_COMPONENTS;
-import com.mdlive.embedkit.uilayer.login.SSOActivity;
+import com.mdlive.embedkit.global.MDLiveConfig.EMBEDKITS;
 import com.mdlive.unifiedmiddleware.commonclasses.utils.MdliveUtils;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashMap;
-
 
 public class MainActivity extends Activity {
     public String gender = "male",  strDate;
@@ -176,15 +174,17 @@ public class MainActivity extends Activity {
             /**
              * OLD way of invoking EmbedKit component
              */
+            /*
             Intent embedKitIntent = new Intent(MainActivity.this, SSOActivity.class);
             embedKitIntent.putExtra("affiliate_sso_login", jsonString);
             embedKitIntent.putExtra("env", env.name());
             startActivity(embedKitIntent);
+            */
 
             /**
              * NEW way of invoking an EmbedKit component
              */
-            MDLiveConfig.activate(EMBEDKIT_COMPONENTS.CALL_ASSIST, jsonString, env, this);
+            MDLiveConfig.activate(EMBEDKITS.DOCTOR_CONSULT, jsonString, env, this);
 
             finish();
 
