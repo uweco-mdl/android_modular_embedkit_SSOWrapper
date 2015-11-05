@@ -27,7 +27,9 @@ import com.mdlive.unifiedmiddleware.commonclasses.utils.MdliveUtils;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class MainActivity extends Activity {
     public String gender = "male",  strDate;
@@ -40,10 +42,43 @@ public class MainActivity extends Activity {
     static LinkedHashMap memberData;
     static LinkedHashMap pharmaData;
 
+    public enum AFFILIATE {
+        BAYLOR, STJOSEPH, CAREINGTON, SUTTER
+    }
+
+    private static final Map<AFFILIATE,Integer> AffiliateLayout = new HashMap<>();
+    static {
+        AffiliateLayout.put(AFFILIATE.BAYLOR, R.layout.main_baylor);
+        AffiliateLayout.put(AFFILIATE.STJOSEPH, R.layout.main_stjoseph);
+        AffiliateLayout.put(AFFILIATE.CAREINGTON, R.layout.main_careington);
+        AffiliateLayout.put(AFFILIATE.SUTTER, R.layout.main_sutter);
+    }
+
+    private static final Map<AFFILIATE, String> AffilClientSecret_Stage = new HashMap<>();
+    static {
+        AffilClientSecret_Stage.put(AFFILIATE.BAYLOR, "10c098fe22d78b51f7f");
+        AffilClientSecret_Stage.put(AFFILIATE.STJOSEPH, "7dfc226d06448fbc62c");
+        AffilClientSecret_Stage.put(AFFILIATE.CAREINGTON, "a01c7a995c728a1b328");
+        AffilClientSecret_Stage.put(AFFILIATE.SUTTER, "");
+    }
+
+    private static final Map<AFFILIATE, String> AffilAPIKey_Stage = new HashMap<>();
+    static {
+        AffilAPIKey_Stage.put(AFFILIATE.BAYLOR, "5f808afe15447728b3c3");
+        AffilAPIKey_Stage.put(AFFILIATE.STJOSEPH, "49c0e7a2d2c14a01bfa0");
+        AffilAPIKey_Stage.put(AFFILIATE.CAREINGTON, "0611b8c6c77c510e766f");
+        AffilAPIKey_Stage.put(AFFILIATE.SUTTER, "");
+    }
+
+    private AFFILIATE affil;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_stjoseph);
+
+        affil = AFFILIATE.STJOSEPH;
+
+        setContentView(AffiliateLayout.get(affil));
 
         // listen for EmbedKit exit signal and respond accordingly
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter(SIGNALS.EXIT_SIGNAL.name()));
@@ -152,7 +187,7 @@ public class MainActivity extends Activity {
 
 
             String ts = Utils.GetCurrentTimeStamp(Utils.DATE_NOTATION.MILLI);
-            jsoMessage.addProperty("client_api_key", getApiKey(env));
+            jsoMessage.addProperty("client_api_key", getApiKey(env, this.affil));
             jsoMessage.addProperty("timestamp", ts);
             jsoMessage.addProperty("unique_id", getInputText(R.id.meid));
 
@@ -165,8 +200,8 @@ public class MainActivity extends Activity {
 
 
             JsonObject jsonData = new JsonObject();
-            jsonData.addProperty("client_secret", getClientSecret(env));
-            jsonData.addProperty("digital_signature", getDigitalSignature(env));
+            jsonData.addProperty("client_secret", getClientSecret(env, this.affil));
+            jsonData.addProperty("digital_signature", getDigitalSignature(env, this.affil));
             jsonData.add("encrypted_message", jsoMessage);
 
             String jsonString = jsonData.toString();
@@ -238,7 +273,7 @@ public class MainActivity extends Activity {
         }
     };
 
-    private String getApiKey(ENVIRON env)
+    private String getApiKey(ENVIRON env, AFFILIATE affil)
     {
         String s = null;
         switch(env)
@@ -252,7 +287,8 @@ public class MainActivity extends Activity {
 
             case PROD:
             case STAGE:
-                s = "c9e63d9a77f17039c470";
+                s = AffilAPIKey_Stage.get(affil);
+                //s = "c9e63d9a77f17039c470";
                 break;
             default:
                 break;
@@ -267,7 +303,7 @@ public class MainActivity extends Activity {
      * @param env
      * @return
      */
-    private String getDigitalSignature(ENVIRON env)
+    private String getDigitalSignature(ENVIRON env, AFFILIATE affil)
     {
         String s = null;
         switch(env)
@@ -295,7 +331,7 @@ public class MainActivity extends Activity {
      * @param env
      * @return
      */
-    private String getClientSecret(ENVIRON env)
+    private String getClientSecret(ENVIRON env, AFFILIATE affil)
     {
         String s = null;
         switch(env)
@@ -309,7 +345,8 @@ public class MainActivity extends Activity {
 
             case PROD:
             case STAGE:
-                s = "b302e84f866a8730eb2";
+                s = AffilClientSecret_Stage.get(affil);
+                //s = "b302e84f866a8730eb2";
                 break;
             default:
                 break;

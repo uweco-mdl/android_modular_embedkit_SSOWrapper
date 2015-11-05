@@ -15,8 +15,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-
+            minifyEnabled true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -40,7 +40,22 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.google.android.gms:play-services-maps:7.8.0'
 
-    compile(name: 'embedkit', ext: 'aar') {
+    compile(name: 'embedkit_commons', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+    compile(name: 'embedkit_assist', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+    compile(name: 'embedkit_sav', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+    compile(name: 'embedkit_sc', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
