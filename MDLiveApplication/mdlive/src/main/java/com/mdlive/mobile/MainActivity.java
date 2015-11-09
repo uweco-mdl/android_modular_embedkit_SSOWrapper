@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
         // listen for EmbedKit exit signal and respond accordingly
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter(SIGNALS.EXIT_SIGNAL.name()));
 
-        // ***** DEFAULT VALUE HERE *****************
+        // ***** DEFAULT ENVIRONMENT VALUE HERE *****************
         env = ENVIRON.STAGE;
         // ******************************************
 
@@ -187,7 +187,11 @@ public class MainActivity extends Activity {
 
 
             String ts = Utils.GetCurrentTimeStamp(Utils.DATE_NOTATION.MILLI);
-            jsoMessage.addProperty("client_api_key", getApiKey(env, this.affil));
+            // ****  !!! DEBUG ONLY ***** REMOVE BEFORE PRODUCTION COMPILATION !!! ********
+            jsoMessage.addProperty("client_api_key", "c9e63d9a77f17039c470");
+            // ****************************************************************************
+            //jsoMessage.addProperty("client_api_key", getApiKey(env, this.affil));
+
             jsoMessage.addProperty("timestamp", ts);
             jsoMessage.addProperty("unique_id", getInputText(R.id.meid));
 
@@ -200,7 +204,10 @@ public class MainActivity extends Activity {
 
 
             JsonObject jsonData = new JsonObject();
-            jsonData.addProperty("client_secret", getClientSecret(env, this.affil));
+            // ****  !!! DEBUG ONLY ***** REMOVE BEFORE PRODUCTION COMPILATION !!! ********
+            jsonData.addProperty("client_secret", "b302e84f866a8730eb2");
+            // ****************************************************************************
+            //jsonData.addProperty("client_secret", getClientSecret(env, this.affil));
             jsonData.addProperty("digital_signature", getDigitalSignature(env, this.affil));
             jsonData.add("encrypted_message", jsoMessage);
 

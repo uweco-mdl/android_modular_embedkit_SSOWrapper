@@ -1,13 +1,9 @@
 package com.mdlive.mobile;
 
 import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class SplashScreenActivity extends Activity {
     private Handler mHandler;

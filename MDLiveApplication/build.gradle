@@ -18,15 +18,3 @@ allprojects {
         jcenter()
     }
 }
-
-/*
-android {
-    defaultConfig {
-        minSdkVersion 15
-    }
-    productFlavors {
-    }
-}
-dependencies {
-}
-*/
