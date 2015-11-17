@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        affil = AFFILIATE.STJOSEPH;
+        affil = AFFILIATE.BAYLOR;
 
         setContentView(AffiliateLayout.get(affil));
 
@@ -240,9 +240,20 @@ public class MainActivity extends Activity {
         Calendar calendar = Calendar.getInstance();
         datePickerDialog = new DatePickerDialog(this, pickerListener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         datePickerDialog.getDatePicker().setCalendarViewShown(false);
-        datePickerDialog.getDatePicker().setMinDate(MdliveUtils.getDateBeforeNumberOfYears(65));
+        datePickerDialog.getDatePicker().setMinDate(this.getDateBeforeNumberOfYears(65));
         datePickerDialog.getDatePicker().setMaxDate(new Date().getTime());
         datePickerDialog.updateDate(1977,0,28);
+    }
+
+    /*
+     * Return the long mili seconds for a date which is n years back
+     */
+    private long getDateBeforeNumberOfYears(int numberOfYears)
+    {
+        final Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.add(Calendar.YEAR, -numberOfYears);
+        return(calendar.getTime().getTime());
     }
 
 	/**

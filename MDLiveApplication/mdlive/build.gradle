@@ -1,5 +1,22 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
+repositories {
+    maven {
+        credentials {
+            username 'uweco'
+            password '903fdbf83488be99797a7757429240ca4f3a2619'
+        }
+        url 'http://dl.bintray.com/vsee/android'
+    }
+    maven {
+        url "https://repo.commonsware.com.s3.amazonaws.com"
+    }
+    maven {
+        url "http://dl.bintray.com/populov/maven"
+    }
+    jcenter()
+}
 
 android {
     compileSdkVersion 21
@@ -21,6 +38,7 @@ android {
         }
     }
 }
+
 android.packagingOptions {
     exclude 'META-INF/LICENSE.txt'
     exclude 'META-INF/LICENSE'
@@ -28,6 +46,7 @@ android.packagingOptions {
     exclude 'META-INF/NOTICE'
     exclude 'version.properties'
 }
+
 dependencies {
     // this is the Theming placeholder:
     compile project(':theming')
@@ -36,31 +55,52 @@ dependencies {
     //compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:support-v13:23.0.1'
+    compile 'com.android.support:support-v13:22.2.1'
     compile 'com.google.code.gson:gson:2.3.1'
-    compile 'com.google.android.gms:play-services-maps:7.8.0'
+    compile 'com.google.android.gms:play-services-maps:8.1.0'
+    compile 'com.google.android.gms:play-services-analytics:8.1.0'
 
-    compile(name: 'embedkit_commons', ext: 'aar') {
+    // Add each supported aar modules here
+
+    compile(name: 'mdlive_assist', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
-    compile(name: 'embedkit_assist', ext: 'aar') {
+    compile(name: 'mdlive_messages', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
-    compile(name: 'embedkit_sav', ext: 'aar') {
+    compile(name: 'mdlive_sav', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
-    compile(name: 'embedkit_sc', ext: 'aar') {
+    compile(name: 'mdlive_myhealth', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+    compile(name: 'mdlive_symptomchecker', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+    compile(name: 'mdlive_myaccounts', ext: 'aar') {
+        exclude module: 'com.android.support'
+        exclude module: 'com.google.code.gson'
+        exclude module: 'com.google.android.gms'
+    }
+    compile(name: 'mdlive_common', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
 
+    compile('com.vsee:vsee-kit:0.4.21616@aar') {
+        transitive = true
+    }
     //this section ensures that the .AAR can be located
     repositories {
         flatDir {
