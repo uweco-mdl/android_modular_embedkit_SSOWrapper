@@ -188,9 +188,9 @@ public class MainActivity extends Activity {
 
             String ts = Utils.GetCurrentTimeStamp(Utils.DATE_NOTATION.MILLI);
             // ****  !!! DEBUG ONLY ***** REMOVE BEFORE PRODUCTION COMPILATION !!! ********
-            jsoMessage.addProperty("client_api_key", "c9e63d9a77f17039c470");
+            //jsoMessage.addProperty("client_api_key", "c9e63d9a77f17039c470");
             // ****************************************************************************
-            //jsoMessage.addProperty("client_api_key", getApiKey(env, this.affil));
+            jsoMessage.addProperty("client_api_key", getApiKey(env, this.affil));
 
             jsoMessage.addProperty("timestamp", ts);
             jsoMessage.addProperty("unique_id", getInputText(R.id.meid));
@@ -205,9 +205,9 @@ public class MainActivity extends Activity {
 
             JsonObject jsonData = new JsonObject();
             // ****  !!! DEBUG ONLY ***** REMOVE BEFORE PRODUCTION COMPILATION !!! ********
-            jsonData.addProperty("client_secret", "b302e84f866a8730eb2");
+            //jsonData.addProperty("client_secret", "b302e84f866a8730eb2");
             // ****************************************************************************
-            //jsonData.addProperty("client_secret", getClientSecret(env, this.affil));
+            jsonData.addProperty("client_secret", getClientSecret(env, this.affil));
             jsonData.addProperty("digital_signature", getDigitalSignature(env, this.affil));
             jsonData.add("encrypted_message", jsoMessage);
 
