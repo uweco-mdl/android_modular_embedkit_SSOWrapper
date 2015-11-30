@@ -23,3 +23,8 @@
 -keep class com.mdlive.mobile.Utils$* {
           *;
       }
+
+
+# VSeeKit
+-keep public class com.vsee.kit.** {*;}
+-keep public class com.vsee.kit.evisit.** {*;}
