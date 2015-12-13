@@ -44,15 +44,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="Me ID" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/hinter1"
             android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/meid"
-            android:text="321456"
-            android:layout_gravity="center_horizontal" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/meid"
+                android:hint="321456"
+                android:layout_gravity="center_horizontal" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -66,14 +71,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="First Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/hinter2"
             android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/fName"
-            android:text="myfirst"
-            android:layout_gravity="center_horizontal" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fName"
+                android:hint="myfirst"
+                android:layout_gravity="center_horizontal" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -87,14 +98,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="Middle Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/hinter3"
             android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/mName"
-            android:text="mymiddle"
-            android:layout_gravity="center_horizontal" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mName"
+                android:hint="mymiddle"
+                android:layout_gravity="center_horizontal" />
+        </android.support.design.widget.TextInputLayout>
+
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -107,14 +125,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="Last Name" />
-        <EditText
-            android:textColor="#000000"
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/hinter4"
             android:layout_width="0dp"
             android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/lName"
-            android:text="mylast"
-            android:layout_gravity="center_horizontal" />
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lName"
+                android:hint="mylast"
+                android:layout_gravity="center_horizontal" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
     <LinearLayout

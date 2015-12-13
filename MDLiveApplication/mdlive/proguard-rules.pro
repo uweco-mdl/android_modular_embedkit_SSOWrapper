@@ -23,3 +23,9 @@
 -keep class com.mdlive.mobile.Utils$* {
           *;
       }
+
+# for API 23+ (Apache HTTP client classes have now been removed):
+-dontwarn org.apache.http.**
+-dontwarn android.net.http.AndroidHttpClient
+-dontwarn com.google.android.gms.**
+-dontwarn com.android.volley.toolbox.**
