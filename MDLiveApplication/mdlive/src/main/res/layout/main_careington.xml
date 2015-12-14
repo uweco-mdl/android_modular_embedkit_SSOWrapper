@@ -1,199 +1,53 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:background="#0AA7F1"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="29dp"
-        android:background="#013777"
-        android:textColor="@color/white"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Careington User Details"
-        android:gravity="center"
-        android:id="@+id/textView" />
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:background="#0AA7F1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="6dip"
-        android:textSize="16dp"
-        android:textStyle="italic|bold"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="All are mandatory fields, No validation in-place." />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Me ID" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/meid"
-            android:text="321456"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="First Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/fName"
-            android:text="myfirst"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Middle Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/mName"
-            android:text="mymiddle"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Last Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/lName"
-            android:text="mylast"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Gender" />
-
-        <RadioGroup android:id="@+id/genderGroup"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Male"
-                android:checked="true"
-                android:id="@+id/Male" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Female"
-                android:id="@+id/Female"
-                android:checked="false" />
-        </RadioGroup>
-
-    </LinearLayout>
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/framelayout" >
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Email" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:text="mdl_tester@aol.com"
-            android:layout_gravity="center_horizontal" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:elevation="6dp">
 
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="#0AA7F1"/>
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Phone" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone"
-            android:inputType="phone"
-            android:text="8002224343"
-            android:layout_gravity="center_horizontal" />
+            android:textSize="29dp"
+            android:background="#013777"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Careington User Details"
+            android:gravity="center"
+            android:id="@+id/textView" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="#0AA7F1"/>
     </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:paddingTop="45dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dip"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="All are mandatory fields, No validation in-place." />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -204,16 +58,157 @@
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Andress 1" />
+                android:text="Me ID" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/hinter1"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:id="@+id/meid"
+                    android:hint="321456"
+                    android:layout_gravity="center_horizontal" />
+            </android.support.design.widget.TextInputLayout>
 
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="First Name" />
 
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/hinter2"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fName"
+                    android:hint="myfirst"
+                    android:layout_gravity="center_horizontal" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Middle Name" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/hinter3"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mName"
+                    android:hint="mymiddle"
+                    android:layout_gravity="center_horizontal" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Last Name" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/hinter4"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lName"
+                    android:hint="mylast"
+                    android:layout_gravity="center_horizontal" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Gender" />
+
+            <RadioGroup android:id="@+id/genderGroup"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"
+                    android:id="@+id/Male" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/Female"
+                    android:checked="false" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Email" />
             <EditText
                 android:textColor="#000000"
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/address1"
-                android:text="205 Maple Street"
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                android:text="mdl_tester@aol.com"
                 android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
@@ -227,14 +222,189 @@
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Address 2" />
+                android:text="Phone" />
             <EditText
                 android:textColor="#000000"
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/address2"
-                android:text="Philadelphia"
+                android:id="@+id/phone"
+                android:inputType="phone"
+                android:text="8002224343"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Andress 1" />
+
+
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address1"
+                    android:text="205 Maple Street"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Address 2" />
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address2"
+                    android:text="Philadelphia"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="City" />
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/city"
+                    android:text="Philadelphia"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="State" />
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/state"
+                    android:text="PA"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="ZipCode" />
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zipcode"
+                    android:numeric="integer"
+                    android:text="19105"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Birth Date" />
+
+                <TextView
+                    android:id="@+id/datePicker"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:padding="5dp"
+                    android:hint="Select"
+                    android:layout_height="wrap_content" />
+              <!--  <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/birthdate" />-->
+
+            </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="15dp"
+            android:background="#0AA7F1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:background="#013777"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="PHARMACY DETAILS" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="#0AA7F1"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Store Number" />
+            5<EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:id="@+id/storeNumber"
+                android:numeric="integer"
+                android:text="5"
                 android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
@@ -248,14 +418,14 @@
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="City" />
+                android:text="Intersection" />
             <EditText
                 android:textColor="#000000"
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/city"
-                android:text="Philadelphia"
+                android:id="@+id/intersection"
+                android:text=""
                 android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
@@ -269,13 +439,55 @@
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="State" />
+                android:text="Address" />
             <EditText
                 android:textColor="#000000"
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/state"
+                android:id="@+id/storeaddress"
+                android:text="187 Cedar Lane"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Store City" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:id="@+id/storecity"
+                android:text="philadelphia"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Store State" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:id="@+id/storestate"
                 android:text="PA"
                 android:layout_gravity="center_horizontal" />
 
@@ -294,15 +506,14 @@
             <EditText
                 android:textColor="#000000"
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/zipcode"
+                android:id="@+id/storeZip"
                 android:numeric="integer"
-                android:text="19105"
+                android:text="19103"
                 android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -312,265 +523,96 @@
                 android:layout_width="0dp"
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
-                android:text="Birth Date" />
-
-            <TextView
-                android:id="@+id/datePicker"
+                android:layout_gravity="center_vertical"
+                android:text="Latitude" />
+            <EditText
+                android:textColor="#000000"
                 android:layout_width="0dp"
-                android:layout_weight="6"
-                android:padding="5dp"
-                android:hint="Select"
-                android:layout_height="wrap_content" />
-          <!--  <DatePicker
-                android:layout_width="wrap_content"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/birthdate" />-->
+                android:id="@+id/latitude"
+                android:numeric="integer"
+                android:text="1092837464"
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:layout_marginTop="15dp"
-        android:background="#0AA7F1"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        android:textSize="19dp"
-        android:textStyle="bold"
-        android:background="#013777"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:text="PHARMACY DETAILS" />
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:background="#0AA7F1"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Store Number" />
-        5<EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/storeNumber"
-            android:numeric="integer"
-            android:text="5"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Intersection" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/intersection"
-            android:text=""
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Address" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/storeaddress"
-            android:text="187 Cedar Lane"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Store City" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/storecity"
-            android:text="philadelphia"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Store State" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/storestate"
-            android:text="PA"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="ZipCode" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/storeZip"
-            android:numeric="integer"
-            android:text="19103"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Latitude" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/latitude"
-            android:numeric="integer"
-            android:text="1092837464"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Longitude" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/langitude"
-            android:numeric="integer"
-            android:text="657483921"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Environment" />
-
-        <RadioGroup android:id="@+id/environment"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="6">
-            <RadioButton
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
                 android:layout_height="wrap_content"
-                android:text="DEV"
-                android:id="@+id/dev" />
-            <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Longitude" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:text="QA"
-                android:id="@+id/qa" />
+                android:id="@+id/langitude"
+                android:numeric="integer"
+                android:text="657483921"
+                android:layout_gravity="center_horizontal" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
                 android:layout_height="wrap_content"
-                android:text="STAGE"
-                android:checked="true"
-                android:id="@+id/stage" />
+                android:layout_gravity="center_vertical"
+                android:text="Environment" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
+            <RadioGroup android:id="@+id/environment"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="PROD"
-                android:id="@+id/prod" />
-        </RadioGroup>
+                android:layout_weight="7">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEV"
+                    android:id="@+id/dev" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QA"
+                    android:id="@+id/qa" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STAGE"
+                    android:checked="true"
+                    android:id="@+id/stage" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROD"
+                    android:id="@+id/prod" />
+            </RadioGroup>
 
 
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Create/Update MDLIVE"
+            android:id="@+id/button"
+            android:onClick="openMDLIVE"
+            android:background="@color/light_blue"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
+    </ScrollView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Create/Update MDLIVE"
-        android:id="@+id/button"
-        android:onClick="openMDLIVE"
-        android:background="@color/light_blue"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
-</ScrollView>
+
+</FrameLayout>

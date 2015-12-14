@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
     static {
         AffilClientSecret_Prod.put(AFFILIATE.BAYLOR, "0000");
         AffilClientSecret_Prod.put(AFFILIATE.STJOSEPH, "0000");
-        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "-----------");
+        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "----------");
         AffilClientSecret_Prod.put(AFFILIATE.SUTTER, "0000");
     }
 
@@ -85,10 +85,9 @@ public class MainActivity extends Activity {
     static {
         AffilAPIKey_Prod.put(AFFILIATE.BAYLOR, "0000");
         AffilAPIKey_Prod.put(AFFILIATE.STJOSEPH, "0000");
-        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "------------");
+        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "-----------");
         AffilAPIKey_Prod.put(AFFILIATE.SUTTER, "0000");
     }
-
 
     private AFFILIATE affil;
 
