@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/framelayout" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/framelayout">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:elevation="6dp">
+        >
 
         <View
             android:layout_width="fill_parent"
@@ -27,7 +28,8 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="4dp"
-            android:background="#0AA7F1"/>
+            android:background="#0AA7F1"
+            android:elevation="6dp"/>
     </LinearLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -573,7 +575,9 @@
             <RadioGroup android:id="@+id/environment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="7">
+                android:layout_weight="7"
+                android:layout_marginBottom="30dp"
+                >
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -589,20 +593,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="STAGE"
-                    android:checked="true"
                     android:id="@+id/stage" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PROD"
+                    android:checked="true"
                     android:id="@+id/prod" />
             </RadioGroup>
 
 
         </LinearLayout>
 
-        <Button
+        <!-- Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -610,9 +614,27 @@
             android:id="@+id/button"
             android:onClick="openMDLIVE"
             android:background="@color/light_blue"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal" / -->
+
     </LinearLayout>
     </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        app:fabSize="normal"
+        app:elevation="8dp"
+        app:pressedTranslationZ="24dp"
+        app:rippleColor="@android:color/white"
+        app:borderWidth="0dp"
+        app:backgroundTint="@color/red"
+
+        android:id="@+id/fab"
+        android:src="@drawable/whitecheckmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:onClick="openMDLIVE"
+        />
 
 
 </FrameLayout>
