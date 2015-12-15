@@ -6,7 +6,6 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/CustomTheme"
         android:name="android.support.multidex.MultiDexApplication">
-      <!--  android:name="com.affiliate.RandomApp" -->
 
             <meta-data
                 android:name="com.google.android.gms.version"

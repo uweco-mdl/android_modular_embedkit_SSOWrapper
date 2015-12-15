@@ -23,7 +23,6 @@ import com.mdlive.embedkit.global.MDLiveConfig;
 import com.mdlive.embedkit.global.MDLiveConfig.ENVIRON;
 import com.mdlive.embedkit.global.MDLiveConfig.SIGNALS;
 import com.mdlive.embedkit.global.MDLiveConfig.EMBEDKITS;
-import com.mdlive.unifiedmiddleware.commonclasses.utils.MdliveUtils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -54,6 +53,8 @@ public class MainActivity extends Activity {
         AffiliateLayout.put(AFFILIATE.SUTTER, R.layout.main_sutter);
     }
 
+    // ***** STAGING DATA ******
+    //
     private static final Map<AFFILIATE, String> AffilClientSecret_Stage = new HashMap<>();
     static {
         AffilClientSecret_Stage.put(AFFILIATE.BAYLOR, "10c098fe22d78b51f7f");
@@ -70,13 +71,31 @@ public class MainActivity extends Activity {
         AffilAPIKey_Stage.put(AFFILIATE.SUTTER, "");
     }
 
+    // ****** PROD DATA
+    //
+    private static final Map<AFFILIATE, String> AffilClientSecret_Prod = new HashMap<>();
+    static {
+        AffilClientSecret_Prod.put(AFFILIATE.BAYLOR, "0000");
+        AffilClientSecret_Prod.put(AFFILIATE.STJOSEPH, "0000");
+        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "0000000000000");
+        AffilClientSecret_Prod.put(AFFILIATE.SUTTER, "0000");
+    }
+
+    private static final Map<AFFILIATE, String> AffilAPIKey_Prod = new HashMap<>();
+    static {
+        AffilAPIKey_Prod.put(AFFILIATE.BAYLOR, "0000");
+        AffilAPIKey_Prod.put(AFFILIATE.STJOSEPH, "0000");
+        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "0000000000000");
+        AffilAPIKey_Prod.put(AFFILIATE.SUTTER, "0000");
+    }
+
     private AFFILIATE affil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        affil = AFFILIATE.BAYLOR;
+        affil = AFFILIATE.CAREINGTON;
 
         setContentView(AffiliateLayout.get(affil));
 
@@ -84,7 +103,7 @@ public class MainActivity extends Activity {
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter(SIGNALS.EXIT_SIGNAL.name()));
 
         // ***** DEFAULT ENVIRONMENT VALUE HERE *****************
-        env = ENVIRON.STAGE;
+        env = ENVIRON.PROD;
         // ******************************************
 
         getDateOfBirth();                        // Sets up dialog for selecting a Birth Date
@@ -92,9 +111,6 @@ public class MainActivity extends Activity {
         pharmaData = new LinkedHashMap();        // holds the 'pharmacy' key-value pairs
 
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.genderGroup);
-
-        // register EmbedKit exit signal listener and respond accordingly
-        LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter(SIGNALS.EXIT_SIGNAL.name()));
 		
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -146,9 +162,12 @@ public class MainActivity extends Activity {
             t.show();
 
             // relaunch current activity
+            /*
             Intent intentRestart = new Intent(context, SplashScreenActivity.class);
             intentRestart.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intentRestart);
+            */
+            recreate();
         }
     };
 
@@ -304,6 +323,8 @@ public class MainActivity extends Activity {
                 break;
 
             case PROD:
+                s = AffilAPIKey_Prod.get(affil);
+                break;
             case STAGE:
                 s = AffilAPIKey_Stage.get(affil);
                 //s = "c9e63d9a77f17039c470";
@@ -362,6 +383,8 @@ public class MainActivity extends Activity {
                 break;
 
             case PROD:
+                s = AffilClientSecret_Prod.get(affil);
+                break;
             case STAGE:
                 s = AffilClientSecret_Stage.get(affil);
                 //s = "b302e84f866a8730eb2";

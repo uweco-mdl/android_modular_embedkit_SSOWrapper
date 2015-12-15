@@ -24,7 +24,14 @@
           *;
       }
 
-
 # VSeeKit
 -keep public class com.vsee.kit.** {*;}
 -keep public class com.vsee.kit.evisit.** {*;}
+
+
+# for API 23+ (Apache HTTP client classes have now been removed):
+-dontwarn org.apache.http.**
+-dontwarn android.net.http.AndroidHttpClient
+-dontwarn com.google.android.gms.**
+-dontwarn com.android.volley.toolbox.**
+

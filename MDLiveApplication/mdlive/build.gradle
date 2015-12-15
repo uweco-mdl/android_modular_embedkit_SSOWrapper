@@ -5,8 +5,8 @@ apply plugin: 'com.google.gms.google-services'
 repositories {
     maven {
         credentials {
-            username 'uweco'
-            password '903fdbf83488be99797a7757429240ca4f3a2619'
+            username 'mdlive-vsee-user'
+            password 'vs33_p@sswd'
         }
         url 'http://dl.bintray.com/vsee/android'
     }
@@ -21,13 +21,13 @@ repositories {
 
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.mdlive.mobile"
         minSdkVersion 15
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 3
         versionName "3.0"
         multiDexEnabled true
@@ -54,16 +54,16 @@ dependencies {
     compile project(':theming')
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    //compile 'com.android.support:appcompat-v7:23.0.1'
-    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:support-v13:22.2.1'
-    compile 'com.google.code.gson:gson:2.3.1'
-    compile 'com.google.android.gms:play-services-maps:8.1.0'
-    compile 'com.google.android.gms:play-services-analytics:8.1.0'
+    compile 'com.android.support:support-v13:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.google.android.gms:play-services-maps:8.3.0'
+    compile 'com.google.android.gms:play-services-analytics:8.3.0'
 
     // Add each supported aar modules here
-
+/*
     compile(name: 'mdlive_assist', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
@@ -74,11 +74,13 @@ dependencies {
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }*/
+
     compile(name: 'mdlive_sav', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
-    }/*
+    }
+    /*
     compile(name: 'mdlive_myhealth', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
@@ -93,18 +95,17 @@ dependencies {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
-    }*/
+    }
+    */
     compile(name: 'mdlive_common', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
 
-
     compile('com.vsee:vsee-kit:0.4.22021@aar') {
         transitive = true
     }
-
 
     //this section ensures that the .AAR can be located
     repositories {
