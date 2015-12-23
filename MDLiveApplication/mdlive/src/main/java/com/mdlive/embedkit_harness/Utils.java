@@ -1,4 +1,4 @@
-package com.mdlive.mobile;
+package com.mdlive.embedkit_harness;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

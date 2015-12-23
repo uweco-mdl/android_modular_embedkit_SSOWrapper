@@ -1,4 +1,4 @@
-package com.mdlive.mobile;
+package com.mdlive.embedkit_harness;
 
 import android.app.Activity;
 import android.content.Intent;

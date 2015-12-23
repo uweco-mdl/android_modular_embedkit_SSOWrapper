@@ -25,7 +25,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.mdlive.mobile"
+        applicationId "com.mdlive.embedkit_harness"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 3

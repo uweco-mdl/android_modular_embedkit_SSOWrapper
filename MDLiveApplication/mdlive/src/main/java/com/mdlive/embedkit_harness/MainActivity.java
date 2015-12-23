@@ -1,4 +1,4 @@
-package com.mdlive.mobile;
+package com.mdlive.embedkit_harness;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 import android.widget.DatePicker;
@@ -77,7 +79,7 @@ public class MainActivity extends Activity {
     static {
         AffilClientSecret_Prod.put(AFFILIATE.BAYLOR, "0000");
         AffilClientSecret_Prod.put(AFFILIATE.STJOSEPH, "0000");
-        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "0000000000000");
+        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "00000000000000");
         AffilClientSecret_Prod.put(AFFILIATE.SUTTER, "0000");
     }
 
@@ -85,7 +87,7 @@ public class MainActivity extends Activity {
     static {
         AffilAPIKey_Prod.put(AFFILIATE.BAYLOR, "0000");
         AffilAPIKey_Prod.put(AFFILIATE.STJOSEPH, "0000");
-        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "0000000000000");
+        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "00000000000000");
         AffilAPIKey_Prod.put(AFFILIATE.SUTTER, "0000");
     }
 
@@ -176,8 +178,52 @@ public class MainActivity extends Activity {
         return ((EditText) findViewById(id)).getText().toString().trim();
     }
 
+    /**
+     * Indicates whether screen contains unpopulated fields
+     *
+     * @return
+     */
+    private boolean hasEmptyField()
+    {
+        boolean hasEmpty = getInputText(R.id.address1).isEmpty()
+                            || txtDOB.getText().toString().isEmpty()
+                            || getInputText(R.id.city).isEmpty()
+                            || getInputText(R.id.email).isEmpty()
+                            || getInputText(R.id.fName).isEmpty()
+                            || getInputText(R.id.lName).isEmpty()
+                            || getInputText(R.id.mName).isEmpty()
+                            || getInputText(R.id.phone).isEmpty()
+                            || getInputText(R.id.state).isEmpty()
+                            || getInputText(R.id.zipcode).isEmpty()
+                            || getInputText(R.id.storeaddress).isEmpty()
+                            || getInputText(R.id.storecity).isEmpty()
+                            || getInputText(R.id.latitude).isEmpty()
+                            || getInputText(R.id.longitude).isEmpty()
+                            || getInputText(R.id.storestate).isEmpty()
+                            || getInputText(R.id.storeNumber).isEmpty()
+                            || getInputText(R.id.storeZip).isEmpty();
+
+        return(hasEmpty);
+    }
+
+    private void showSnackbarMessage(String mesg)
+    {
+        CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.framelayout);
+        Snackbar snackbar = Snackbar.make(coordinatorLayout, mesg, Snackbar.LENGTH_LONG);
+        View sbView = snackbar.getView();
+        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+        textView.setTextColor(Color.YELLOW);
+
+        snackbar.show();
+
+    }
 
     public void openMDLIVE(View v) {
+        if(hasEmptyField()) {
+            showSnackbarMessage(getString(R.string.emptyField));
+            return;
+        }
+
         JsonObject jsoMessage = new JsonObject();
         try {
 
@@ -199,7 +245,7 @@ public class MainActivity extends Activity {
             String intersec = getInputText(R.id.intersection).toString();
             pharmaData.put("intersection", intersec==null||intersec.isEmpty() ? "" : intersec);
             pharmaData.put("latitude", getInputText(R.id.latitude));
-            pharmaData.put("longitude", getInputText(R.id.langitude));
+            pharmaData.put("longitude", getInputText(R.id.longitude));
             pharmaData.put("state", getInputText(R.id.storestate));
             pharmaData.put("store_number", getInputText(R.id.storeNumber));
             pharmaData.put("zipcode", getInputText(R.id.storeZip));

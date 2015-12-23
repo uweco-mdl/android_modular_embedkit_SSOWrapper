@@ -1,9 +1,16 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/framelayout">
+
+<!-- FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/framelayout">
+    android:id="@+id/framelayout" -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -554,7 +561,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:id="@+id/langitude"
+                android:id="@+id/longitude"
                 android:numeric="integer"
                 android:text="657483921"
                 android:layout_gravity="center_horizontal" />
@@ -622,8 +629,6 @@
     <android.support.design.widget.FloatingActionButton
         app:fabSize="normal"
         app:elevation="8dp"
-        app:pressedTranslationZ="24dp"
-        app:rippleColor="@android:color/white"
         app:borderWidth="0dp"
         app:backgroundTint="@color/red"
 
@@ -634,7 +639,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:onClick="openMDLIVE"
+        android:stateListAnimator="@anim/fab_raise"
         />
 
 
-</FrameLayout>
+<!--/FrameLayout -->
+</android.support.design.widget.CoordinatorLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MDLIVE</string>
+
+    <string name="emptyField">Empty fields not allowed</string>
 </resources>
