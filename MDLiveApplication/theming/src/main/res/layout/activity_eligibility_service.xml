@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle"
+    android:background="@color/mdliveBottomBlueColor">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/headerTxt"
+            style="@style/HeaderTextViewStyle"
+            android:layout_alignParentLeft="true"
+            android:text="@string/mdl_verification" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/providerBgdLinearLayoutStyle"
+        android:id="@+id/docOnCalLinLay"
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dimen_24_dp"
+            android:layout_marginBottom="@dimen/dimen_10_dp"
+            android:indeterminate="true"
+            style="?android:attr/progressBarStyle"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateDrawable="@drawable/mdlive_progressbar"
+            />
+
+        <TextView
+            style="@style/InsuranceEligibiltyPrimaryTextStyle"
+            android:id="@+id/PatientName"
+            android:textColor="@color/darkblack"
+            android:text="@string/mdl_insurance_eligibilty_service"
+            />
+
+        <TextView
+            style="@style/InsuranceEligibiltySecondaryTextStyle"
+            android:text="@string/mdl_insurance_eligibilty_few_minutes"
+            android:gravity="center"
+            android:textColor="@color/darkblack"
+            android:id="@+id/Time"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

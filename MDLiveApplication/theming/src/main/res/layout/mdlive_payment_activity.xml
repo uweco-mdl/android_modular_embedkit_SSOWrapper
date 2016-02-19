@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout style="@style/ContainerStyle">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/mdlive_toolbar" />
+
+            <ScrollView
+                style="@style/WagLinearLayoutStylePediatricNew"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="9dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="7dp">
+
+                        <TextView
+                            android:layout_width="@dimen/dimen_0_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/mdl_doctor_visit_total"
+                            android:tag="@string/mdltag_doctor_visit_total"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:gravity="top"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cost"
+                            android:layout_width="@dimen/dimen_0_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:gravity="top|end"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/parentMasterCardLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:background="@color/white">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mdl_use_card_text"
+                            android:tag="@string/mdltag_use_card_text"
+
+                            android:layout_marginTop="22dp"
+                            android:textSize="17sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/masterCardRl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_rect_white"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="9dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="9dp">
+
+
+                            <ImageView
+                                android:layout_width="57dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/master_card"
+                                android:id="@+id/card_logo" />
+
+                            <TextView
+                                android:id="@+id/useMasterCardtxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mdl_card_details"
+                                android:tag="@string/mdltag_card_details"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/card_logo"
+                                android:layout_toEndOf="@+id/card_logo"
+                                android:paddingLeft="11dp"
+                                android:textColor="@color/card_details_text_color"
+                                android:textSize="17sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ortxt"
+                            style="@style/BillingViewTextStyle"
+                            android:text="@string/mdl_or_upper"
+                            android:tag="or"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/BillingViewTextStyle"
+                        android:text="@string/mdl_payment_instructions"
+                        android:tag="@string/mdltag_payment_instructions" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <WebView
+                                android:id="@+id/HostedPCI"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp" />
+
+                            <Button
+                                android:layout_width="32dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/camera_icon_blue"
+                                android:id="@+id/ScanCardBtn"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="45dp"
+                                android:layout_marginRight="15dp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    <LinearLayout
+                        style="@style/Choose_Pharmacy_Search_Field"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtexpDate"
+                            style="@style/searchPharmacyLabelStyle"
+                            android:text="@string/mdl_expiration_date"
+                            android:tag="@string/mdltag_expiration_date" />
+
+                        <TextView
+                            style="@style/EditFieldCommonStyle"
+                            android:id="@+id/edtExpiryDate"
+                            android:editable="false"
+                            android:hint="@string/mdl_mm_yy"
+                            android:tag="@string/mdltag_mm_yy"
+                            android:background="@null" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/Choose_Pharmacy_Search_Field"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/searchPharmacyLabelStyle"
+                            android:text="@string/mdl_ziptxtTitle"
+                            android:tag="@string/mdltag_zipTxt" />
+
+                        <EditText
+                            android:id="@+id/edtZipCode"
+                            style="@style/EditFieldCommonStyle"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textSize="17sp"
+                            android:digits="0123456789"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:hint="@string/mdl_ziptxt"
+                            android:tag="@string/mdltag_zipTxt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="21dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/mdl_apply_offer_code"
+                            android:tag="@string/mdl_apply_offer_code"
+                            android:onClick="applyOfferCode"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/card_details_text_color"
+                            android:background="@null"
+                            android:textSize="17sp"
+                            android:gravity="top" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:checked="false"
+                            android:textSize="16sp"
+                            android:gravity="left|top"
+                            android:text="@string/mdl_hsa_card"
+                            android:tag="@string/mdltag_hsa_card"
+                            app:theme="@style/Switch"
+                            android:paddingLeft="30dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mdl_card_usage_message"
+                        android:tag="@string/mdltag_card_usage_message"
+                        android:textColor="@color/get_started_message_color"
+                        android:textSize="@dimen/dimen_14_dp"
+                        android:layout_marginTop="75dp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include layout="@layout/custom_progress_dialog" />
+</merge>

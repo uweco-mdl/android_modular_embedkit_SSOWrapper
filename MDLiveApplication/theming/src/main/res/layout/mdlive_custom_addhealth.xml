@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mylocation_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+        android:gravity="center"
+        android:background="@drawable/searchpvr_white_rounded_corner"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/deleteIcon"
+            android:background="@drawable/icon_x"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="visible"
+             />
+
+    <LinearLayout
+        style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/deleteIcon"
+        >
+        <TextView
+            style="@style/common_style_W_Match_H_Wrap"
+            android:text="@string/mdl_empty_conditions_reported"
+            android:tag="@string/mdltag_empty_conditions_reported"
+            android:textColor="@color/condition_txt_color"
+            android:gravity="left"
+            android:id="@+id/conditionName"
+            android:textSize="17sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+        <TextView
+            style="@style/common_style_W_Match_H_Wrap"
+            android:text="@string/mdl_empty_conditions_reported"
+            android:tag="@string/mdltag_empty_conditions_reported"
+            android:textColor="@color/condition_txt_color"
+            android:gravity="left"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:id="@+id/conditionSubName"
+            android:singleLine="true"
+            android:visibility="visible"
+            />
+</LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

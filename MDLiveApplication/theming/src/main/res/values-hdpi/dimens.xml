@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dash_board_icon_width">48dp</dimen>
+    <dimen name="dash_board_icon_height">48dp</dimen>
+
+    <dimen name="login_container_top_margin">260dp</dimen>
+
+    <dimen name="dashboard_user_logo_width">48dp</dimen>
+    <dimen name="dashboard_user_logo_height">48dp</dimen>
+
+    <dimen name="dashboard_user_spinner_margin_top">0dp</dimen>
+    <dimen name="dashboard_user_spinner_margin_bottom">24dp</dimen>
+    <dimen name="dashboard_user_spinner_height">112dp</dimen>
+
+    <dimen name="drop_shadow">0dp</dimen>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:id="@+id/mdlive_container_layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/myfamily_history_textviewquestion_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:tag="@string/mdltag_my_family_history_question"
+            android:text="@string/mdl_my_family_history_question"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/mdlive_family_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_family_history_checkBox_spinnerCv"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="@dimen/txtProvider_marginLeft"
+            android:layout_marginRight="@dimen/txtProvider_marginLeft"
+            android:layout_marginTop="6dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:id="@+id/my_family_history_other_relativelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/my_family_history_other_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:tag="@string/mdltag_my_family_history_other"
+                    android:text="@string/mdl_my_family_history_other"
+                    android:textColor="@color/darkgreyTextColor" />
+
+                <EditText
+                    android:id="@+id/my_family_history_other_editText"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/my_family_history_other_textview"
+                android:textColor="@color/ReasonForVisit_TextColor_black"
+                    android:textCursorDrawable="@null"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/my_family_history_other_editText"
+                    android:background="@color/radio_button_color_highlighted"
+                    android:onClick="addAction"
+                    android:tag="@string/mdltag_my_family_history_other_add"
+                    android:text="@string/mdl_my_family_history_other_add"
+                    android:textColor="@color/white"
+                    android:id="@+id/my_family_history_other_btn" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

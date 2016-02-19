@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_style_W_Match_H_Match_O_Vertical"
+    android:background="#f1f5f8">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_8_dp"
+        android:clipToPadding="false"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:dividerHeight="8dp"></ListView>
+
+</LinearLayout>

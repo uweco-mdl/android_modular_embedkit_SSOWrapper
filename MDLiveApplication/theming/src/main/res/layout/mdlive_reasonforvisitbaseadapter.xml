@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:id="@+id/reasonListItem"
+    android:padding="10dp"
+    >
+<ImageView
+    style = "@style/common_style_W_Wrap_H_Wrap"
+    android:src="@drawable/check_box_tick"
+    android:id="@+id/reasonCheckbox" />
+
+<TextView
+    style = "@style/common_style_W_Match_M_Wrap"
+    android:layout_height="wrap_content"
+    android:textSize="15sp"
+    android:textColor="@color/darkblack"
+    android:paddingTop="2dp"
+    android:maxLines="2"
+    android:ellipsize="end"
+    android:paddingLeft="10dp"
+    android:paddingBottom="2dp"
+    android:id="@+id/reasonTxt" />
+</LinearLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/mdl_apply_offer_code"
+        android:tag="@string/mdltag_apply_offer_code"
+        android:textAllCaps="true"
+        android:layout_gravity="center_vertical" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="@string/mdl_enter_code"
+        android:tag="@string/mdltag_enter_code"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/textView"
+        android:layout_gravity="center_vertical" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/offerCode"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textCursorDrawable="@null"
+        android:background="@color/transparent"
+        android:layout_gravity="center_vertical"
+         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/gray_6"/>
+ </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:layout_gravity="center_horizontal">
+    <Button
+        android:id="@+id/btn_ok_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="@color/mdlivePrimaryBlueColor"
+        android:text="@string/mdl_apply"
+        android:tag="@string/mdltag_apply" />
+    <Button
+        android:id="@+id/btn_close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mdlivePrimaryBlueColor"
+        android:visibility="gone"
+         android:text="@string/mdl_cancel"
+        android:tag="@string/mdltag_cancel"/>
+
+</LinearLayout>
+</LinearLayout>

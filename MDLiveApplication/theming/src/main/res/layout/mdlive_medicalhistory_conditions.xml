@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle">
+    <!--<include layout="@layout/header" />-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/mdlivePrimaryBlueColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mdl_conditions"
+            android:tag="@string/mdltag_conditions"
+            android:id="@+id/textView6"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:inputType="textCapSentences"
+         />
+
+    </RelativeLayout>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstAutoTextView"
+                android:layout_margin="10dp"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/edittext_bg"
+                android:hint="@string/mdl_add_condition_with_eg_hint"
+                android:tag="@string/mdltag_add_condition_with_eg_hint"
+                android:padding="10dp"
+                 />
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/secondAutoTextView"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="@string/mdl_add_condition_hint"
+                android:tag="@string/mdltag_add_condition_hint"
+                android:padding="10dp"
+                />
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/thirdAutoTextView"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="@string/mdl_add_condition_hint"
+                android:tag="@string/mdltag_add_condition_hint"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mdl_save"
+        android:tag="@string/mdltag_save"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+       style="@style/ContinueButtonStyle"
+        android:id="@+id/SavContinueBtn" />
+</LinearLayout>

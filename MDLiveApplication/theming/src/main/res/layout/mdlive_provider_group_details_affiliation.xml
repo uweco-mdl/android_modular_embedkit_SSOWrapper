@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle"
+    android:background="@color/mdliveBottomBlueColor">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backImg"
+            style="@style/HeaderBackImgStyle" />
+
+        <TextView
+            android:id="@+id/headerTxt"
+            style="@style/HeaderTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_toEndOf="@+id/backImg"
+            android:layout_toRightOf="@+id/backImg"
+            android:tag="@string/mdltag_choose_doctor"
+            android:text="@string/mdl_affliation_caps" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:background="@color/white">
+
+        <LinearLayout
+            style="@style/WagParentLinearLayoutStyleZeroHeight"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/CCPAffiliationStyle">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/affiliationLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <View
+                    style="@style/ProviderSearchViewStyle"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/CCPAffiliationStyle">
+
+                <TextView
+                    android:id="@+id/mission_heading"
+                    style="@style/CCPAffiliationDetailHeaderStyle"
+                    android:tag="Our Mission"
+                    android:text="@string/mdl_our_mission" />
+
+                <TextView
+                    android:id="@+id/mission_txt"
+                    style="@style/CCPAffiliationDetailContentStyle" />
+
+                <View
+                    style="@style/ProviderSearchViewStyle"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/CCPAffiliationStyle">
+
+                <TextView
+                    android:id="@+id/provider_heading"
+                    style="@style/CCPAffiliationDetailHeaderStyle"
+                    android:tag="Our Providers"
+                    android:text="@string/mdl_our_providers" />
+
+
+                    <LinearLayout
+                        android:id="@+id/providerVertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <GridView
+                            android:id="@+id/affliationView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="3"
+                            android:columnWidth="90dp"
+                            android:horizontalSpacing="10dp"
+                            android:verticalSpacing="2dp"
+                            android:gravity="center"
+                            android:stretchMode="columnWidth">
+
+                        </GridView>
+
+<!--
+                        <HorizontalScrollView
+                            android:id="@+id/horizontalScrollView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:id="@+id/providerHorizontalScrollView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/providerHorizontalScrollViewOdd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+                        </HorizontalScrollView>-->
+                    </LinearLayout>
+
+
+                <View
+                    style="@style/ProviderSearchViewStyle"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/CCPAffiliationStyle">
+
+                <TextView
+                    android:id="@+id/links_heading"
+                    style="@style/CCPAffiliationDetailHeaderStyle"
+                    android:tag="Links"
+                    android:text="@string/mdl_link" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_20_dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView
+                        android:id="@+id/LinkImg1"
+                        style="@style/CCPAffiliationLinkImg"
+                        android:visibility="gone" />
+
+                    <com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView
+                        android:id="@+id/LinkImg2"
+                        style="@style/CCPAffiliationLinkImg"
+                        android:visibility="gone" />
+
+                    <com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView
+                        android:id="@+id/LinkImg3"
+                        style="@style/CCPAffiliationLinkImg"
+                        android:visibility="gone" />
+
+                    <com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView
+                        android:id="@+id/LinkImg4"
+                        style="@style/CCPAffiliationLinkImg"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

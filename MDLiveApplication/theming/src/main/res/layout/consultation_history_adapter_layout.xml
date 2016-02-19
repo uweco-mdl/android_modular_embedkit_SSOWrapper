@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dimen_4_dp"
+    app:backgroundTint="#EEF2F7"
+    android:clipToPadding="false"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.mdlive.unifiedmiddleware.commonclasses.customUi.CircularNetworkImageView
+                android:id="@+id/adapter_provider_image_view"
+                style="@style/Adapter_Left_Element"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="@dimen/dimen_14_dp"
+                android:layout_marginTop="13dp"
+                android:contentDescription="@string/mdl_app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dash_board_doctor_icon"
+                android:tag="@string/mdltag_app_name" />
+
+            <LinearLayout
+                style="@style/Adapter_Middle_Element"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/adapter_provider_top_text_view"
+                    style="@style/Provider_Top_Item_Text_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:singleLine="true"
+                    android:tag="@string/mdltag_app_name"
+                    android:text="@string/mdl_app_name"
+                    android:textColor="@color/unread_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginTop="@dimen/dimen_4_dp"/>
+
+                <TextView
+                    android:id="@+id/adapter_provider_bottom_text_view"
+                    style="@style/Provider_Top_Item_Text_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:tag="@string/mdltag_app_name"
+                    android:text="@string/mdl_app_name"
+                    android:textColor="@color/unread_text_color"
+                    android:layout_marginTop="@dimen/dimen_4_dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                style="@style/Adapter_Right_Element"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_next_item"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/history_details_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/provider_imageMarginTop_Bottom"
+            android:layout_marginTop="@dimen/provider_imageMarginTop_Bottom"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dimen_14_dp">
+
+                <TextView
+                    style="@style/Provider_Top_Item_Text_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/mdltag_reason_for_visit_colon_text"
+                    android:text="@string/mdl_reason_for_visit_colon_text"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/unread_text_color"/>
+
+                <TextView
+                    android:id="@+id/adapter_reason_for_visit_text_view"
+                    style="@style/Provider_Top_Item_Text_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/mdltag_app_name"
+                    android:text="@string/mdl_app_name"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/unread_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/provider_imageMarginTop_Bottom"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dimen_14_dp">
+
+                <TextView
+                    style="@style/Provider_Top_Item_Text_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/mdltag_primary_diagnosis"
+                    android:text="@string/mdl_primary_diagnosis"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/unread_text_color" />
+
+                <TextView
+                    android:id="@+id/adapter_primary_diagnosis_text_view"
+                    style="@style/Provider_Top_Item_Text_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/mdltag_not_sure"
+                    android:text="@string/mdl_not_sure"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/unread_text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16_dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/adapter_send_msg_text_view"
+                    style="@style/ConsultationHistory_Bottom_Text_Style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:tag="@string/mdltag_send_message_caps"
+                    android:text="@string/mdl_send_message_caps"
+                    android:layout_gravity="center"
+                    android:textColor="@color/card_details_text_color"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/need_assistance"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/adapter_aftercare_instructions_text_view"
+                    style="@style/ConsultationHistory_Bottom_Text_Style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:layout_gravity="center"
+                    android:tag="@string/mdltag_aftercase_instructions_caps"
+                    android:text="@string/mdl_aftercase_instructions_caps"
+                    android:textColor="@color/card_details_text_color"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/need_assistance"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/adapter_view_claim_form_text_view"
+                    style="@style/ConsultationHistory_Bottom_Text_Style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:tag="@string/mdltag_view_claim_form_caps"
+                    android:text="@string/mdl_view_claim_form_caps"
+                    android:textColor="@color/card_details_text_color"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

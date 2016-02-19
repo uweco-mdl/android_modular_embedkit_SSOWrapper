@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background_color">
+
+    <ListView
+        android:id="@+id/helpandsupport_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/dimen_8_dp"
+        android:scrollbars="none"
+        android:padding="@dimen/dimen_8_dp"
+        android:clipToPadding="false"/>
+
+</FrameLayout>

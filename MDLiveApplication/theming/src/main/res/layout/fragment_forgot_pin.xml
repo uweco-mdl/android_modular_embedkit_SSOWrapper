@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background_color"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/forgot_image_view"
+        android:layout_width="292dp"
+        android:layout_height="@dimen/dimen_64_dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_64_dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/forgot_pin" />
+
+    <TextView
+        android:id="@+id/forgot_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_32_dp"
+        android:text="@string/mdl_forgot_your_pin_lower"
+        android:tag="@string/mdltag_forgot_your_pin_lower"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:text="@string/mdl_tap_below_to_reset_it"
+        android:tag="@string/mdltag_tap_below_to_reset_it"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_48_dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/first_available_blue_button_color"
+        android:text="@string/mdl_reset_pin"
+        android:tag="@string/mdltag_reset_pin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:onClick="onResetPinClicked"/>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/mdl_share"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:textColor="#33B5E5"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/shareHeaderTv" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#33B5E5"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareLv"
+        android:divider="#dddddd"
+        android:dividerHeight="1dp"
+        ></ListView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/shareCancelBtn"
+        android:textSize="14sp"
+        android:background="#dddddd"
+        />
+</LinearLayout>

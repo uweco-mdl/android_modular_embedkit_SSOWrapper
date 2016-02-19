@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txt_add_FamilyMember"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="7dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginTop="22dp"
+    android:fontFamily="sans-serif-light"
+    android:tag="@string/mdltag_current_family_member"
+    android:text="@string/mdl_current_family_member"
+    android:textColor="@color/darkblack"
+    android:textSize="20sp" />

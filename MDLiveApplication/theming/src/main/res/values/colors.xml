@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--BasePrimaryColor-->
+    <color name="mdliveBackgroundColor">#ecf5fa</color>
+    <color name="mdlivePrimaryBlueColor">#3A89C9</color>
+    <color name="mdliveBottomBlueColor">#ECF5FA</color>
+    <color name="mdliveHeaderPrimaryBlueColor">#489cd4</color>
+    <!--BasePrimaryColor-->
+    <color name="mdliveLoginUsernameColor">#878f95</color>
+
+
+    <color name="black">#35393d</color>
+    <color name="darkblack">#000000</color>
+    <color name="withPatient">#F18032</color>
+    <color name="disableBtn">#E6E6E6</color>
+
+    <color name="white">#ffffff</color>
+    <color name="grey_txt">#b4b9bd</color>
+    <color name="parentView_color">#D2D5D7</color>
+    <color name="childView_color">#E7E7E7</color>
+    <color name="continueBtn_color">#5877AD</color>
+    <color name="headerStyle_color">#F7F6F5</color>
+    <color name="green">#2A7DB6</color>
+    <color name="red">#FA5858</color>
+    <color name="location_color">#35393d</color>
+    <color name="confirmappmt_evisit_color">#464646</color>
+    <item name="view" type="color">#E0D8D8</item>
+    <item name="search_bgd" type="color">#878f95</item>
+
+    <color name="myPrimaryColor">#2196F3</color>
+
+    <color name="myPrimaryDarkColor">#1976D2</color>
+
+    <color name="myAccentColor">#FF4081</color>
+
+    <color name="myDrawerBackground">#FFF</color>
+
+    <color name="myWindowBackground">#FFF</color>
+
+    <color name="myTextPrimaryColor">#212121</color>
+
+    <color name="myNavigationColor">#000</color>
+
+    <color name="transparent_native">#0FFF</color>
+    <color name="link_blue_native">#0645AD</color>
+
+    <drawable name="pressed_gray">#0c000000</drawable>
+
+    <drawable name="selected_gray">#2c000000</drawable>
+
+    <!-- STATUS BAR COLOR -->
+    <color name="status_bar_color">#224D70</color>
+
+    <color name="lightgray">#D3D3D3</color>
+    <color name="steelblue">#4682B4</color>
+
+
+    <color name="gray_6">#666666</color>
+    <color name="gray_a">#AAAAAA</color>
+    <color name="gray_thankyou">#2E2F2F</color>
+
+    <color name="gray_added_color">#7A7A7A</color>
+    <color name="gray_c">#CCCCCC</color>
+    <color name="transparent">#0FFF</color>
+    <color name="link_blue">#0645AD</color>
+    <color name="customercall_blue">#257cfc</color>
+    <color name="selected_bg">#0645AD</color>
+    <color name="white_trans">@color/white</color>
+
+
+    <color name="chooseProvider_TextColor">#464646</color>
+    <color name="Availabilty_TextColor_green">#00bd4a</color>
+    <color name="need_assistance">#959595</color>
+    <color name="summary_contact">#007aff</color>
+    <color name="startappmt_btn_blue">#0288d1</color>
+
+    <color name="ReasonForVisit_TextColor_black">#100c0c</color>
+    <color name="ReasonForVisit_EditText_HintColor">#959595</color>
+
+    <color name="green_background">#00bd4a</color>
+    <color name="darkgrey_background">#464646</color>
+    <color name="darkgreyTextColor">#464646</color>
+    <color name="app_background">#f1f5f8</color>
+    <color name="blue_text_color">#007aff</color>
+    <color name="EditText_HintColor">#959595</color>
+    
+    <color name="choose_pharmacy_background">#f1f5f8</color>
+    <color name="pharmacy_search_hint_color">#acacac</color>
+
+    <color name="radio_button_color_highlighted">#257cfc</color>
+    <color name="medical_history_sub_text">#464646</color>
+    <color name="change_password_alert_text_color">#6d6d6d</color>
+    <color name="change_password_alert_text_color_red">#ff0000</color>
+    <color name="change_password_alert_text_color_green">#4bb544</color>
+    <color name="change_password_medium_text_color_yellow">#D2B224</color>
+
+    <color name="red_200">#EF9A9A</color>
+    <color name="red_300">#E57373</color>
+    <color name="red_400">#EF5350</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_600">#E53935</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_900">#B71C1C</color>
+
+    <color name="tab_text_color">#33ffffff</color>
+    <color name="selected_tab_text_color">#ffffff</color>
+
+    <color name="red_theme_primary">#cf102d</color>
+    <color name="red_theme_primary_dark">#ac0d25</color>
+
+    <color name="window_background_color">#EEF2F7</color>
+
+    <color name="get_started_message_color">#6d6d6d</color>
+
+
+    <color name="getstarted_background_color">#EFF3F6</color>
+    <color name="mylocation_background_color">#F1F5F8</color>
+
+    <color name="choose_pro_orange_color">#F07F24</color>
+    <color name="choose_pro_green_color">#00BC49</color>
+    <color name="choose_pro_gray_color">#A8A8A8</color>
+
+    <color name="search_pvr_blue_color">#007AFF</color>
+    <color name="condition_txt_color">#454545</color>
+
+    <color name="mdl_confirm_btn_color">#0288d1</color>
+    <color name="search_pvr_txt_blue_color">#0079FD</color>
+
+    <color name="card_details_text_color">#257cfc</color>
+
+    <color name="medicalhry_background">#FDFDFD</color>
+    <color name="dash_board_notification_background_color">#2d80f8</color>
+
+    <color name="blue_text">#2d80f8</color>
+    <color name="light_blue">#2d80f8</color>
+
+    <color name="waiting_room_green_color">#63c55a</color>
+
+    <color name="first_available_blue_button_color">#0288d1</color>
+    <color name="add_conditions_color">#257CFC</color>
+    <color name="add_conditions_new_color">#0288d1</color>
+
+    <color name="border">#56565a</color>
+
+    <!-- Waiting Room colors -->
+    <color name="waiting_room_header_color_01">#76aec5</color>
+    <color name="waiting_room_header_color_02">#57c592</color>
+    <color name="waiting_room_header_color_03">#f15e36</color>
+    <color name="waiting_room_header_color_04">#a367c5</color>
+    <color name="waiting_room_header_color_05">#2062c5</color>
+    <color name="waiting_room_header_color_06">#e7e55c</color>
+    <color name="waiting_room_header_color_07">#76aec5</color>
+    <color name="waiting_room_header_color_08">#57c592</color>
+    <color name="waiting_room_header_color_09">#f15e36</color>
+    <color name="waiting_room_header_color_10">#a367c5</color>
+    <color name="waiting_room_header_color_11">#2062c5</color>
+    <color name="waiting_room_header_color_12">#e7e55c</color>
+    <color name="waiting_room_header_color_13">#76aec5</color>
+    <color name="waiting_room_header_color_14">#57c592</color>
+    <color name="waiting_room_header_color_15">#f15e36</color>
+    <color name="waiting_room_header_color_16">#a367c5</color>
+    <color name="waiting_room_header_color_17">#2062c5</color>
+    <color name="waiting_room_header_color_18">#e7e55c</color>
+    <color name="waiting_room_header_color_19">#76aec5</color>
+    <color name="waiting_room_header_color_20">#57c592</color>
+    <color name="waiting_room_header_color_21">#f15e36</color>
+    <color name="waiting_room_header_color_22">#a367c5</color>
+    <color name="waiting_room_header_color_23">#2062c5</color>
+    <color name="waiting_room_header_color_24">#e7e55c</color>
+    <color name="waiting_room_header_color_25">#76aec5</color>
+    <color name="waiting_room_header_color_26">#57c592</color>
+    <color name="waiting_room_header_color_27">#f15e36</color>
+    <color name="waiting_room_header_color_28">#a367c5</color>
+    <color name="waiting_room_header_color_29">#2062c5</color>
+
+
+    <array name="waiting_room_header_colors">
+        <item>@color/waiting_room_header_color_01</item>
+        <item>@color/waiting_room_header_color_02</item>
+        <item>@color/waiting_room_header_color_03</item>
+        <item>@color/waiting_room_header_color_04</item>
+        <item>@color/waiting_room_header_color_05</item>
+        <item>@color/waiting_room_header_color_06</item>
+        <item>@color/waiting_room_header_color_07</item>
+        <item>@color/waiting_room_header_color_08</item>
+        <item>@color/waiting_room_header_color_09</item>
+        <item>@color/waiting_room_header_color_10</item>
+        <item>@color/waiting_room_header_color_11</item>
+        <item>@color/waiting_room_header_color_12</item>
+        <item>@color/waiting_room_header_color_13</item>
+        <item>@color/waiting_room_header_color_14</item>
+        <item>@color/waiting_room_header_color_15</item>
+        <item>@color/waiting_room_header_color_16</item>
+        <item>@color/waiting_room_header_color_17</item>
+        <item>@color/waiting_room_header_color_18</item>
+        <item>@color/waiting_room_header_color_19</item>
+        <item>@color/waiting_room_header_color_20</item>
+        <item>@color/waiting_room_header_color_21</item>
+        <item>@color/waiting_room_header_color_22</item>
+        <item>@color/waiting_room_header_color_23</item>
+        <item>@color/waiting_room_header_color_24</item>
+        <item>@color/waiting_room_header_color_25</item>
+        <item>@color/waiting_room_header_color_26</item>
+        <item>@color/waiting_room_header_color_27</item>
+        <item>@color/waiting_room_header_color_28</item>
+        <item>@color/waiting_room_header_color_29</item>
+        <item>@color/waiting_room_header_color_01</item>
+    </array>
+
+    <color name="toggle_color">#77c3bf</color>
+
+    <color name="read_text_color">#959595</color>
+    <color name="unread_text_color">#464646</color>
+    <color name="divider">#dbdbdb</color>
+
+    <color name="dashboard_menu_color">#556370</color>
+
+    <color name="doctor_on_call_background">#29abe2</color>
+
+</resources>

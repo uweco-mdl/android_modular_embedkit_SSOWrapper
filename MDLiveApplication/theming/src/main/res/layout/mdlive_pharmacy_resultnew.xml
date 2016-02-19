@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle"
+    >
+    <RelativeLayout
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:elevation="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_arrow_hdpi"
+            android:id="@+id/backImg"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="19dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_icon"
+            android:id="@+id/homeImg"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_alignTop="@+id/backImg"
+            android:layout_toEndOf="@+id/backImg" />
+        <TextView
+            android:id="@+id/headerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:text="@string/mdl_choosepharmacy"
+            android:tag="@string/mdltag_choosepharmacy"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/homeImg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mdl_filter_upper"
+            android:tag="@string/mdltag_filter"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:id="@+id/filter_txt"
+            />
+    </RelativeLayout>
+
+    <com.mdlive.embedkit.uilayer.pharmacy.customui.CustomFlt
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:layout_above="@+id/rl_footer">
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_footer"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </com.mdlive.embedkit.uilayer.pharmacy.customui.CustomFlt>
+
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:background="@android:color/white" >
+
+        <ListView
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dip"
+            android:id="@+id/pharmList"
+            android:layout_above="@+id/loadingIndicator"
+            android:clickable="true" />
+
+        <ProgressBar
+            android:id="@+id/loadingIndicator"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/footerButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:text="@string/mdl_list_results"
+        android:tag="@string/mdltag_list_results">
+
+    </Button>
+
+
+</LinearLayout>

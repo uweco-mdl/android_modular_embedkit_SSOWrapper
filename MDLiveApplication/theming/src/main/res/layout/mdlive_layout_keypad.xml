@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_c"
+        android:layout_marginBottom="@dimen/dimen_32_dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_pad_1"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_one"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_2"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_two"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_3"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_three"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_pad_4"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_four"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_5"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_five"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_6"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_six"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_pad_7"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_seven"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_8"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_eight"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_9"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_nine"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/num_pad_0"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mdl_number_zero"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/num_pad_cross"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="29dp"
+                android:layout_height="21dp"
+                android:background="@drawable/cross"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

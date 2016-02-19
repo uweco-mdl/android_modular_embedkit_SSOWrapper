@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spinner_drop_down_offset">112dp</dimen>
+    <dimen name="spinner_drop_down_offset_getstarted">30dp</dimen>
+    <dimen name="spinner_padding_left">7dp</dimen>
+    <dimen name="spinnerpatientname_leftmargin">3dp</dimen>
+
+    <dimen name="drop_shadow">4dp</dimen>
+</resources>

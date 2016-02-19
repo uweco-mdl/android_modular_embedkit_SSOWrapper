@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
     static {
         AffilClientSecret_Prod.put(AFFILIATE.BAYLOR, "0000");
         AffilClientSecret_Prod.put(AFFILIATE.STJOSEPH, "0000");
-        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "00000000000000");
+        AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "3c7d73325ff3e3ff3c9");
         AffilClientSecret_Prod.put(AFFILIATE.SUTTER, "0000");
     }
 
@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
     static {
         AffilAPIKey_Prod.put(AFFILIATE.BAYLOR, "0000");
         AffilAPIKey_Prod.put(AFFILIATE.STJOSEPH, "0000");
-        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "00000000000000");
+        AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "7d0adbaeb36629f6e394");
         AffilAPIKey_Prod.put(AFFILIATE.SUTTER, "0000");
     }
 

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:clickable="false">
+
+        <LinearLayout
+            android:id="@+id/notification_fragment_messages_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen_16_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:paddingLeft="@dimen/dimen_8_dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onMessageClicked">
+
+            <!--android:paddingTop="@dimen/dimen_6_dp"
+          -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification_icon1"
+                android:paddingLeft="@dimen/dimen_2_dp"
+                />
+
+            <TextView
+                android:id="@+id/notification_fragment_messages_text_view"
+                style="@style/Notification_Text_Default"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="@dimen/dimen_8_dp"
+                android:paddingTop="@dimen/dimen_0_dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen_8_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:paddingLeft="@dimen/dimen_8_dp"
+            android:clickable="true"
+            android:onClick="onPersonalInfoClicked">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification_icon2"
+                android:paddingTop="@dimen/dimen_6_dp"
+                android:paddingLeft="@dimen/dimen_2_dp"/>
+
+            <TextView
+                android:id="@+id/notification_fragment_personal_text_view"
+                style="@style/Notification_Text_Default"
+                android:layout_marginLeft="@dimen/dimen_8_dp"
+                android:layout_marginTop="5dp"
+                android:paddingTop="@dimen/dimen_0_dp"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen_8_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:paddingLeft="@dimen/dimen_8_dp"
+            android:clickable="true"
+            android:onClick="onPreferedStoreClicked">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification_icon3"
+                android:paddingTop="@dimen/dimen_6_dp"
+                android:paddingLeft="@dimen/dimen_2_dp"/>
+
+            <TextView
+                android:id="@+id/notification_fragment_prefered_store_text_view"
+                style="@style/Notification_Text_Default"
+                android:paddingTop="@dimen/dimen_0_dp"
+                android:layout_marginLeft="@dimen/dimen_8_dp"
+                android:layout_marginTop="7dp"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notification_fragment_upcoming_appoinment_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen_8_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:paddingLeft="@dimen/dimen_8_dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification_icon4_no_upcoming"
+                android:paddingTop="@dimen/dimen_8_dp"
+                android:paddingLeft="@dimen/dimen_2_dp"/>
+
+            <TextView
+                android:id="@+id/notification_fragment_upcoming_appoinment_text_view"
+                style="@style/Notification_Text_Default"
+                android:textSize="18sp"
+                android:layout_marginLeft="@dimen/dimen_8_dp"
+                android:layout_marginTop="5dp"
+                android:paddingTop="@dimen/dimen_6_dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/onCallNotifyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_8_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:paddingLeft="@dimen/dimen_8_dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification_icon4_upcoming"
+                android:paddingTop="@dimen/dimen_8_dp"
+                android:paddingLeft="@dimen/dimen_2_dp"/>
+
+            <TextView
+                android:id="@+id/oncall_appointment_textview"
+                style="@style/Notification_Text_Upcoming"
+                android:textSize="18sp"
+                android:layout_marginLeft="@dimen/dimen_8_dp"
+                android:layout_marginTop="5dp"
+                android:paddingTop="@dimen/dimen_6_dp"
+                />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/notification_fragment_upcoming_appoinment_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0dip"
+            android:divider="@null"
+            android:paddingTop="@dimen/dimen_8_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"/>
+
+        <Button
+            android:id="@+id/notification_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:clickable="false"/>
+    </LinearLayout>
+</FrameLayout>

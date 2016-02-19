@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pediatricContainer"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        style="@style/ContainerStyle">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/mdlive_toolbar" />
+
+        <ScrollView
+            android:id="@+id/pediatricScroll"
+            style="@style/ScrollViewStyle"
+            android:background="@color/mdliveBottomBlueColor"
+            android:layout_below="@+id/header">
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:layout_marginBottom="@dimen/ped_bottom"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10_dp">
+
+                <TextView
+                    android:id="@+id/ageTxt"
+                    style="@style/Pediatric_TextStyle"
+                    android:text="@string/mdl_patient_under_age"
+                    android:tag="@string/mdltag_patient_under_age"
+                    android:textSize="@dimen/textsize_medium" />
+
+                <TextView
+                    style="@style/Pediatric_TextStyle"
+                    android:text="@string/mdl_pediatric_please_text"
+                    android:tag="@string/mdltag_pediatric_please_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_medium"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:cardCornerRadius="@dimen/dimen_4_dp"
+                    style="@style/Pediatric_Field_Card_View_Style"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="9dp">
+
+                        <TextView
+                            style="@style/Pediatric_Weight_text_style"
+                            android:text="@string/mdl_pediatric_Birth_Weight_text"
+                            android:tag="@string/mdltag_pediatric_Birth_Weight_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_birthweight"
+                                style="@style/Pediatric_Weight_edittext_style"
+                                android:layout_alignBottom="@+id/textViewUnitBirth"/>
+
+                            <TextView
+                                style="@style/Pediatric_label_text_style"
+                                android:id="@+id/textViewUnitBirth"
+                                android:text="@string/mdl_pediatric_lbs_text"
+                                android:tag="@string/mdltag_pediatric_lbs_text"
+                                android:layout_toRightOf="@+id/edt_birthweight"
+                                android:layout_toEndOf="@+id/edt_birthweight"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    style="@style/WagLinearLayoutStylePediatric"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="@dimen/dimen_4_dp"
+                        style="@style/Pediatric_Field_Card_View_Style"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="9dp">
+
+                            <TextView
+                                style="@style/Pediatric_Weight_text_style"
+                                android:text="@string/mdl_pediatric_current_Weight_text"
+                                android:tag="@string/mdltag_pediatric_current_Weight_text" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                              >
+
+                                <EditText
+                                    android:id="@+id/edt_currentweight"
+                                    style="@style/Pediatric_Weight_edittext_style"
+                                    android:focusable="true"
+                                    android:layout_alignBottom="@+id/textViewUnit" />
+
+                                <TextView
+                                    style="@style/Pediatric_label_text_style"
+                                    android:text="@string/mdl_pediatric_lbs_text"
+                                    android:tag="@string/mdltag_pediatric_lbs_text"
+                                    android:id="@+id/textViewUnit"
+                                    android:layout_toRightOf="@+id/edt_currentweight"
+                                    android:layout_toEndOf="@+id/edt_currentweight"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="@dimen/dimen_4_dp"
+                        style="@style/Pediatric_Field_Card_View_Style"
+                        android:id="@+id/diet_layout"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="9dp">
+
+                            <TextView
+                                android:id="@+id/txt_dietTypeHeader"
+                                android:text="@string/mdl_pediatric_diet_text"
+                                android:tag="@string/mdltag_pediatric_diet_text"
+                                style="@style/Pediatric_Weight_text_style" />
+
+                            <TextView
+                                android:id="@+id/txt_dietType"
+                                style="@style/Pediatric_drop_text_style"
+                                android:drawableRight="@drawable/dropdown_icon"
+                                android:hint="@string/mdl_pediatric_select_hint"
+                                android:tag="@string/mdltag_pediatric_select_hint" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="@dimen/dimen_4_dp"
+                        style="@style/Pediatric_Field_Card_View_Style"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="9dp">
+
+                            <TextView
+                                style="@style/Pediatric_Weight_text_style"
+                                android:text="@string/mdl_pediatric_delivery_text"
+                                android:tag="@string/mdl_pediatric_delivery_text" />
+
+                            <TextView
+                                android:id="@+id/txt_deliveryType"
+                                style="@style/Pediatric_drop_text_style"
+                                android:drawableRight="@drawable/dropdown_icon"
+                                android:hint="@string/mdl_pediatric_select_hint"
+                                android:tag="@string/mdltag_pediatric_select_hint"
+                                android:textSize="@dimen/textsize_large"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:orientation="vertical"
+                    >
+
+                    <View style="@style/ViewStyle"
+                        android:id="@+id/birth_complication_view"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_birthComplications"
+                        style="@style/Pediatric_relative_layout_style">
+
+                        <TextView
+                            style="@style/Pediatric_TextStyle"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mdl_pediatric_birthComplications_text"
+                            android:tag="@string/mdltag_pediatric_birthComplications_text" />
+
+                        <RadioGroup
+                            android:id="@+id/birthComplications_group"
+                            style="@style/Pediatric_radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/birthComplications_yesButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_yes_text"
+                                android:tag="@string/mdltag_radio_yes_text" />
+
+                            <RadioButton
+                                android:id="@+id/birthComplications_noButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_No_text"
+                                android:tag="@string/mdltag_radio_No_text" />
+
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_pleaseDescribe"
+                        style="@style/Pediatric_birth_compl_descr_style"
+                        android:hint="@string/mdl_pediatric_birth_describe"
+                        android:tag="@string/mdltag_pediatric_birth_describe"
+                        android:visibility="gone" />
+
+                    <View style="@style/ViewStyle"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout style="@style/Pediatric_relative_layout_style">
+
+                        <TextView
+                            style="@style/Pediatric_TextStyle"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mdl_pediatric_immunization_text"
+                            android:tag="@string/mdltag_pediatric_immunization_text" />
+
+
+                        <RadioGroup
+                            android:id="@+id/immunization_group"
+                            style="@style/Pediatric_radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/immunization_yesButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_yes_text"
+                                android:tag="@string/mdltag_radio_yes_text" />
+
+                            <RadioButton
+                                android:id="@+id/immunization_noButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_No_text"
+                                android:tag="@string/mdltag_radio_No_text" />
+
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_lastShot_label"
+                        style="@style/Pediatric_TextStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/mdl_pediatric_last_shot"
+                        android:tag="@string/mdltag_pediatric_last_shot"
+                        android:visibility="gone" />
+
+
+                    <EditText
+                        android:id="@+id/edt_lastshot"
+                        style="@style/Pediatric_birth_compl_descr_style"
+                        android:hint="@string/mdl_pediatric_edt_last_shot"
+                        android:tag="@string/mdltag_pediatric_edt_last_shot"
+                        android:visibility="gone" />
+
+                    <View style="@style/ViewStyle"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout style="@style/Pediatric_relative_layout_style">
+
+                        <TextView
+                            style="@style/Pediatric_TextStyle"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mdl_pediatric_smoking_text"
+                            android:tag="@string/mdltag_pediatric_smoking_text" />
+
+
+                        <RadioGroup
+                            android:id="@+id/smoking_group"
+                            style="@style/Pediatric_radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/smoking_yesButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_yes_text"
+                                android:tag="@string/mdltag_radio_yes_text" />
+
+                            <RadioButton
+                                android:id="@+id/smoking_noButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_No_text"
+                                android:tag="@string/mdltag_radio_No_text" />
+
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+
+                    <View style="@style/ViewStyle"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout style="@style/Pediatric_relative_layout_style">
+
+                        <TextView
+                            style="@style/Pediatric_TextStyle"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mdl_pediatric_childcare_text"
+                            android:tag="@string/mdltag_pediatric_childcare_text" />
+
+
+                        <RadioGroup
+                            android:id="@+id/childcare_group"
+                            style="@style/Pediatric_radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/childcare_yesButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_yes_text"
+                                android:tag="@string/mdltag_radio_yes_text" />
+
+                            <RadioButton
+                                android:id="@+id/childcare_noButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_No_text"
+                                android:tag="@string/mdltag_radio_No_text" />
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                    <View style="@style/ViewStyle"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout style="@style/Pediatric_relative_layout_style">
+
+                        <TextView
+                            style="@style/Pediatric_TextStyle"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mdl_pediatric_siblings_text"
+                            android:tag="@string/mdltag_pediatric_siblings_text" />
+
+
+                        <RadioGroup
+                            android:id="@+id/siblings_group"
+                            style="@style/Pediatric_radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/siblings_yesButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_yes_text"
+                                android:tag="@string/mdltag_radio_yes_text" />
+
+                            <RadioButton
+                                android:id="@+id/siblings_noButton"
+                                style="@style/Pediatric_radio_button_style"
+                                android:text="@string/mdl_radio_No_text"
+                                android:tag="@string/mdltag_radio_No_text" />
+
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/ViewStyle"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/Pediatric_TextStyle"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/mdl_pediatric_mandatory_text"
+                    android:tag="@string/mdltag_pediatric_mandatory_text"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+</android.support.v4.widget.DrawerLayout>
+    <include layout="@layout/custom_progress_dialog" />
+</merge>

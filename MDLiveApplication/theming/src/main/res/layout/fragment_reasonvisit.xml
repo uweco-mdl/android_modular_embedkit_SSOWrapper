@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_style_W_Match_H_Match_O_Vertical"
+    android:background="@color/getstarted_background_color"
+    >
+
+    <TextView
+        android:id="@+id/txtReasonVisit"
+        style="@style/common_style_W_Match_M_Wrap"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/mdl_subheader_reason_txt"
+        android:tag="@string/mdltag_subheader_reason_txt"
+        android:textColor="@color/ReasonForVisit_TextColor_black"
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/txtReasonVisit"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edtxt_reasonvisit"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColorHint="@color/ReasonForVisit_EditText_HintColor"
+        android:hint="@string/mdl_enter_symptom"
+        android:tag="@string/mdltag_enter_symptom" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        style="@style/btnContinueStyle" />
+
+    <RelativeLayout
+        android:id="@+id/MyHealthAddPhotoL2"
+        android:layout_height="58dp"
+        android:layout_width="match_parent"
+        android:layout_above="@id/btnContinue"
+        android:background="@color/darkgrey_background">
+
+        <ImageView
+            android:id="@+id/imgCamera"
+            android:layout_width="28dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/camera_icon_white" />
+
+        <TextView
+            android:id="@+id/txt_addPhoto"
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgCamera"
+            android:text="@string/mdl_add_photo"
+            android:tag="@string/mdltag_add_photo"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/common_style_W_Wrap_H_Wrap"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/imgCamera"
+            android:layout_below="@id/txt_addPhoto"
+            android:textColor="@color/white"
+            android:text="@string/mdl_my_health_helpful"
+            android:tag="@string/mdltag_my_health_helpful"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/reasonList"
+        style="@style/common_style_W_Match_M_Wrap"
+        android:layout_below="@id/search_edit"
+        android:layout_above="@id/MyHealthAddPhotoL2"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:dividerHeight="1dp"
+        />
+
+</RelativeLayout>

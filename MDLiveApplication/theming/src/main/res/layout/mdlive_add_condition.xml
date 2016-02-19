@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/line_bottomline_medicalhistory_bg">
+
+    <AutoCompleteTextView
+        style = "@style/BaseEditTextStyle.LoginEditTextStyle.AddEditText"
+        android:id="@+id/ConditionEt"
+        android:hint="@string/mdl_add_condition_hint"
+        android:tag="@string/mdltag_add_condition_hint"
+        android:paddingRight="35dp"
+        android:maxLength="100"
+        android:dropDownVerticalOffset="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/DeleteConditionBtn" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_x"
+        android:id="@+id/DeleteConditionBtn"
+        android:contentDescription="@string/mdl_delete"
+        android:tag="@string/mdltag_delete"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/LinearLayoutStyle"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/providerImageHolder"
+        style="@style/DoctorLinearLayoutStyle"
+        android:background="@drawable/edittext_bg"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ProviderDetailHeaderStyle"
+            android:text="@string/mdl_affiliations"
+            android:tag="@string/mdltag_affiliations"
+            />
+        <LinearLayout
+            android:id="@+id/providerImageCollectionHolder"
+            style="@style/DoctorLinearLayoutStyle"
+            android:onClick="providerGroupDetailsAffiliation"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

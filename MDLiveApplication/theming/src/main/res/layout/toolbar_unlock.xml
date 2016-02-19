@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_toolbar_height"
+    android:background="@color/window_background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_toolbar_height">
+
+        <FrameLayout
+            android:id="@+id/frame_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/toolbar_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBackClicked"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_arrow_hdpi" />
+
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:onClick="onSignUpClicked"
+                android:text="@string/mdl_sign_up"
+                android:tag="@string/mdltag_sign_up"
+                android:textColor="@color/card_details_text_color"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+
+            <TextView
+                android:id="@+id/forgot_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_16_dp"
+                android:clickable="true"
+                android:onClick="onForgotPinClicked"
+                android:text="@string/mdl_forgot_your_pin"
+                android:tag="@string/mdltag_forgot_your_pin"
+                android:textColor="@color/card_details_text_color"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/headerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_space_toolbar"
+            android:layout_toLeftOf="@id/frame_right"
+            android:layout_toRightOf="@id/frame_left"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

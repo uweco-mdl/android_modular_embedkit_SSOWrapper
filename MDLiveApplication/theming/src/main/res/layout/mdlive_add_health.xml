@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mylocation_background_color"
+    android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/wagHeaderLinearLayoutStyle"
+            android:background="@color/red_theme_primary"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/dimen_toolbar_height"
+            >
+            <include
+                android:id="@+id/header"
+                layout="@layout/mdlive_toolbar"
+                />
+            </LinearLayout>
+    <RelativeLayout
+        style="@style/common_style_W_Match_H_Match_O_Vertical">
+
+    <LinearLayout
+        style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/conditionText"
+            style="@style/common_style_W_Match_H_Wrap"
+            android:background="@drawable/searchpvr_white_rounded_corner"
+            android:hint="@string/mdl_add_conditions_text"
+            android:tag="@string/mdltag_add_conditions_text"
+            android:textColorHint="@color/grey_txt"
+            android:textColor="@color/condition_txt_color"
+            android:gravity="left"
+            android:textSize="17sp"
+            android:textCursorDrawable="@null"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:padding="15dp"
+             />
+
+
+        <TextView
+            android:id="@+id/errorText"
+            style="@style/common_style_W_Match_H_Wrap"
+            android:tag="@string/mdltag_add_conditions_text"
+            android:textColorHint="@color/grey_txt"
+            android:textColor="@color/condition_txt_color"
+            android:gravity="left"
+            android:textSize="17sp"
+            android:visibility="gone"
+            android:padding="5dp"
+            />
+
+
+        <LinearLayout
+            style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+            android:id="@+id/medicationCredentailsLayout"
+            android:visibility="gone"
+            >
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:layout_height="match_parent"
+                android:background="@drawable/searchpvr_white_rounded_corner"
+                android:hint="@string/mdl_dosageTxt"
+                android:tag="@string/mdltag_dosageTxt"
+                android:textColorHint="@color/grey_txt"
+                android:textColor="@color/condition_txt_color"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/dimen_16_dp"
+                android:id="@+id/dosageTxt"
+                android:padding="10dp"
+                android:maxLength="10"
+                android:textCursorDrawable="@null"
+                android:clickable="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:drawableRight="@drawable/dropdown_icon"
+                android:background="@drawable/searchpvr_white_rounded_corner"
+                android:textColorHint="@color/grey_txt"
+                android:textColor="@color/condition_txt_color"
+                android:singleLine="false"
+                android:gravity="center|left"
+                android:padding="10dp"
+                android:ellipsize="end"
+                android:onClick="timesTxtOnClick"
+                android:id="@+id/timesTxt"
+                android:clickable="true"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:id="@+id/modeTxt"
+                android:drawableRight="@drawable/dropdown_icon"
+                android:background="@drawable/searchpvr_white_rounded_corner"
+                android:textColorHint="@color/grey_txt"
+                android:textColor="@color/condition_txt_color"
+                android:gravity="center|left"
+                android:onClick="modeTxtOnClick"
+                android:ellipsize="end"
+                android:singleLine="false"
+                android:padding="10dp"
+                android:clickable="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+            </LinearLayout>
+
+        <LinearLayout
+            style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+            android:id="@+id/procedureLayout"
+            android:visibility="gone"
+            >
+
+        <LinearLayout
+            style="@style/common_style_W_Match_H_Wrap_O_Horizontal"
+            android:visibility="visible"
+            >
+
+            <TextView
+                style="@style/common_style_W_Match_H_Wrap"
+                android:layout_width="0dp"
+                android:layout_weight="70"
+                android:drawableRight="@drawable/dropdown_icon"
+                android:background="@drawable/searchpvr_white_rounded_corner"
+                android:text="@string/mdl_select_surgery_txt"
+                android:tag="@string/mdltag_select_surgery_txt"
+                android:textColorHint="@color/grey_txt"
+                android:textColor="@color/condition_txt_color"
+                android:gravity="left"
+                android:singleLine="true"
+                android:id="@+id/surgeryName"
+                android:padding="15dp"
+                android:clickable="true"
+                android:onClick="surgeryNameClick"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                style="@style/common_style_W_Match_H_Wrap"
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:drawableRight="@drawable/dropdown_icon"
+                android:background="@drawable/searchpvr_white_rounded_corner"
+                android:text="@string/mdl_year_txt"
+                android:tag="@string/mdltag_year_txt"
+                android:clickable="true"
+                android:textColorHint="@color/grey_txt"
+                android:textColor="@color/condition_txt_color"
+                android:gravity="left"
+                android:singleLine="true"
+                android:padding="15dp"
+                android:onClick="surgeryYearClick"
+                android:id="@+id/surgeryYear"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+            <EditText
+                android:id="@+id/otherProcedureTxt"
+                style="@style/common_style_W_Match_H_Wrap"
+                android:background="@drawable/searchpvr_white_rounded_corner"
+                android:hint="@string/mdl_add_other_procedure_text"
+                android:tag="@string/mdltag_add_other_procedure_text"
+                android:textColorHint="@color/grey_txt"
+                android:textColor="@color/condition_txt_color"
+                android:gravity="left"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textCursorDrawable="@null"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        layout="@layout/custom_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/mdliveBottomBlueColor"
+        android:visibility="gone"
+        android:layout_above="@+id/add_existing_btn">
+
+        <include layout="@layout/custom_progress_bar" />
+    </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include layout="@layout/custom_progress_dialog" />
+
+    </merge>
+

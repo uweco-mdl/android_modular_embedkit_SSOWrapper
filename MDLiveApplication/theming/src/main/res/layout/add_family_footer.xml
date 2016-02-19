@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  style="@style/common_style_W_Match_H_Wrap_O_Vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<android.support.v7.widget.CardView
+    style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/addFamilyMember">
+
+    <RelativeLayout
+        style="@style/common_style_W_Wrap_H_Wrap"
+        >
+
+    <ImageView
+        android:id="@+id/imgAddMember"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/add_child" />
+
+    <TextView
+        android:id="@+id/txtAddMember"
+        style="@style/common_style_W_Wrap_H_Wrap"
+        android:textColor="@color/darkgreyTextColor"
+        android:layout_toRightOf="@id/imgAddMember"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:text="@string/mdl_add_new_family_member"
+        android:tag="@string/mdltag_add_new_family_member"
+        />
+
+    </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/call_customer"
+        style="@style/common_style_W_Match_H_Wrap_O_Vertical"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+ </LinearLayout>

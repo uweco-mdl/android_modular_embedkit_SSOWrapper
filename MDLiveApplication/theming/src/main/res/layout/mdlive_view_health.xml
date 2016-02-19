@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mylocation_background_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mylocation_background_color"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/mdlive_toolbar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/header">
+
+                <RelativeLayout
+                    style="@style/common_style_W_Match_M_Match"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/add_existing_btn"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        style="@style/common_style_W_Wrap_H_Wrap_O_Vertical"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/noConditionsLayout"
+                        android:visibility="gone"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/camera_gray_icon"
+                            android:id="@+id/statusIcon" />
+
+                        <TextView
+                            android:id="@+id/noConditionTitleTv"
+                            style="@style/common_style_W_Wrap_H_Wrap"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="@string/mdl_empty_conditions_reported"
+                            android:tag="@string/mdltag_empty_conditions_reported"
+                            android:textColor="@color/grey_txt"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/noConditionSubTitleTv"
+                            style="@style/common_style_W_Wrap_H_Wrap"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="@string/mdl_empty_conditions_reported_msg"
+                            android:tag="@string/mdltag_empty_conditions_reported_msg"
+                            android:textColor="@color/grey_txt"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/conditionsListView"
+                        style="@style/common_style_W_Match_M_Match"
+                        android:divider="@color/transparent"
+                        android:dividerHeight="10dp"
+                        android:text="@string/mdl_add_conditions_text"
+                        android:tag="@string/mdltag_add_conditions_text"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/progressBar"
+                    layout="@layout/custom_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:background="@color/mdliveBottomBlueColor"
+                    android:visibility="gone"
+                    android:layout_above="@+id/add_existing_btn">
+
+                    <include layout="@layout/custom_progress_bar" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_existing_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_toolbar_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/add_conditions_new_color"
+                    android:onClick="addConditionsClick"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/common_style_W_Wrap_H_Wrap"
+                        android:layout_centerInParent="true"
+                        android:text="@string/mdl_add_conditions_text"
+                        android:tag="@string/mdltag_add_conditions_text"
+                        android:textColor="@color/white"
+                        android:id="@+id/addItemTv"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__left_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start" />
+
+
+        <FrameLayout
+            android:id="@+id/dash_board__right_container"
+            android:layout_width="@dimen/drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end"
+            android:visibility="gone" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</merge>

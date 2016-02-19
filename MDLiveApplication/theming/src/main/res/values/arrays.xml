@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="left_navigation_items">
+        <item>@string/mdl_home</item>
+        <item>@string/mdl_see_a_doctor_now</item>
+        <item>@string/mdl_my_health</item>
+        <item>@string/mdl_mdlive_assist</item>
+        <item>@string/mdl_message_center</item>
+        <item>@string/mdl_symptom_checker</item>
+        <item>@string/mdl_my_accounts</item>
+        <item>@string/mdl_support</item>
+        <item>@string/mdl_share_app</item>
+    </string-array>
+
+    <string-array name="left_navigation_items_sso">
+        <item>@string/mdl_home</item>
+    </string-array>
+
+    <string-array name="left_navigation_items_image">
+        <item>@drawable/drawer_home_icon</item>
+        <item>@drawable/drawer_talk_doctor_icon</item>
+        <item>@drawable/drawer_myhealth_icon</item>
+        <item>@drawable/drawer_assit_icon</item>
+        <item>@drawable/drawer_message_center</item>
+        <item>@drawable/drawer_symptom_check_icon</item>
+        <item>@drawable/drawer_my_accounts_icon</item>
+        <item>@drawable/drawer_help_icon</item>
+        <item>@drawable/drawer_share_icon</item>
+    </string-array>
+
+    <string-array name="waiting_room_details">
+        <item>@string/mdl_waiting_room_text_01</item>
+        <item>@string/mdl_waiting_room_text_02</item>
+        <item>@string/mdl_waiting_room_text_03</item>
+        <item>@string/mdl_waiting_room_text_04</item>
+        <item>@string/mdl_waiting_room_text_05</item>
+        <item>@string/mdl_waiting_room_text_06</item>
+        <item>@string/mdl_waiting_room_text_07</item>
+        <item>@string/mdl_waiting_room_text_08</item>
+        <item>@string/mdl_waiting_room_text_09</item>
+        <item>@string/mdl_waiting_room_text_10</item>
+        <item>@string/mdl_waiting_room_text_11</item>
+        <item>@string/mdl_waiting_room_text_12</item>
+        <item>@string/mdl_waiting_room_text_13</item>
+        <item>@string/mdl_waiting_room_text_14</item>
+        <item>@string/mdl_waiting_room_text_15</item>
+        <item>@string/mdl_waiting_room_text_16</item>
+        <item>@string/mdl_waiting_room_text_17</item>
+        <item>@string/mdl_waiting_room_text_18</item>
+        <item>@string/mdl_waiting_room_text_19</item>
+        <item>@string/mdl_waiting_room_text_20</item>
+        <item>@string/mdl_waiting_room_text_21</item>
+        <item>@string/mdl_waiting_room_text_22</item>
+        <item>@string/mdl_waiting_room_text_23</item>
+        <item>@string/mdl_waiting_room_text_24</item>
+        <item>@string/mdl_waiting_room_text_25</item>
+        <item>@string/mdl_waiting_room_text_26</item>
+        <item>@string/mdl_waiting_room_text_27</item>
+        <item>@string/mdl_waiting_room_text_28</item>
+        <item>@string/mdl_waiting_room_text_29</item>
+        <item>@string/mdl_waiting_room_text_01</item>
+    </string-array>
+</resources>

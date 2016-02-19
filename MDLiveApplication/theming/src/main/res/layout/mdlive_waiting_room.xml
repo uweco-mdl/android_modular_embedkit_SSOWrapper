@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ContainerStyle"
+    android:background="@color/window_background_color">
+
+    <LinearLayout
+        style="@style/wagHeaderLinearLayoutStyle"
+        android:background="@color/red_theme_primary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/homeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:onClick="movetohome"
+            android:background="@drawable/home_icon"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/headerTxt"
+            style="@style/HeaderTextViewStyle"
+            android:layout_centerInParent="true"
+            android:text="@string/mdl_waiting_header"
+            android:tag="@string/mdltag_waiting_warn_text"/>
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/consultation_image_view"
+                    android:src="@drawable/dash_board_doctor_icon" />
+
+                <TextView
+                    android:id="@+id/txt_waitingtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:tag="@string/mdltag_waiting_doctor_new"
+                    android:text="@string/mdl_waiting_doctor_new"
+                    android:textColor="@color/darkblack"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="26sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:gravity="center"
+                android:tag="@string/mdltag_waiting_text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/mdl_waiting_text"
+                android:textColor="@color/darkblack"
+                android:fontFamily="sans-serif-light"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="@string/mdltag_waiting_warn_complete"
+                android:text="@string/mdl_waiting_warn_complete"
+                android:textColor="@color/darkgreyTextColor"
+                android:fontFamily="sans-serif-light"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/mdlive_progressbar"
+                    />
+            </RelativeLayout>
+
+            <com.mdlive.sav.WaitingRoom.WaitingRoomViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/viewPager"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:paddingLeft="24dp"
+                android:paddingRight="12dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+
+
+</LinearLayout>
