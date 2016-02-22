@@ -3,7 +3,7 @@
 
     <application android:allowBackup="true"
         android:label="@string/mdl_app_name"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/appicon"
         android:theme="@style/CustomTheme"
         android:name="android.support.multidex.MultiDexApplication">
 

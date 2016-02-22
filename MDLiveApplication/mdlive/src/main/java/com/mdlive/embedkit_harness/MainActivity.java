@@ -97,7 +97,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        affil = AFFILIATE.CAREINGTON;
+        affil = AFFILIATE.BAYLOR;
 
         setContentView(AffiliateLayout.get(affil));
 
@@ -105,7 +105,7 @@ public class MainActivity extends Activity {
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter(SIGNALS.EXIT_SIGNAL.name()));
 
         // ***** DEFAULT ENVIRONMENT VALUE HERE *****************
-        env = ENVIRON.PROD;
+        env = ENVIRON.STAGE;
         // ******************************************
 
         getDateOfBirth();                        // Sets up dialog for selecting a Birth Date
@@ -174,8 +174,14 @@ public class MainActivity extends Activity {
     };
 
     private String getInputText(int id) {
-        String inputText ="";
-        return ((EditText) findViewById(id)).getText().toString().trim();
+        String inputText="";
+        try {
+            inputText = ((EditText) findViewById(id)).getText().toString().trim();
+        }catch(Exception ex){
+            // ...
+            // ...
+        }
+        return (inputText);
     }
 
     /**
@@ -185,6 +191,43 @@ public class MainActivity extends Activity {
      */
     private boolean hasEmptyField()
     {
+        // DEBUG ONLY.
+        if(getInputText(R.id.address1).isEmpty())
+            Toast.makeText(this,"ADDRESS empty!",Toast.LENGTH_SHORT).show();
+        if(txtDOB.getText().toString().isEmpty())
+            Toast.makeText(this,"DOB empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.city).isEmpty())
+            Toast.makeText(this,"CITY empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.email).isEmpty())
+            Toast.makeText(this,"EMAIL empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.fName).isEmpty())
+            Toast.makeText(this,"FIRST NAME empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.lName).isEmpty())
+            Toast.makeText(this,"LAST NAME empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.mName).isEmpty())
+            Toast.makeText(this,"MIDDLE NAME empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.phone).isEmpty())
+            Toast.makeText(this,"PHONE empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.state).isEmpty())
+            Toast.makeText(this,"STATE empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.zipcode).isEmpty())
+            Toast.makeText(this,"ZIPCODE empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.storeaddress).isEmpty())
+            Toast.makeText(this,"STORE ADDR empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.storecity).isEmpty())
+            Toast.makeText(this,"STORE CITY empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.latitude).isEmpty())
+            Toast.makeText(this,"LATITUDE empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.longitude).isEmpty())
+            Toast.makeText(this,"LONGITUDE empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.storestate).isEmpty())
+            Toast.makeText(this,"STORE STATE empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.storeNumber).isEmpty())
+            Toast.makeText(this,"STORE NUM empty!",Toast.LENGTH_SHORT).show();
+        if(getInputText(R.id.storeZip).isEmpty())
+            Toast.makeText(this,"STORE ZIP empty!",Toast.LENGTH_SHORT).show();
+
+
         boolean hasEmpty = getInputText(R.id.address1).isEmpty()
                             || txtDOB.getText().toString().isEmpty()
                             || getInputText(R.id.city).isEmpty()
@@ -206,7 +249,7 @@ public class MainActivity extends Activity {
         return(hasEmpty);
     }
 
-    private void showSnackbarMessage(String mesg)
+    private void showSnackbarMessage(String mesg) throws NullPointerException
     {
         CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.framelayout);
         Snackbar snackbar = Snackbar.make(coordinatorLayout, mesg, Snackbar.LENGTH_LONG);
@@ -218,12 +261,54 @@ public class MainActivity extends Activity {
 
     }
 
-    public void openMDLIVE(View v) {
+    public void openMyHealth(View v)
+    {
         if(hasEmptyField()) {
-            showSnackbarMessage(getString(R.string.emptyField));
+            if(affil.equals(AFFILIATE.CAREINGTON)){
+                showSnackbarMessage(getString(R.string.emptyField));
+            }
             return;
         }
 
+        String jsonString = constructJsonString();
+
+        MDLiveConfig.activate(EMBEDKITS.MY_HEALTH, jsonString, env, this);
+
+        finish();
+
+    }
+
+    public void openSAV(View v) {
+        if(hasEmptyField()) {
+            if(affil.equals(AFFILIATE.CAREINGTON)){
+                showSnackbarMessage(getString(R.string.emptyField));
+            }
+            return;
+        }
+
+        /**
+         * OLD way of invoking EmbedKit component
+         */
+        /*
+        Intent embedKitIntent = new Intent(MainActivity.this, SSOActivity.class);
+        embedKitIntent.putExtra("affiliate_sso_login", jsonString);
+        embedKitIntent.putExtra("env", env.name());
+        startActivity(embedKitIntent);
+        */
+
+        /**
+         * NEW way of invoking an EmbedKit component
+         */
+        String jsonString = constructJsonString();
+
+        MDLiveConfig.activate(EMBEDKITS.DOCTOR_CONSULT, jsonString, env, this);
+
+        finish();
+    }
+
+    private String constructJsonString(){
+
+        String jsonString=null;
         JsonObject jsoMessage = new JsonObject();
         try {
 
@@ -276,29 +361,13 @@ public class MainActivity extends Activity {
             jsonData.addProperty("digital_signature", getDigitalSignature(env, this.affil));
             jsonData.add("encrypted_message", jsoMessage);
 
-            String jsonString = jsonData.toString();
-
-            /**
-             * OLD way of invoking EmbedKit component
-             */
-            /*
-            Intent embedKitIntent = new Intent(MainActivity.this, SSOActivity.class);
-            embedKitIntent.putExtra("affiliate_sso_login", jsonString);
-            embedKitIntent.putExtra("env", env.name());
-            startActivity(embedKitIntent);
-            */
-
-            /**
-             * NEW way of invoking an EmbedKit component
-             */
-            MDLiveConfig.activate(EMBEDKITS.DOCTOR_CONSULT, jsonString, env, this);
-
-            finish();
+            jsonString = jsonData.toString();
 
         }catch(Exception e){
             e.printStackTrace();
         }
 
+        return(jsonString);
     }
 
     private void getDateOfBirth() {

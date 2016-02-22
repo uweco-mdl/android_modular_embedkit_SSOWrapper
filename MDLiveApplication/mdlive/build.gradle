@@ -6,7 +6,7 @@ repositories {
     maven {
         credentials {
             username 'mdlive-vsee-user'
-            password 'vs33_p@sswd'
+            password '438631c3534ca56638d29c5173305eb8b4c7546b'
         }
         url 'http://dl.bintray.com/vsee/android'
     }
@@ -34,7 +34,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -61,6 +61,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.google.android.gms:play-services-maps:8.3.0'
     compile 'com.google.android.gms:play-services-analytics:8.3.0'
+    compile 'com.google.android.gms:play-services-fitness:8.3.0'
 
     // Add each supported aar modules here
 /*
@@ -80,17 +81,19 @@ dependencies {
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
-    /*
+
     compile(name: 'mdlive_myhealth', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
+
     compile(name: 'mdlive_symptomchecker', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
+    /*
     compile(name: 'mdlive_myaccounts', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'

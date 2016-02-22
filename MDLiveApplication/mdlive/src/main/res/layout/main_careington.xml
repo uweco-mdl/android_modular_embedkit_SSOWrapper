@@ -562,7 +562,7 @@
                 android:layout_weight="7"
                 android:layout_height="wrap_content"
                 android:id="@+id/longitude"
-                android:numeric="integer"
+                android:inputType="number"
                 android:text="657483921"
                 android:layout_gravity="center_horizontal" />
 
@@ -613,6 +613,16 @@
 
         </LinearLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:text="GO MyHealth"
+            android:id="@+id/goMyHealth"
+            android:onClick="openMyHealth"
+            android:background="@color/red"
+            android:layout_gravity="center_horizontal" />
+
         <!-- Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -638,7 +648,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:onClick="openMDLIVE"
+        android:onClick="openSAV"
         android:stateListAnimator="@anim/fab_raise"
         />
 
