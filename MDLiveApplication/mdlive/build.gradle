@@ -31,6 +31,11 @@ android {
         versionCode 3
         versionName "3.0"
         multiDexEnabled true
+
+        // force 32-bit emulation for 64-bit devices
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
     }
     buildTypes {
         release {
@@ -38,6 +43,10 @@ android {
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    // increase GC memory allocation threshold to prevent compile/dex-time errors
+    dexOptions {
+        javaMaxHeapSize "3g"
     }
 }
 
@@ -106,7 +115,7 @@ dependencies {
         exclude module: 'com.google.android.gms'
     }
 
-    compile('com.vsee:vsee-kit:0.4.22021@aar') {
+    compile('com.vsee:vsee-kit:0.4.22458@aar') {
         transitive = true
     }
 
