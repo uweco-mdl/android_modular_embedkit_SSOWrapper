@@ -73,7 +73,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-fitness:8.3.0'
 
     // Add each supported aar modules here
-/*
     compile(name: 'mdlive_assist', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
