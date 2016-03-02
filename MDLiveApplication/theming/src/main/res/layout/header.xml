@@ -1,6 +1,0 @@
-<RelativeLayout
-    style="@style/HeaderStyle"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView
-        style="@style/HeaderLogoStyle"/>
-</RelativeLayout>
