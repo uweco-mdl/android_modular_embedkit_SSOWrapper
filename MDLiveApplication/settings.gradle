@@ -1,1 +1,1 @@
-include ':mdlive', ':theming'
+include ':common', ':mdlive', ':theming', ':assist', ':messages', ':myaccounts', ':myhealth'

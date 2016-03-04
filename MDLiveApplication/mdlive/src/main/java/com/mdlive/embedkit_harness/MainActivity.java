@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
@@ -22,9 +23,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.mdlive.embedkit.global.MDLiveConfig;
+import com.mdlive.embedkit.global.MDLiveConfig.EMBEDKITS;
 import com.mdlive.embedkit.global.MDLiveConfig.ENVIRON;
 import com.mdlive.embedkit.global.MDLiveConfig.SIGNALS;
-import com.mdlive.embedkit.global.MDLiveConfig.EMBEDKITS;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -36,6 +37,7 @@ public class MainActivity extends Activity {
     public String gender = "male",  strDate;
     private int month,day,year;
     private DatePickerDialog datePickerDialog;
+    FloatingActionButton fab = null;
 
     TextView txtDOB;
     ENVIRON env;
@@ -105,6 +107,14 @@ public class MainActivity extends Activity {
         affil = AFFILIATE.HCA;
 
         setContentView(AffiliateLayout.get(affil));
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSAV(v);
+            }
+        });
 
         // listen for EmbedKit exit signal and respond accordingly
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter(SIGNALS.EXIT_SIGNAL.name()));

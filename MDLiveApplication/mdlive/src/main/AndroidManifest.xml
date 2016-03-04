@@ -12,7 +12,7 @@
                 android:value="@integer/google_play_services_version" />
             <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyDKBxaAQPl2F-HKPnmzGhEev4ofL92HsPM" />
+                android:value="AIzaSyBr_4_t7t6-JihExU2AvgpD2s4qI94A0BU" />
 
             <activity
                     android:name="com.mdlive.embedkit_harness.SplashScreenActivity"

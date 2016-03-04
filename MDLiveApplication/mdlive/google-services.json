@@ -1,36 +1,31 @@
 {
   "project_info": {
-    "project_id": "default-demo-app-9cf47",
-    "project_number": "321824229413",
-    "name": "Default Demo App"
+    "project_id": "embedkit-harness",
+    "project_number": "947337809482",
+    "name": "EmbedKit Harness"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:321824229413:android:27d689d63f1b7a06",
-        "client_id": "android:com.google.samples.quickstart.signin",
+        "mobilesdk_app_id": "1:947337809482:android:7bd836bb0ed0ad10",
+        "client_id": "android:com.mdlive.embedkit_harness",
         "client_type": 1,
         "android_client_info": {
-          "package_name": "com.google.samples.quickstart.signin"
+          "package_name": "com.mdlive.embedkit_harness",
+          "certificate_hash": []
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "321824229413-hltvhc50l6sk899efvnklfufrjqeubcj.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.google.samples.quickstart.signin",
-            "certificate_hash": "5FA64892256D3A994DCFED2E4770B305322CE9A0"
-          }
-        }
-      ],
+      "oauth_client": [],
       "api_key": [],
       "services": {
         "analytics_service": {
-          "status": 1
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-68912220-1"
+          }
         },
         "cloud_messaging_service": {
-          "status": 1,
+          "status": 2,
           "apns_config": []
         },
         "appinvite_service": {
@@ -38,7 +33,7 @@
           "other_platform_oauth_client": []
         },
         "google_signin_service": {
-          "status": 2
+          "status": 1
         },
         "ads_service": {
           "status": 1
