@@ -7,6 +7,12 @@
         android:theme="@style/CustomTheme"
         android:name="android.support.multidex.MultiDexApplication">
 
+
+            <!-- Google Api Key -->
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBNCYdN4VpzsWBbddXOe7rs3naUTbtZISY" />
+
             <meta-data
                 android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version" />
