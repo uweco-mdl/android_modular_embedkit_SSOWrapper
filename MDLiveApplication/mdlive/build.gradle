@@ -32,7 +32,7 @@ android {
         versionName "3.0"
         multiDexEnabled true
 
-        // force 32-bit emulation for 64-bit devices
+        // force 32-bit emulation for 64-bit devices, because VSee lib does not directly support 64-bit arch
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }

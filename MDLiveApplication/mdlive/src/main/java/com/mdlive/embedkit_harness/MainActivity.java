@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
     static LinkedHashMap pharmaData;
 
     public enum AFFILIATE {
-        BAYLOR, STJOSEPH, CAREINGTON, SUTTER, HCA
+        BAYLOR, STJOSEPH, CAREINGTON, SUTTER, HCA, CIGNA_MARRIOT
     }
 
     private static final Map<AFFILIATE,Integer> AffiliateLayout = new HashMap<>();
@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
         AffiliateLayout.put(AFFILIATE.CAREINGTON, R.layout.main_careington);
         AffiliateLayout.put(AFFILIATE.SUTTER, R.layout.main_sutter);
         AffiliateLayout.put(AFFILIATE.HCA, R.layout.main_hca);
+        AffiliateLayout.put(AFFILIATE.CIGNA_MARRIOT, R.layout.main_cigna);
     }
 
     // ***** STAGING DATA ******
@@ -67,6 +68,7 @@ public class MainActivity extends Activity {
         AffilClientSecret_Stage.put(AFFILIATE.CAREINGTON, "a01c7a995c728a1b328");
         AffilClientSecret_Stage.put(AFFILIATE.SUTTER, "");
         AffilClientSecret_Stage.put(AFFILIATE.HCA, "b23ce03c8f41f71cec2");
+        AffilClientSecret_Stage.put(AFFILIATE.CIGNA_MARRIOT, "f593177fc9ef015df43");
     }
 
     private static final Map<AFFILIATE, String> AffilAPIKey_Stage = new HashMap<>();
@@ -76,6 +78,7 @@ public class MainActivity extends Activity {
         AffilAPIKey_Stage.put(AFFILIATE.CAREINGTON, "0611b8c6c77c510e766f");
         AffilAPIKey_Stage.put(AFFILIATE.SUTTER, "");
         AffilAPIKey_Stage.put(AFFILIATE.HCA, "5c3ca50937bdd1e39bfa");
+        AffilAPIKey_Stage.put(AFFILIATE.CIGNA_MARRIOT, "ab4ab70d7f30712c964b");
     }
 
     // ****** PROD DATA
@@ -87,6 +90,7 @@ public class MainActivity extends Activity {
         AffilClientSecret_Prod.put(AFFILIATE.CAREINGTON, "3c7d73325ff3e3ff3c9");
         AffilClientSecret_Prod.put(AFFILIATE.SUTTER, "0000");
         AffilClientSecret_Prod.put(AFFILIATE.HCA, "0000");
+        AffilClientSecret_Prod.put(AFFILIATE.CIGNA_MARRIOT, "0000");
     }
 
     private static final Map<AFFILIATE, String> AffilAPIKey_Prod = new HashMap<>();
@@ -96,6 +100,7 @@ public class MainActivity extends Activity {
         AffilAPIKey_Prod.put(AFFILIATE.CAREINGTON, "7d0adbaeb36629f6e394");
         AffilAPIKey_Prod.put(AFFILIATE.SUTTER, "0000");
         AffilAPIKey_Prod.put(AFFILIATE.HCA, "0000");
+        AffilAPIKey_Prod.put(AFFILIATE.CIGNA_MARRIOT, "0000");
     }
 
     private AFFILIATE affil;
@@ -104,7 +109,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        affil = AFFILIATE.HCA;
+        affil = AFFILIATE.CIGNA_MARRIOT;
 
         setContentView(AffiliateLayout.get(affil));
 
