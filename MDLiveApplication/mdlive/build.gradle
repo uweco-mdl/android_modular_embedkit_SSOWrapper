@@ -73,7 +73,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-measurement:8.4.0'
 
     // Add each supported aar modules here
-    compile(name: 'mdlive_assist', ext: 'aar') {
+/*    compile(name: 'mdlive_assist', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
@@ -108,7 +108,7 @@ dependencies {
         exclude module: 'com.google.code.gson'
         exclude module: 'com.google.android.gms'
     }
-
+*/
     compile(name: 'mdlive_common', ext: 'aar') {
         exclude module: 'com.android.support'
         exclude module: 'com.google.code.gson'

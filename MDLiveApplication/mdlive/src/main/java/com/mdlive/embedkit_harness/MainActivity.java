@@ -109,7 +109,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        affil = AFFILIATE.CIGNA_MARRIOT;
+        affil = AFFILIATE.STJOSEPH;
 
         setContentView(AffiliateLayout.get(affil));
 

@@ -1,199 +1,215 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:background="#185499"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="27dp"
-        android:background="#36872C"
-        android:textColor="@color/white"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="St. Joseph's User Details"
-        android:gravity="center"
-        android:id="@+id/textView" />
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:background="#185499"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="6dip"
-        android:textSize="16dp"
-        android:textStyle="italic|bold"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="All are mandatory fields, No validation in-place." />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Me ID" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/meid"
-            android:text="321456"
-            android:layout_gravity="center_horizontal" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/framelayout">
 
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="First Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/fName"
-            android:text="myfirst"
-            android:layout_gravity="center_horizontal" />
 
-    </LinearLayout>
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="#185499"/>
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Middle Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/mName"
-            android:text="mymiddle"
-            android:layout_gravity="center_horizontal" />
+            android:textSize="27dp"
+            android:background="#36872C"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="St. Joseph's User Details"
+            android:gravity="center"
+            android:id="@+id/textView" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="#185499"/>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Last Name" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/lName"
-            android:text="mylast"
-            android:layout_gravity="center_horizontal" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Gender" />
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:paddingTop="45dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dip"
+                android:textSize="16dp"
+                android:textStyle="italic|bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="All are mandatory fields, No validation in-place." />
 
-        <RadioGroup android:id="@+id/genderGroup"
-            android:layout_width="0dp"
-            android:layout_weight="6"
+        <LinearLayout
             android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
             android:layout_height="wrap_content">
-            <RadioButton
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
                 android:layout_height="wrap_content"
-                android:text="Male"
-                android:checked="true"
-                android:id="@+id/Male" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Me ID" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="6"
                 android:layout_height="wrap_content"
-                android:text="Female"
-                android:id="@+id/Female"
-                android:checked="false" />
-        </RadioGroup>
+                android:inputType="number"
+                android:id="@+id/meid"
+                android:text="321456"
+                android:layout_gravity="center_horizontal" />
 
-    </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="First Name" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/fName"
+                android:text="myfirst"
+                android:layout_gravity="center_horizontal" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Email" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:text="mdl_tester@aol.com"
-            android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Middle Name" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/mName"
+                android:text="mymiddle"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Last Name" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/lName"
+                android:text="mylast"
+                android:layout_gravity="center_horizontal" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Phone" />
-        <EditText
-            android:textColor="#000000"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone"
-            android:inputType="phone"
-            android:text="8002224343"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Gender" />
+
+            <RadioGroup android:id="@+id/genderGroup"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"
+                    android:id="@+id/Male" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/Female"
+                    android:checked="false" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Email" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                android:text="mdl_tester@aol.com"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Phone" />
+            <EditText
+                android:textColor="#000000"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone"
+                android:inputType="phone"
+                android:text="8002224343"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -297,7 +313,7 @@
                 android:layout_weight="6"
                 android:layout_height="wrap_content"
                 android:id="@+id/zipcode"
-                android:numeric="integer"
+                android:inputType="number"
                 android:text="19105"
                 android:layout_gravity="center_horizontal" />
 
@@ -492,7 +508,7 @@
             android:layout_weight="6"
             android:layout_height="wrap_content"
             android:id="@+id/latitude"
-            android:numeric="integer"
+            android:inputType="number"
             android:text="1092837464"
             android:layout_gravity="center_horizontal" />
 
@@ -563,13 +579,42 @@
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="  Start EmbedKit  "
-        android:id="@+id/button"
-        android:background="@color/light_blue"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
-</ScrollView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:text="GO MyHealth"
+            android:id="@+id/goMyHealth"
+            android:onClick="openMyHealth"
+            android:background="@color/red"
+            android:layout_gravity="center_horizontal" />
+        <!--Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="  Start EmbedKit  "
+            android:id="@+id/button"
+            android:background="@color/light_blue"
+            android:layout_gravity="center_horizontal" /-->
+    </LinearLayout>
+    </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+    app:fabSize="normal"
+    app:elevation="8dp"
+    app:borderWidth="0dp"
+    app:backgroundTint="@color/red"
+
+    android:id="@+id/fab"
+    android:src="@drawable/whitecheckmark"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:stateListAnimator="@anim/fab_raise"
+    />
+
+
+<!--/FrameLayout -->
+</android.support.design.widget.CoordinatorLayout>

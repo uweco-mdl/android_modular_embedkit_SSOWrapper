@@ -345,7 +345,7 @@
                     android:layout_weight="7"
                     android:layout_height="wrap_content"
                     android:id="@+id/zipcode"
-                    android:numeric="integer"
+                    android:inputType="number"
                     android:text="19105"
                     android:layout_gravity="center_horizontal" />
 
@@ -412,7 +412,7 @@
                 android:layout_weight="7"
                 android:layout_height="wrap_content"
                 android:id="@+id/storeNumber"
-                android:numeric="integer"
+                android:inputType="number"
                 android:text="5"
                 android:layout_gravity="center_horizontal" />
 
